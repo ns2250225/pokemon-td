@@ -1,0 +1,10113 @@
+{
+  "1": {
+    "id": 1,
+    "name": "bulbasaur",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 2,
+        "name": "ivysaur",
+        "stage": 2,
+        "evolvesFrom": 1,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 3,
+            "name": "venusaur",
+            "stage": 3,
+            "evolvesFrom": 2,
+            "trigger": {
+              "kind": "level-up",
+              "level": 32
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "2": {
+    "id": 4,
+    "name": "charmander",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 5,
+        "name": "charmeleon",
+        "stage": 2,
+        "evolvesFrom": 4,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 6,
+            "name": "charizard",
+            "stage": 3,
+            "evolvesFrom": 5,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "3": {
+    "id": 7,
+    "name": "squirtle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 8,
+        "name": "wartortle",
+        "stage": 2,
+        "evolvesFrom": 7,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 9,
+            "name": "blastoise",
+            "stage": 3,
+            "evolvesFrom": 8,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "4": {
+    "id": 10,
+    "name": "caterpie",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 11,
+        "name": "metapod",
+        "stage": 2,
+        "evolvesFrom": 10,
+        "trigger": {
+          "kind": "level-up",
+          "level": 7
+        },
+        "children": [
+          {
+            "id": 12,
+            "name": "butterfree",
+            "stage": 3,
+            "evolvesFrom": 11,
+            "trigger": {
+              "kind": "level-up",
+              "level": 10
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "5": {
+    "id": 13,
+    "name": "weedle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 14,
+        "name": "kakuna",
+        "stage": 2,
+        "evolvesFrom": 13,
+        "trigger": {
+          "kind": "level-up",
+          "level": 7
+        },
+        "children": [
+          {
+            "id": 15,
+            "name": "beedrill",
+            "stage": 3,
+            "evolvesFrom": 14,
+            "trigger": {
+              "kind": "level-up",
+              "level": 10
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "6": {
+    "id": 16,
+    "name": "pidgey",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 17,
+        "name": "pidgeotto",
+        "stage": 2,
+        "evolvesFrom": 16,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 18,
+            "name": "pidgeot",
+            "stage": 3,
+            "evolvesFrom": 17,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "7": {
+    "id": 19,
+    "name": "rattata",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 20,
+        "name": "raticate",
+        "stage": 2,
+        "evolvesFrom": 19,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "8": {
+    "id": 21,
+    "name": "spearow",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 22,
+        "name": "fearow",
+        "stage": 2,
+        "evolvesFrom": 21,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "9": {
+    "id": 23,
+    "name": "ekans",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 24,
+        "name": "arbok",
+        "stage": 2,
+        "evolvesFrom": 23,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "10": {
+    "id": 172,
+    "name": "pichu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 25,
+        "name": "pikachu",
+        "stage": 2,
+        "evolvesFrom": 172,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 220
+        },
+        "children": [
+          {
+            "id": 26,
+            "name": "raichu",
+            "stage": 3,
+            "evolvesFrom": 25,
+            "trigger": {
+              "kind": "use-item",
+              "item": "thunder-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "11": {
+    "id": 27,
+    "name": "sandshrew",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 28,
+        "name": "sandslash",
+        "stage": 2,
+        "evolvesFrom": 27,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "12": {
+    "id": 29,
+    "name": "nidoran-f",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 30,
+        "name": "nidorina",
+        "stage": 2,
+        "evolvesFrom": 29,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 31,
+            "name": "nidoqueen",
+            "stage": 3,
+            "evolvesFrom": 30,
+            "trigger": {
+              "kind": "use-item",
+              "item": "moon-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "13": {
+    "id": 32,
+    "name": "nidoran-m",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 33,
+        "name": "nidorino",
+        "stage": 2,
+        "evolvesFrom": 32,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 34,
+            "name": "nidoking",
+            "stage": 3,
+            "evolvesFrom": 33,
+            "trigger": {
+              "kind": "use-item",
+              "item": "moon-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "14": {
+    "id": 173,
+    "name": "cleffa",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 35,
+        "name": "clefairy",
+        "stage": 2,
+        "evolvesFrom": 173,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": [
+          {
+            "id": 36,
+            "name": "clefable",
+            "stage": 3,
+            "evolvesFrom": 35,
+            "trigger": {
+              "kind": "use-item",
+              "item": "moon-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "15": {
+    "id": 37,
+    "name": "vulpix",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 38,
+        "name": "ninetales",
+        "stage": 2,
+        "evolvesFrom": 37,
+        "trigger": {
+          "kind": "use-item",
+          "item": "fire-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "16": {
+    "id": 174,
+    "name": "igglybuff",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 39,
+        "name": "jigglypuff",
+        "stage": 2,
+        "evolvesFrom": 174,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": [
+          {
+            "id": 40,
+            "name": "wigglytuff",
+            "stage": 3,
+            "evolvesFrom": 39,
+            "trigger": {
+              "kind": "use-item",
+              "item": "moon-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "17": {
+    "id": 41,
+    "name": "zubat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 42,
+        "name": "golbat",
+        "stage": 2,
+        "evolvesFrom": 41,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": [
+          {
+            "id": 169,
+            "name": "crobat",
+            "stage": 3,
+            "evolvesFrom": 42,
+            "trigger": {
+              "kind": "level-up",
+              "happiness": 160
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "18": {
+    "id": 43,
+    "name": "oddish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 44,
+        "name": "gloom",
+        "stage": 2,
+        "evolvesFrom": 43,
+        "trigger": {
+          "kind": "level-up",
+          "level": 21
+        },
+        "children": [
+          {
+            "id": 45,
+            "name": "vileplume",
+            "stage": 3,
+            "evolvesFrom": 44,
+            "trigger": {
+              "kind": "use-item",
+              "item": "leaf-stone"
+            },
+            "children": []
+          },
+          {
+            "id": 182,
+            "name": "bellossom",
+            "stage": 3,
+            "evolvesFrom": 44,
+            "trigger": {
+              "kind": "use-item",
+              "item": "sun-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "19": {
+    "id": 46,
+    "name": "paras",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 47,
+        "name": "parasect",
+        "stage": 2,
+        "evolvesFrom": 46,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "20": {
+    "id": 48,
+    "name": "venonat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 49,
+        "name": "venomoth",
+        "stage": 2,
+        "evolvesFrom": 48,
+        "trigger": {
+          "kind": "level-up",
+          "level": 31
+        },
+        "children": []
+      }
+    ]
+  },
+  "21": {
+    "id": 50,
+    "name": "diglett",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 51,
+        "name": "dugtrio",
+        "stage": 2,
+        "evolvesFrom": 50,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "22": {
+    "id": 52,
+    "name": "meowth",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 53,
+        "name": "persian",
+        "stage": 2,
+        "evolvesFrom": 52,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      },
+      {
+        "id": 863,
+        "name": "perrserker",
+        "stage": 2,
+        "evolvesFrom": 52,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "23": {
+    "id": 54,
+    "name": "psyduck",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 55,
+        "name": "golduck",
+        "stage": 2,
+        "evolvesFrom": 54,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": []
+      }
+    ]
+  },
+  "24": {
+    "id": 56,
+    "name": "mankey",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 57,
+        "name": "primeape",
+        "stage": 2,
+        "evolvesFrom": 56,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": [
+          {
+            "id": 979,
+            "name": "annihilape",
+            "stage": 3,
+            "evolvesFrom": 57,
+            "trigger": {
+              "kind": "use-move"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "25": {
+    "id": 58,
+    "name": "growlithe",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 59,
+        "name": "arcanine",
+        "stage": 2,
+        "evolvesFrom": 58,
+        "trigger": {
+          "kind": "use-item",
+          "item": "fire-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "26": {
+    "id": 60,
+    "name": "poliwag",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 61,
+        "name": "poliwhirl",
+        "stage": 2,
+        "evolvesFrom": 60,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 62,
+            "name": "poliwrath",
+            "stage": 3,
+            "evolvesFrom": 61,
+            "trigger": {
+              "kind": "use-item",
+              "item": "water-stone"
+            },
+            "children": []
+          },
+          {
+            "id": 186,
+            "name": "politoed",
+            "stage": 3,
+            "evolvesFrom": 61,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "kings-rock"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "27": {
+    "id": 63,
+    "name": "abra",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 64,
+        "name": "kadabra",
+        "stage": 2,
+        "evolvesFrom": 63,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 65,
+            "name": "alakazam",
+            "stage": 3,
+            "evolvesFrom": 64,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "28": {
+    "id": 66,
+    "name": "machop",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 67,
+        "name": "machoke",
+        "stage": 2,
+        "evolvesFrom": 66,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": [
+          {
+            "id": 68,
+            "name": "machamp",
+            "stage": 3,
+            "evolvesFrom": 67,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "29": {
+    "id": 69,
+    "name": "bellsprout",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 70,
+        "name": "weepinbell",
+        "stage": 2,
+        "evolvesFrom": 69,
+        "trigger": {
+          "kind": "level-up",
+          "level": 21
+        },
+        "children": [
+          {
+            "id": 71,
+            "name": "victreebel",
+            "stage": 3,
+            "evolvesFrom": 70,
+            "trigger": {
+              "kind": "use-item",
+              "item": "leaf-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "30": {
+    "id": 72,
+    "name": "tentacool",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 73,
+        "name": "tentacruel",
+        "stage": 2,
+        "evolvesFrom": 72,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "31": {
+    "id": 74,
+    "name": "geodude",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 75,
+        "name": "graveler",
+        "stage": 2,
+        "evolvesFrom": 74,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 76,
+            "name": "golem",
+            "stage": 3,
+            "evolvesFrom": 75,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "32": {
+    "id": 77,
+    "name": "ponyta",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 78,
+        "name": "rapidash",
+        "stage": 2,
+        "evolvesFrom": 77,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "33": {
+    "id": 79,
+    "name": "slowpoke",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 80,
+        "name": "slowbro",
+        "stage": 2,
+        "evolvesFrom": 79,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      },
+      {
+        "id": 199,
+        "name": "slowking",
+        "stage": 2,
+        "evolvesFrom": 79,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "kings-rock"
+        },
+        "children": []
+      }
+    ]
+  },
+  "34": {
+    "id": 81,
+    "name": "magnemite",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 82,
+        "name": "magneton",
+        "stage": 2,
+        "evolvesFrom": 81,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 462,
+            "name": "magnezone",
+            "stage": 3,
+            "evolvesFrom": 82,
+            "trigger": {
+              "kind": "level-up",
+              "location": "mt-coronet"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "35": {
+    "id": 83,
+    "name": "farfetchd",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 865,
+        "name": "sirfetchd",
+        "stage": 2,
+        "evolvesFrom": 83,
+        "trigger": {
+          "kind": "three-critical-hits"
+        },
+        "children": []
+      }
+    ]
+  },
+  "36": {
+    "id": 84,
+    "name": "doduo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 85,
+        "name": "dodrio",
+        "stage": 2,
+        "evolvesFrom": 84,
+        "trigger": {
+          "kind": "level-up",
+          "level": 31
+        },
+        "children": []
+      }
+    ]
+  },
+  "37": {
+    "id": 86,
+    "name": "seel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 87,
+        "name": "dewgong",
+        "stage": 2,
+        "evolvesFrom": 86,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "38": {
+    "id": 88,
+    "name": "grimer",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 89,
+        "name": "muk",
+        "stage": 2,
+        "evolvesFrom": 88,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "39": {
+    "id": 90,
+    "name": "shellder",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 91,
+        "name": "cloyster",
+        "stage": 2,
+        "evolvesFrom": 90,
+        "trigger": {
+          "kind": "use-item",
+          "item": "water-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "40": {
+    "id": 92,
+    "name": "gastly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 93,
+        "name": "haunter",
+        "stage": 2,
+        "evolvesFrom": 92,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 94,
+            "name": "gengar",
+            "stage": 3,
+            "evolvesFrom": 93,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "41": {
+    "id": 95,
+    "name": "onix",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 208,
+        "name": "steelix",
+        "stage": 2,
+        "evolvesFrom": 95,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "metal-coat"
+        },
+        "children": []
+      }
+    ]
+  },
+  "42": {
+    "id": 96,
+    "name": "drowzee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 97,
+        "name": "hypno",
+        "stage": 2,
+        "evolvesFrom": 96,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "43": {
+    "id": 98,
+    "name": "krabby",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 99,
+        "name": "kingler",
+        "stage": 2,
+        "evolvesFrom": 98,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "44": {
+    "id": 100,
+    "name": "voltorb",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 101,
+        "name": "electrode",
+        "stage": 2,
+        "evolvesFrom": 100,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "45": {
+    "id": 102,
+    "name": "exeggcute",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 103,
+        "name": "exeggutor",
+        "stage": 2,
+        "evolvesFrom": 102,
+        "trigger": {
+          "kind": "use-item",
+          "item": "leaf-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "46": {
+    "id": 104,
+    "name": "cubone",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 105,
+        "name": "marowak",
+        "stage": 2,
+        "evolvesFrom": 104,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "47": {
+    "id": 236,
+    "name": "tyrogue",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 106,
+        "name": "hitmonlee",
+        "stage": 2,
+        "evolvesFrom": 236,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20,
+          "relativeStats": 1
+        },
+        "children": []
+      },
+      {
+        "id": 107,
+        "name": "hitmonchan",
+        "stage": 2,
+        "evolvesFrom": 236,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20,
+          "relativeStats": -1
+        },
+        "children": []
+      },
+      {
+        "id": 237,
+        "name": "hitmontop",
+        "stage": 2,
+        "evolvesFrom": 236,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20,
+          "relativeStats": 0
+        },
+        "children": []
+      }
+    ]
+  },
+  "48": {
+    "id": 108,
+    "name": "lickitung",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 463,
+        "name": "lickilicky",
+        "stage": 2,
+        "evolvesFrom": 108,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "rollout"
+        },
+        "children": []
+      }
+    ]
+  },
+  "49": {
+    "id": 109,
+    "name": "koffing",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 110,
+        "name": "weezing",
+        "stage": 2,
+        "evolvesFrom": 109,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "50": {
+    "id": 111,
+    "name": "rhyhorn",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 112,
+        "name": "rhydon",
+        "stage": 2,
+        "evolvesFrom": 111,
+        "trigger": {
+          "kind": "level-up",
+          "level": 42
+        },
+        "children": [
+          {
+            "id": 464,
+            "name": "rhyperior",
+            "stage": 3,
+            "evolvesFrom": 112,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "protector"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "51": {
+    "id": 440,
+    "name": "happiny",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 113,
+        "name": "chansey",
+        "stage": 2,
+        "evolvesFrom": 440,
+        "trigger": {
+          "kind": "level-up",
+          "heldItem": "oval-stone",
+          "timeOfDay": "day"
+        },
+        "children": [
+          {
+            "id": 242,
+            "name": "blissey",
+            "stage": 3,
+            "evolvesFrom": 113,
+            "trigger": {
+              "kind": "level-up",
+              "happiness": 160
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "52": {
+    "id": 114,
+    "name": "tangela",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 465,
+        "name": "tangrowth",
+        "stage": 2,
+        "evolvesFrom": 114,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "ancient-power"
+        },
+        "children": []
+      }
+    ]
+  },
+  "53": {
+    "id": 115,
+    "name": "kangaskhan",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "54": {
+    "id": 116,
+    "name": "horsea",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 117,
+        "name": "seadra",
+        "stage": 2,
+        "evolvesFrom": 116,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 230,
+            "name": "kingdra",
+            "stage": 3,
+            "evolvesFrom": 117,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "dragon-scale"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "55": {
+    "id": 118,
+    "name": "goldeen",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 119,
+        "name": "seaking",
+        "stage": 2,
+        "evolvesFrom": 118,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": []
+      }
+    ]
+  },
+  "56": {
+    "id": 120,
+    "name": "staryu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 121,
+        "name": "starmie",
+        "stage": 2,
+        "evolvesFrom": 120,
+        "trigger": {
+          "kind": "use-item",
+          "item": "water-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "57": {
+    "id": 439,
+    "name": "mime-jr",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 122,
+        "name": "mr-mime",
+        "stage": 2,
+        "evolvesFrom": 439,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "mimic"
+        },
+        "children": [
+          {
+            "id": 866,
+            "name": "mr-rime",
+            "stage": 3,
+            "evolvesFrom": 122,
+            "trigger": {
+              "kind": "level-up",
+              "level": 42
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "58": {
+    "id": 123,
+    "name": "scyther",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 212,
+        "name": "scizor",
+        "stage": 2,
+        "evolvesFrom": 123,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "metal-coat"
+        },
+        "children": []
+      },
+      {
+        "id": 900,
+        "name": "kleavor",
+        "stage": 2,
+        "evolvesFrom": 123,
+        "trigger": {
+          "kind": "use-item",
+          "item": "black-augurite"
+        },
+        "children": []
+      }
+    ]
+  },
+  "59": {
+    "id": 238,
+    "name": "smoochum",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 124,
+        "name": "jynx",
+        "stage": 2,
+        "evolvesFrom": 238,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "60": {
+    "id": 239,
+    "name": "elekid",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 125,
+        "name": "electabuzz",
+        "stage": 2,
+        "evolvesFrom": 239,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 466,
+            "name": "electivire",
+            "stage": 3,
+            "evolvesFrom": 125,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "electirizer"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "61": {
+    "id": 240,
+    "name": "magby",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 126,
+        "name": "magmar",
+        "stage": 2,
+        "evolvesFrom": 240,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 467,
+            "name": "magmortar",
+            "stage": 3,
+            "evolvesFrom": 126,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "magmarizer"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "62": {
+    "id": 127,
+    "name": "pinsir",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "63": {
+    "id": 128,
+    "name": "tauros",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "64": {
+    "id": 129,
+    "name": "magikarp",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 130,
+        "name": "gyarados",
+        "stage": 2,
+        "evolvesFrom": 129,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "65": {
+    "id": 131,
+    "name": "lapras",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "66": {
+    "id": 132,
+    "name": "ditto",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "67": {
+    "id": 133,
+    "name": "eevee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 134,
+        "name": "vaporeon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "use-item",
+          "item": "water-stone"
+        },
+        "children": []
+      },
+      {
+        "id": 135,
+        "name": "jolteon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "use-item",
+          "item": "thunder-stone"
+        },
+        "children": []
+      },
+      {
+        "id": 136,
+        "name": "flareon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "use-item",
+          "item": "fire-stone"
+        },
+        "children": []
+      },
+      {
+        "id": 196,
+        "name": "espeon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "day",
+          "happiness": 160
+        },
+        "children": []
+      },
+      {
+        "id": 197,
+        "name": "umbreon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "night",
+          "happiness": 160
+        },
+        "children": []
+      },
+      {
+        "id": 470,
+        "name": "leafeon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "level-up",
+          "location": "eterna-forest"
+        },
+        "children": []
+      },
+      {
+        "id": 471,
+        "name": "glaceon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "level-up",
+          "location": "sinnoh-route-217"
+        },
+        "children": []
+      },
+      {
+        "id": 700,
+        "name": "sylveon",
+        "stage": 2,
+        "evolvesFrom": 133,
+        "trigger": {
+          "kind": "level-up",
+          "knownMoveType": "fairy"
+        },
+        "children": []
+      }
+    ]
+  },
+  "68": {
+    "id": 137,
+    "name": "porygon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 233,
+        "name": "porygon2",
+        "stage": 2,
+        "evolvesFrom": 137,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "up-grade"
+        },
+        "children": [
+          {
+            "id": 474,
+            "name": "porygon-z",
+            "stage": 3,
+            "evolvesFrom": 233,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "dubious-disc"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "69": {
+    "id": 138,
+    "name": "omanyte",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 139,
+        "name": "omastar",
+        "stage": 2,
+        "evolvesFrom": 138,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "70": {
+    "id": 140,
+    "name": "kabuto",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 141,
+        "name": "kabutops",
+        "stage": 2,
+        "evolvesFrom": 140,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "71": {
+    "id": 142,
+    "name": "aerodactyl",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "72": {
+    "id": 446,
+    "name": "munchlax",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 143,
+        "name": "snorlax",
+        "stage": 2,
+        "evolvesFrom": 446,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "73": {
+    "id": 144,
+    "name": "articuno",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "74": {
+    "id": 145,
+    "name": "zapdos",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "75": {
+    "id": 146,
+    "name": "moltres",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "76": {
+    "id": 147,
+    "name": "dratini",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 148,
+        "name": "dragonair",
+        "stage": 2,
+        "evolvesFrom": 147,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 149,
+            "name": "dragonite",
+            "stage": 3,
+            "evolvesFrom": 148,
+            "trigger": {
+              "kind": "level-up",
+              "level": 55
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "77": {
+    "id": 150,
+    "name": "mewtwo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "78": {
+    "id": 151,
+    "name": "mew",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "79": {
+    "id": 152,
+    "name": "chikorita",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 153,
+        "name": "bayleef",
+        "stage": 2,
+        "evolvesFrom": 152,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 154,
+            "name": "meganium",
+            "stage": 3,
+            "evolvesFrom": 153,
+            "trigger": {
+              "kind": "level-up",
+              "level": 32
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "80": {
+    "id": 155,
+    "name": "cyndaquil",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 156,
+        "name": "quilava",
+        "stage": 2,
+        "evolvesFrom": 155,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 157,
+            "name": "typhlosion",
+            "stage": 3,
+            "evolvesFrom": 156,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "81": {
+    "id": 158,
+    "name": "totodile",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 159,
+        "name": "croconaw",
+        "stage": 2,
+        "evolvesFrom": 158,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 160,
+            "name": "feraligatr",
+            "stage": 3,
+            "evolvesFrom": 159,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "82": {
+    "id": 161,
+    "name": "sentret",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 162,
+        "name": "furret",
+        "stage": 2,
+        "evolvesFrom": 161,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": []
+      }
+    ]
+  },
+  "83": {
+    "id": 163,
+    "name": "hoothoot",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 164,
+        "name": "noctowl",
+        "stage": 2,
+        "evolvesFrom": 163,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "84": {
+    "id": 165,
+    "name": "ledyba",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 166,
+        "name": "ledian",
+        "stage": 2,
+        "evolvesFrom": 165,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": []
+      }
+    ]
+  },
+  "85": {
+    "id": 167,
+    "name": "spinarak",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 168,
+        "name": "ariados",
+        "stage": 2,
+        "evolvesFrom": 167,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "86": {
+    "id": 170,
+    "name": "chinchou",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 171,
+        "name": "lanturn",
+        "stage": 2,
+        "evolvesFrom": 170,
+        "trigger": {
+          "kind": "level-up",
+          "level": 27
+        },
+        "children": []
+      }
+    ]
+  },
+  "87": {
+    "id": 175,
+    "name": "togepi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 176,
+        "name": "togetic",
+        "stage": 2,
+        "evolvesFrom": 175,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": [
+          {
+            "id": 468,
+            "name": "togekiss",
+            "stage": 3,
+            "evolvesFrom": 176,
+            "trigger": {
+              "kind": "use-item",
+              "item": "shiny-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "88": {
+    "id": 177,
+    "name": "natu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 178,
+        "name": "xatu",
+        "stage": 2,
+        "evolvesFrom": 177,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "89": {
+    "id": 179,
+    "name": "mareep",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 180,
+        "name": "flaaffy",
+        "stage": 2,
+        "evolvesFrom": 179,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": [
+          {
+            "id": 181,
+            "name": "ampharos",
+            "stage": 3,
+            "evolvesFrom": 180,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "90": {
+    "id": 298,
+    "name": "azurill",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 183,
+        "name": "marill",
+        "stage": 2,
+        "evolvesFrom": 298,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": [
+          {
+            "id": 184,
+            "name": "azumarill",
+            "stage": 3,
+            "evolvesFrom": 183,
+            "trigger": {
+              "kind": "level-up",
+              "level": 18
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "91": {
+    "id": 438,
+    "name": "bonsly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 185,
+        "name": "sudowoodo",
+        "stage": 2,
+        "evolvesFrom": 438,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "mimic"
+        },
+        "children": []
+      }
+    ]
+  },
+  "92": {
+    "id": 187,
+    "name": "hoppip",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 188,
+        "name": "skiploom",
+        "stage": 2,
+        "evolvesFrom": 187,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 189,
+            "name": "jumpluff",
+            "stage": 3,
+            "evolvesFrom": 188,
+            "trigger": {
+              "kind": "level-up",
+              "level": 27
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "93": {
+    "id": 190,
+    "name": "aipom",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 424,
+        "name": "ambipom",
+        "stage": 2,
+        "evolvesFrom": 190,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "double-hit"
+        },
+        "children": []
+      }
+    ]
+  },
+  "94": {
+    "id": 191,
+    "name": "sunkern",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 192,
+        "name": "sunflora",
+        "stage": 2,
+        "evolvesFrom": 191,
+        "trigger": {
+          "kind": "use-item",
+          "item": "sun-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "95": {
+    "id": 193,
+    "name": "yanma",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 469,
+        "name": "yanmega",
+        "stage": 2,
+        "evolvesFrom": 193,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "ancient-power"
+        },
+        "children": []
+      }
+    ]
+  },
+  "96": {
+    "id": 194,
+    "name": "wooper",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 195,
+        "name": "quagsire",
+        "stage": 2,
+        "evolvesFrom": 194,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      },
+      {
+        "id": 980,
+        "name": "clodsire",
+        "stage": 2,
+        "evolvesFrom": 194,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "97": {
+    "id": 198,
+    "name": "murkrow",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 430,
+        "name": "honchkrow",
+        "stage": 2,
+        "evolvesFrom": 198,
+        "trigger": {
+          "kind": "use-item",
+          "item": "dusk-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "98": {
+    "id": 200,
+    "name": "misdreavus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 429,
+        "name": "mismagius",
+        "stage": 2,
+        "evolvesFrom": 200,
+        "trigger": {
+          "kind": "use-item",
+          "item": "dusk-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "99": {
+    "id": 201,
+    "name": "unown",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "100": {
+    "id": 360,
+    "name": "wynaut",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 202,
+        "name": "wobbuffet",
+        "stage": 2,
+        "evolvesFrom": 360,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": []
+      }
+    ]
+  },
+  "101": {
+    "id": 203,
+    "name": "girafarig",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 981,
+        "name": "farigiraf",
+        "stage": 2,
+        "evolvesFrom": 203,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "twin-beam"
+        },
+        "children": []
+      }
+    ]
+  },
+  "102": {
+    "id": 204,
+    "name": "pineco",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 205,
+        "name": "forretress",
+        "stage": 2,
+        "evolvesFrom": 204,
+        "trigger": {
+          "kind": "level-up",
+          "level": 31
+        },
+        "children": []
+      }
+    ]
+  },
+  "103": {
+    "id": 206,
+    "name": "dunsparce",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 982,
+        "name": "dudunsparce",
+        "stage": 2,
+        "evolvesFrom": 206,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "hyper-drill"
+        },
+        "children": []
+      }
+    ]
+  },
+  "104": {
+    "id": 207,
+    "name": "gligar",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 472,
+        "name": "gliscor",
+        "stage": 2,
+        "evolvesFrom": 207,
+        "trigger": {
+          "kind": "level-up",
+          "heldItem": "razor-fang",
+          "timeOfDay": "night"
+        },
+        "children": []
+      }
+    ]
+  },
+  "105": {
+    "id": 209,
+    "name": "snubbull",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 210,
+        "name": "granbull",
+        "stage": 2,
+        "evolvesFrom": 209,
+        "trigger": {
+          "kind": "level-up",
+          "level": 23
+        },
+        "children": []
+      }
+    ]
+  },
+  "106": {
+    "id": 211,
+    "name": "qwilfish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 904,
+        "name": "overqwil",
+        "stage": 2,
+        "evolvesFrom": 211,
+        "trigger": {
+          "kind": "strong-style-move"
+        },
+        "children": []
+      }
+    ]
+  },
+  "107": {
+    "id": 213,
+    "name": "shuckle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "108": {
+    "id": 214,
+    "name": "heracross",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "109": {
+    "id": 215,
+    "name": "sneasel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 461,
+        "name": "weavile",
+        "stage": 2,
+        "evolvesFrom": 215,
+        "trigger": {
+          "kind": "level-up",
+          "heldItem": "razor-claw",
+          "timeOfDay": "night"
+        },
+        "children": []
+      },
+      {
+        "id": 903,
+        "name": "sneasler",
+        "stage": 2,
+        "evolvesFrom": 215,
+        "trigger": {
+          "kind": "level-up",
+          "heldItem": "razor-claw",
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "110": {
+    "id": 216,
+    "name": "teddiursa",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 217,
+        "name": "ursaring",
+        "stage": 2,
+        "evolvesFrom": 216,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 901,
+            "name": "ursaluna",
+            "stage": 3,
+            "evolvesFrom": 217,
+            "trigger": {
+              "kind": "use-item",
+              "item": "peat-block",
+              "timeOfDay": "full-moon"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "111": {
+    "id": 218,
+    "name": "slugma",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 219,
+        "name": "magcargo",
+        "stage": 2,
+        "evolvesFrom": 218,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "112": {
+    "id": 220,
+    "name": "swinub",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 221,
+        "name": "piloswine",
+        "stage": 2,
+        "evolvesFrom": 220,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": [
+          {
+            "id": 473,
+            "name": "mamoswine",
+            "stage": 3,
+            "evolvesFrom": 221,
+            "trigger": {
+              "kind": "level-up",
+              "knownMove": "ancient-power"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "113": {
+    "id": 222,
+    "name": "corsola",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 864,
+        "name": "cursola",
+        "stage": 2,
+        "evolvesFrom": 222,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "114": {
+    "id": 223,
+    "name": "remoraid",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 224,
+        "name": "octillery",
+        "stage": 2,
+        "evolvesFrom": 223,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "115": {
+    "id": 225,
+    "name": "delibird",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "116": {
+    "id": 458,
+    "name": "mantyke",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 226,
+        "name": "mantine",
+        "stage": 2,
+        "evolvesFrom": 458,
+        "trigger": {
+          "kind": "level-up"
+        },
+        "children": []
+      }
+    ]
+  },
+  "117": {
+    "id": 227,
+    "name": "skarmory",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "118": {
+    "id": 228,
+    "name": "houndour",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 229,
+        "name": "houndoom",
+        "stage": 2,
+        "evolvesFrom": 228,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "119": {
+    "id": 231,
+    "name": "phanpy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 232,
+        "name": "donphan",
+        "stage": 2,
+        "evolvesFrom": 231,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "120": {
+    "id": 234,
+    "name": "stantler",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 899,
+        "name": "wyrdeer",
+        "stage": 2,
+        "evolvesFrom": 234,
+        "trigger": {
+          "kind": "agile-style-move"
+        },
+        "children": []
+      }
+    ]
+  },
+  "121": {
+    "id": 235,
+    "name": "smeargle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "122": {
+    "id": 241,
+    "name": "miltank",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "123": {
+    "id": 243,
+    "name": "raikou",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "124": {
+    "id": 244,
+    "name": "entei",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "125": {
+    "id": 245,
+    "name": "suicune",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "126": {
+    "id": 246,
+    "name": "larvitar",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 247,
+        "name": "pupitar",
+        "stage": 2,
+        "evolvesFrom": 246,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 248,
+            "name": "tyranitar",
+            "stage": 3,
+            "evolvesFrom": 247,
+            "trigger": {
+              "kind": "level-up",
+              "level": 55
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "127": {
+    "id": 249,
+    "name": "lugia",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "128": {
+    "id": 250,
+    "name": "ho-oh",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "129": {
+    "id": 251,
+    "name": "celebi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "130": {
+    "id": 252,
+    "name": "treecko",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 253,
+        "name": "grovyle",
+        "stage": 2,
+        "evolvesFrom": 252,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 254,
+            "name": "sceptile",
+            "stage": 3,
+            "evolvesFrom": 253,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "131": {
+    "id": 255,
+    "name": "torchic",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 256,
+        "name": "combusken",
+        "stage": 2,
+        "evolvesFrom": 255,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 257,
+            "name": "blaziken",
+            "stage": 3,
+            "evolvesFrom": 256,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "132": {
+    "id": 258,
+    "name": "mudkip",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 259,
+        "name": "marshtomp",
+        "stage": 2,
+        "evolvesFrom": 258,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 260,
+            "name": "swampert",
+            "stage": 3,
+            "evolvesFrom": 259,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "133": {
+    "id": 261,
+    "name": "poochyena",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 262,
+        "name": "mightyena",
+        "stage": 2,
+        "evolvesFrom": 261,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": []
+      }
+    ]
+  },
+  "134": {
+    "id": 263,
+    "name": "zigzagoon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 264,
+        "name": "linoone",
+        "stage": 2,
+        "evolvesFrom": 263,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 862,
+            "name": "obstagoon",
+            "stage": 3,
+            "evolvesFrom": 264,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35,
+              "timeOfDay": "night"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "135": {
+    "id": 265,
+    "name": "wurmple",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 266,
+        "name": "silcoon",
+        "stage": 2,
+        "evolvesFrom": 265,
+        "trigger": {
+          "kind": "level-up",
+          "level": 7
+        },
+        "children": [
+          {
+            "id": 267,
+            "name": "beautifly",
+            "stage": 3,
+            "evolvesFrom": 266,
+            "trigger": {
+              "kind": "level-up",
+              "level": 10
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": 268,
+        "name": "cascoon",
+        "stage": 2,
+        "evolvesFrom": 265,
+        "trigger": {
+          "kind": "level-up",
+          "level": 7
+        },
+        "children": [
+          {
+            "id": 269,
+            "name": "dustox",
+            "stage": 3,
+            "evolvesFrom": 268,
+            "trigger": {
+              "kind": "level-up",
+              "level": 10
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "136": {
+    "id": 270,
+    "name": "lotad",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 271,
+        "name": "lombre",
+        "stage": 2,
+        "evolvesFrom": 270,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 272,
+            "name": "ludicolo",
+            "stage": 3,
+            "evolvesFrom": 271,
+            "trigger": {
+              "kind": "use-item",
+              "item": "water-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "137": {
+    "id": 273,
+    "name": "seedot",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 274,
+        "name": "nuzleaf",
+        "stage": 2,
+        "evolvesFrom": 273,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 275,
+            "name": "shiftry",
+            "stage": 3,
+            "evolvesFrom": 274,
+            "trigger": {
+              "kind": "use-item",
+              "item": "leaf-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "138": {
+    "id": 276,
+    "name": "taillow",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 277,
+        "name": "swellow",
+        "stage": 2,
+        "evolvesFrom": 276,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "139": {
+    "id": 278,
+    "name": "wingull",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 279,
+        "name": "pelipper",
+        "stage": 2,
+        "evolvesFrom": 278,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "140": {
+    "id": 280,
+    "name": "ralts",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 281,
+        "name": "kirlia",
+        "stage": 2,
+        "evolvesFrom": 280,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 282,
+            "name": "gardevoir",
+            "stage": 3,
+            "evolvesFrom": 281,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          },
+          {
+            "id": 475,
+            "name": "gallade",
+            "stage": 3,
+            "evolvesFrom": 281,
+            "trigger": {
+              "kind": "use-item",
+              "item": "dawn-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "141": {
+    "id": 283,
+    "name": "surskit",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 284,
+        "name": "masquerain",
+        "stage": 2,
+        "evolvesFrom": 283,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "142": {
+    "id": 285,
+    "name": "shroomish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 286,
+        "name": "breloom",
+        "stage": 2,
+        "evolvesFrom": 285,
+        "trigger": {
+          "kind": "level-up",
+          "level": 23
+        },
+        "children": []
+      }
+    ]
+  },
+  "143": {
+    "id": 287,
+    "name": "slakoth",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 288,
+        "name": "vigoroth",
+        "stage": 2,
+        "evolvesFrom": 287,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 289,
+            "name": "slaking",
+            "stage": 3,
+            "evolvesFrom": 288,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "144": {
+    "id": 290,
+    "name": "nincada",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 291,
+        "name": "ninjask",
+        "stage": 2,
+        "evolvesFrom": 290,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      },
+      {
+        "id": 292,
+        "name": "shedinja",
+        "stage": 2,
+        "evolvesFrom": 290,
+        "trigger": {
+          "kind": "shed"
+        },
+        "children": []
+      }
+    ]
+  },
+  "145": {
+    "id": 293,
+    "name": "whismur",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 294,
+        "name": "loudred",
+        "stage": 2,
+        "evolvesFrom": 293,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 295,
+            "name": "exploud",
+            "stage": 3,
+            "evolvesFrom": 294,
+            "trigger": {
+              "kind": "level-up",
+              "level": 40
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "146": {
+    "id": 296,
+    "name": "makuhita",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 297,
+        "name": "hariyama",
+        "stage": 2,
+        "evolvesFrom": 296,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "147": {
+    "id": 299,
+    "name": "nosepass",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 476,
+        "name": "probopass",
+        "stage": 2,
+        "evolvesFrom": 299,
+        "trigger": {
+          "kind": "level-up",
+          "location": "mt-coronet"
+        },
+        "children": []
+      }
+    ]
+  },
+  "148": {
+    "id": 300,
+    "name": "skitty",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 301,
+        "name": "delcatty",
+        "stage": 2,
+        "evolvesFrom": 300,
+        "trigger": {
+          "kind": "use-item",
+          "item": "moon-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "149": {
+    "id": 302,
+    "name": "sableye",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "150": {
+    "id": 303,
+    "name": "mawile",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "151": {
+    "id": 304,
+    "name": "aron",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 305,
+        "name": "lairon",
+        "stage": 2,
+        "evolvesFrom": 304,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 306,
+            "name": "aggron",
+            "stage": 3,
+            "evolvesFrom": 305,
+            "trigger": {
+              "kind": "level-up",
+              "level": 42
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "152": {
+    "id": 307,
+    "name": "meditite",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 308,
+        "name": "medicham",
+        "stage": 2,
+        "evolvesFrom": 307,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "153": {
+    "id": 309,
+    "name": "electrike",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 310,
+        "name": "manectric",
+        "stage": 2,
+        "evolvesFrom": 309,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "154": {
+    "id": 311,
+    "name": "plusle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "155": {
+    "id": 312,
+    "name": "minun",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "156": {
+    "id": 313,
+    "name": "volbeat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "157": {
+    "id": 314,
+    "name": "illumise",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "158": {
+    "id": 406,
+    "name": "budew",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 315,
+        "name": "roselia",
+        "stage": 2,
+        "evolvesFrom": 406,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "day",
+          "happiness": 160
+        },
+        "children": [
+          {
+            "id": 407,
+            "name": "roserade",
+            "stage": 3,
+            "evolvesFrom": 315,
+            "trigger": {
+              "kind": "use-item",
+              "item": "shiny-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "159": {
+    "id": 316,
+    "name": "gulpin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 317,
+        "name": "swalot",
+        "stage": 2,
+        "evolvesFrom": 316,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "160": {
+    "id": 318,
+    "name": "carvanha",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 319,
+        "name": "sharpedo",
+        "stage": 2,
+        "evolvesFrom": 318,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "161": {
+    "id": 320,
+    "name": "wailmer",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 321,
+        "name": "wailord",
+        "stage": 2,
+        "evolvesFrom": 320,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "162": {
+    "id": 322,
+    "name": "numel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 323,
+        "name": "camerupt",
+        "stage": 2,
+        "evolvesFrom": 322,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": []
+      }
+    ]
+  },
+  "163": {
+    "id": 324,
+    "name": "torkoal",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "164": {
+    "id": 325,
+    "name": "spoink",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 326,
+        "name": "grumpig",
+        "stage": 2,
+        "evolvesFrom": 325,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": []
+      }
+    ]
+  },
+  "165": {
+    "id": 327,
+    "name": "spinda",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "166": {
+    "id": 328,
+    "name": "trapinch",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 329,
+        "name": "vibrava",
+        "stage": 2,
+        "evolvesFrom": 328,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": [
+          {
+            "id": 330,
+            "name": "flygon",
+            "stage": 3,
+            "evolvesFrom": 329,
+            "trigger": {
+              "kind": "level-up",
+              "level": 45
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "167": {
+    "id": 331,
+    "name": "cacnea",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 332,
+        "name": "cacturne",
+        "stage": 2,
+        "evolvesFrom": 331,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": []
+      }
+    ]
+  },
+  "168": {
+    "id": 333,
+    "name": "swablu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 334,
+        "name": "altaria",
+        "stage": 2,
+        "evolvesFrom": 333,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "169": {
+    "id": 335,
+    "name": "zangoose",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "170": {
+    "id": 336,
+    "name": "seviper",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "171": {
+    "id": 337,
+    "name": "lunatone",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "172": {
+    "id": 338,
+    "name": "solrock",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "173": {
+    "id": 339,
+    "name": "barboach",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 340,
+        "name": "whiscash",
+        "stage": 2,
+        "evolvesFrom": 339,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "174": {
+    "id": 341,
+    "name": "corphish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 342,
+        "name": "crawdaunt",
+        "stage": 2,
+        "evolvesFrom": 341,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "175": {
+    "id": 343,
+    "name": "baltoy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 344,
+        "name": "claydol",
+        "stage": 2,
+        "evolvesFrom": 343,
+        "trigger": {
+          "kind": "level-up",
+          "level": 36
+        },
+        "children": []
+      }
+    ]
+  },
+  "176": {
+    "id": 345,
+    "name": "lileep",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 346,
+        "name": "cradily",
+        "stage": 2,
+        "evolvesFrom": 345,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "177": {
+    "id": 347,
+    "name": "anorith",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 348,
+        "name": "armaldo",
+        "stage": 2,
+        "evolvesFrom": 347,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "178": {
+    "id": 349,
+    "name": "feebas",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 350,
+        "name": "milotic",
+        "stage": 2,
+        "evolvesFrom": 349,
+        "trigger": {
+          "kind": "level-up"
+        },
+        "children": []
+      }
+    ]
+  },
+  "179": {
+    "id": 351,
+    "name": "castform",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "180": {
+    "id": 352,
+    "name": "kecleon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "181": {
+    "id": 353,
+    "name": "shuppet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 354,
+        "name": "banette",
+        "stage": 2,
+        "evolvesFrom": 353,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "182": {
+    "id": 355,
+    "name": "duskull",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 356,
+        "name": "dusclops",
+        "stage": 2,
+        "evolvesFrom": 355,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": [
+          {
+            "id": 477,
+            "name": "dusknoir",
+            "stage": 3,
+            "evolvesFrom": 356,
+            "trigger": {
+              "kind": "trade",
+              "heldItem": "reaper-cloth"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "183": {
+    "id": 357,
+    "name": "tropius",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "184": {
+    "id": 433,
+    "name": "chingling",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 358,
+        "name": "chimecho",
+        "stage": 2,
+        "evolvesFrom": 433,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "night",
+          "happiness": 220
+        },
+        "children": []
+      }
+    ]
+  },
+  "185": {
+    "id": 359,
+    "name": "absol",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "186": {
+    "id": 361,
+    "name": "snorunt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 362,
+        "name": "glalie",
+        "stage": 2,
+        "evolvesFrom": 361,
+        "trigger": {
+          "kind": "level-up",
+          "level": 42
+        },
+        "children": []
+      },
+      {
+        "id": 478,
+        "name": "froslass",
+        "stage": 2,
+        "evolvesFrom": 361,
+        "trigger": {
+          "kind": "use-item",
+          "item": "dawn-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "187": {
+    "id": 363,
+    "name": "spheal",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 364,
+        "name": "sealeo",
+        "stage": 2,
+        "evolvesFrom": 363,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 365,
+            "name": "walrein",
+            "stage": 3,
+            "evolvesFrom": 364,
+            "trigger": {
+              "kind": "level-up",
+              "level": 44
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "188": {
+    "id": 366,
+    "name": "clamperl",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 367,
+        "name": "huntail",
+        "stage": 2,
+        "evolvesFrom": 366,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "deep-sea-tooth"
+        },
+        "children": []
+      },
+      {
+        "id": 368,
+        "name": "gorebyss",
+        "stage": 2,
+        "evolvesFrom": 366,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "deep-sea-scale"
+        },
+        "children": []
+      }
+    ]
+  },
+  "189": {
+    "id": 369,
+    "name": "relicanth",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "190": {
+    "id": 370,
+    "name": "luvdisc",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "191": {
+    "id": 371,
+    "name": "bagon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 372,
+        "name": "shelgon",
+        "stage": 2,
+        "evolvesFrom": 371,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": [
+          {
+            "id": 373,
+            "name": "salamence",
+            "stage": 3,
+            "evolvesFrom": 372,
+            "trigger": {
+              "kind": "level-up",
+              "level": 50
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "192": {
+    "id": 374,
+    "name": "beldum",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 375,
+        "name": "metang",
+        "stage": 2,
+        "evolvesFrom": 374,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 376,
+            "name": "metagross",
+            "stage": 3,
+            "evolvesFrom": 375,
+            "trigger": {
+              "kind": "level-up",
+              "level": 45
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "193": {
+    "id": 377,
+    "name": "regirock",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "194": {
+    "id": 378,
+    "name": "regice",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "195": {
+    "id": 379,
+    "name": "registeel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "196": {
+    "id": 380,
+    "name": "latias",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "197": {
+    "id": 381,
+    "name": "latios",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "198": {
+    "id": 382,
+    "name": "kyogre",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "199": {
+    "id": 383,
+    "name": "groudon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "200": {
+    "id": 384,
+    "name": "rayquaza",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "201": {
+    "id": 385,
+    "name": "jirachi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "202": {
+    "id": 386,
+    "name": "deoxys",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "203": {
+    "id": 387,
+    "name": "turtwig",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 388,
+        "name": "grotle",
+        "stage": 2,
+        "evolvesFrom": 387,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 389,
+            "name": "torterra",
+            "stage": 3,
+            "evolvesFrom": 388,
+            "trigger": {
+              "kind": "level-up",
+              "level": 32
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "204": {
+    "id": 390,
+    "name": "chimchar",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 391,
+        "name": "monferno",
+        "stage": 2,
+        "evolvesFrom": 390,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 392,
+            "name": "infernape",
+            "stage": 3,
+            "evolvesFrom": 391,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "205": {
+    "id": 393,
+    "name": "piplup",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 394,
+        "name": "prinplup",
+        "stage": 2,
+        "evolvesFrom": 393,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 395,
+            "name": "empoleon",
+            "stage": 3,
+            "evolvesFrom": 394,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "206": {
+    "id": 396,
+    "name": "starly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 397,
+        "name": "staravia",
+        "stage": 2,
+        "evolvesFrom": 396,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 398,
+            "name": "staraptor",
+            "stage": 3,
+            "evolvesFrom": 397,
+            "trigger": {
+              "kind": "level-up",
+              "level": 34
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "207": {
+    "id": 399,
+    "name": "bidoof",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 400,
+        "name": "bibarel",
+        "stage": 2,
+        "evolvesFrom": 399,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": []
+      }
+    ]
+  },
+  "208": {
+    "id": 401,
+    "name": "kricketot",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 402,
+        "name": "kricketune",
+        "stage": 2,
+        "evolvesFrom": 401,
+        "trigger": {
+          "kind": "level-up",
+          "level": 10
+        },
+        "children": []
+      }
+    ]
+  },
+  "209": {
+    "id": 403,
+    "name": "shinx",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 404,
+        "name": "luxio",
+        "stage": 2,
+        "evolvesFrom": 403,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": [
+          {
+            "id": 405,
+            "name": "luxray",
+            "stage": 3,
+            "evolvesFrom": 404,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "211": {
+    "id": 408,
+    "name": "cranidos",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 409,
+        "name": "rampardos",
+        "stage": 2,
+        "evolvesFrom": 408,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "212": {
+    "id": 410,
+    "name": "shieldon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 411,
+        "name": "bastiodon",
+        "stage": 2,
+        "evolvesFrom": 410,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "213": {
+    "id": 412,
+    "name": "burmy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 413,
+        "name": "wormadam",
+        "stage": 2,
+        "evolvesFrom": 412,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      },
+      {
+        "id": 414,
+        "name": "mothim",
+        "stage": 2,
+        "evolvesFrom": 412,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "214": {
+    "id": 415,
+    "name": "combee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 416,
+        "name": "vespiquen",
+        "stage": 2,
+        "evolvesFrom": 415,
+        "trigger": {
+          "kind": "level-up",
+          "level": 21
+        },
+        "children": []
+      }
+    ]
+  },
+  "215": {
+    "id": 417,
+    "name": "pachirisu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "216": {
+    "id": 418,
+    "name": "buizel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 419,
+        "name": "floatzel",
+        "stage": 2,
+        "evolvesFrom": 418,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "217": {
+    "id": 420,
+    "name": "cherubi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 421,
+        "name": "cherrim",
+        "stage": 2,
+        "evolvesFrom": 420,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "218": {
+    "id": 422,
+    "name": "shellos",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 423,
+        "name": "gastrodon",
+        "stage": 2,
+        "evolvesFrom": 422,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "219": {
+    "id": 425,
+    "name": "drifloon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 426,
+        "name": "drifblim",
+        "stage": 2,
+        "evolvesFrom": 425,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "220": {
+    "id": 427,
+    "name": "buneary",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 428,
+        "name": "lopunny",
+        "stage": 2,
+        "evolvesFrom": 427,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "221": {
+    "id": 431,
+    "name": "glameow",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 432,
+        "name": "purugly",
+        "stage": 2,
+        "evolvesFrom": 431,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "223": {
+    "id": 434,
+    "name": "stunky",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 435,
+        "name": "skuntank",
+        "stage": 2,
+        "evolvesFrom": 434,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "224": {
+    "id": 436,
+    "name": "bronzor",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 437,
+        "name": "bronzong",
+        "stage": 2,
+        "evolvesFrom": 436,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": []
+      }
+    ]
+  },
+  "228": {
+    "id": 441,
+    "name": "chatot",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "229": {
+    "id": 442,
+    "name": "spiritomb",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "230": {
+    "id": 443,
+    "name": "gible",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 444,
+        "name": "gabite",
+        "stage": 2,
+        "evolvesFrom": 443,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": [
+          {
+            "id": 445,
+            "name": "garchomp",
+            "stage": 3,
+            "evolvesFrom": 444,
+            "trigger": {
+              "kind": "level-up",
+              "level": 48
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "232": {
+    "id": 447,
+    "name": "riolu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 448,
+        "name": "lucario",
+        "stage": 2,
+        "evolvesFrom": 447,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "day",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "233": {
+    "id": 449,
+    "name": "hippopotas",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 450,
+        "name": "hippowdon",
+        "stage": 2,
+        "evolvesFrom": 449,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "234": {
+    "id": 451,
+    "name": "skorupi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 452,
+        "name": "drapion",
+        "stage": 2,
+        "evolvesFrom": 451,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "235": {
+    "id": 453,
+    "name": "croagunk",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 454,
+        "name": "toxicroak",
+        "stage": 2,
+        "evolvesFrom": 453,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "236": {
+    "id": 455,
+    "name": "carnivine",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "237": {
+    "id": 456,
+    "name": "finneon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 457,
+        "name": "lumineon",
+        "stage": 2,
+        "evolvesFrom": 456,
+        "trigger": {
+          "kind": "level-up",
+          "level": 31
+        },
+        "children": []
+      }
+    ]
+  },
+  "239": {
+    "id": 459,
+    "name": "snover",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 460,
+        "name": "abomasnow",
+        "stage": 2,
+        "evolvesFrom": 459,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "240": {
+    "id": 479,
+    "name": "rotom",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "241": {
+    "id": 480,
+    "name": "uxie",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "242": {
+    "id": 481,
+    "name": "mesprit",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "243": {
+    "id": 482,
+    "name": "azelf",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "244": {
+    "id": 483,
+    "name": "dialga",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "245": {
+    "id": 484,
+    "name": "palkia",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "246": {
+    "id": 485,
+    "name": "heatran",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "247": {
+    "id": 486,
+    "name": "regigigas",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "248": {
+    "id": 487,
+    "name": "giratina",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "249": {
+    "id": 488,
+    "name": "cresselia",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "250": {
+    "id": 489,
+    "name": "phione",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 490,
+        "name": "manaphy",
+        "stage": 2,
+        "evolvesFrom": 489,
+        "trigger": null,
+        "children": []
+      }
+    ]
+  },
+  "252": {
+    "id": 491,
+    "name": "darkrai",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "253": {
+    "id": 492,
+    "name": "shaymin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "254": {
+    "id": 493,
+    "name": "arceus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "255": {
+    "id": 494,
+    "name": "victini",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "256": {
+    "id": 495,
+    "name": "snivy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 496,
+        "name": "servine",
+        "stage": 2,
+        "evolvesFrom": 495,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 497,
+            "name": "serperior",
+            "stage": 3,
+            "evolvesFrom": 496,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "257": {
+    "id": 498,
+    "name": "tepig",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 499,
+        "name": "pignite",
+        "stage": 2,
+        "evolvesFrom": 498,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 500,
+            "name": "emboar",
+            "stage": 3,
+            "evolvesFrom": 499,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "258": {
+    "id": 501,
+    "name": "oshawott",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 502,
+        "name": "dewott",
+        "stage": 2,
+        "evolvesFrom": 501,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 503,
+            "name": "samurott",
+            "stage": 3,
+            "evolvesFrom": 502,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "259": {
+    "id": 504,
+    "name": "patrat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 505,
+        "name": "watchog",
+        "stage": 2,
+        "evolvesFrom": 504,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "260": {
+    "id": 506,
+    "name": "lillipup",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 507,
+        "name": "herdier",
+        "stage": 2,
+        "evolvesFrom": 506,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 508,
+            "name": "stoutland",
+            "stage": 3,
+            "evolvesFrom": 507,
+            "trigger": {
+              "kind": "level-up",
+              "level": 32
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "261": {
+    "id": 509,
+    "name": "purrloin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 510,
+        "name": "liepard",
+        "stage": 2,
+        "evolvesFrom": 509,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "262": {
+    "id": 511,
+    "name": "pansage",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 512,
+        "name": "simisage",
+        "stage": 2,
+        "evolvesFrom": 511,
+        "trigger": {
+          "kind": "use-item",
+          "item": "leaf-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "263": {
+    "id": 513,
+    "name": "pansear",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 514,
+        "name": "simisear",
+        "stage": 2,
+        "evolvesFrom": 513,
+        "trigger": {
+          "kind": "use-item",
+          "item": "fire-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "264": {
+    "id": 515,
+    "name": "panpour",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 516,
+        "name": "simipour",
+        "stage": 2,
+        "evolvesFrom": 515,
+        "trigger": {
+          "kind": "use-item",
+          "item": "water-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "265": {
+    "id": 517,
+    "name": "munna",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 518,
+        "name": "musharna",
+        "stage": 2,
+        "evolvesFrom": 517,
+        "trigger": {
+          "kind": "use-item",
+          "item": "moon-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "266": {
+    "id": 519,
+    "name": "pidove",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 520,
+        "name": "tranquill",
+        "stage": 2,
+        "evolvesFrom": 519,
+        "trigger": {
+          "kind": "level-up",
+          "level": 21
+        },
+        "children": [
+          {
+            "id": 521,
+            "name": "unfezant",
+            "stage": 3,
+            "evolvesFrom": 520,
+            "trigger": {
+              "kind": "level-up",
+              "level": 32
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "267": {
+    "id": 522,
+    "name": "blitzle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 523,
+        "name": "zebstrika",
+        "stage": 2,
+        "evolvesFrom": 522,
+        "trigger": {
+          "kind": "level-up",
+          "level": 27
+        },
+        "children": []
+      }
+    ]
+  },
+  "268": {
+    "id": 524,
+    "name": "roggenrola",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 525,
+        "name": "boldore",
+        "stage": 2,
+        "evolvesFrom": 524,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 526,
+            "name": "gigalith",
+            "stage": 3,
+            "evolvesFrom": 525,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "269": {
+    "id": 527,
+    "name": "woobat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 528,
+        "name": "swoobat",
+        "stage": 2,
+        "evolvesFrom": 527,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "270": {
+    "id": 529,
+    "name": "drilbur",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 530,
+        "name": "excadrill",
+        "stage": 2,
+        "evolvesFrom": 529,
+        "trigger": {
+          "kind": "level-up",
+          "level": 31
+        },
+        "children": []
+      }
+    ]
+  },
+  "271": {
+    "id": 531,
+    "name": "audino",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "272": {
+    "id": 532,
+    "name": "timburr",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 533,
+        "name": "gurdurr",
+        "stage": 2,
+        "evolvesFrom": 532,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 534,
+            "name": "conkeldurr",
+            "stage": 3,
+            "evolvesFrom": 533,
+            "trigger": {
+              "kind": "trade"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "273": {
+    "id": 535,
+    "name": "tympole",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 536,
+        "name": "palpitoad",
+        "stage": 2,
+        "evolvesFrom": 535,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 537,
+            "name": "seismitoad",
+            "stage": 3,
+            "evolvesFrom": 536,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "274": {
+    "id": 538,
+    "name": "throh",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "275": {
+    "id": 539,
+    "name": "sawk",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "276": {
+    "id": 540,
+    "name": "sewaddle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 541,
+        "name": "swadloon",
+        "stage": 2,
+        "evolvesFrom": 540,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 542,
+            "name": "leavanny",
+            "stage": 3,
+            "evolvesFrom": 541,
+            "trigger": {
+              "kind": "level-up",
+              "happiness": 220
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "277": {
+    "id": 543,
+    "name": "venipede",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 544,
+        "name": "whirlipede",
+        "stage": 2,
+        "evolvesFrom": 543,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": [
+          {
+            "id": 545,
+            "name": "scolipede",
+            "stage": 3,
+            "evolvesFrom": 544,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "278": {
+    "id": 546,
+    "name": "cottonee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 547,
+        "name": "whimsicott",
+        "stage": 2,
+        "evolvesFrom": 546,
+        "trigger": {
+          "kind": "use-item",
+          "item": "sun-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "279": {
+    "id": 548,
+    "name": "petilil",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 549,
+        "name": "lilligant",
+        "stage": 2,
+        "evolvesFrom": 548,
+        "trigger": {
+          "kind": "use-item",
+          "item": "sun-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "280": {
+    "id": 550,
+    "name": "basculin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 902,
+        "name": "basculegion",
+        "stage": 2,
+        "evolvesFrom": 550,
+        "trigger": {
+          "kind": "recoil-damage"
+        },
+        "children": []
+      }
+    ]
+  },
+  "281": {
+    "id": 551,
+    "name": "sandile",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 552,
+        "name": "krokorok",
+        "stage": 2,
+        "evolvesFrom": 551,
+        "trigger": {
+          "kind": "level-up",
+          "level": 29
+        },
+        "children": [
+          {
+            "id": 553,
+            "name": "krookodile",
+            "stage": 3,
+            "evolvesFrom": 552,
+            "trigger": {
+              "kind": "level-up",
+              "level": 40
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "282": {
+    "id": 554,
+    "name": "darumaka",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 555,
+        "name": "darmanitan",
+        "stage": 2,
+        "evolvesFrom": 554,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "283": {
+    "id": 556,
+    "name": "maractus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "284": {
+    "id": 557,
+    "name": "dwebble",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 558,
+        "name": "crustle",
+        "stage": 2,
+        "evolvesFrom": 557,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "285": {
+    "id": 559,
+    "name": "scraggy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 560,
+        "name": "scrafty",
+        "stage": 2,
+        "evolvesFrom": 559,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39
+        },
+        "children": []
+      }
+    ]
+  },
+  "286": {
+    "id": 561,
+    "name": "sigilyph",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "287": {
+    "id": 562,
+    "name": "yamask",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 563,
+        "name": "cofagrigus",
+        "stage": 2,
+        "evolvesFrom": 562,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      },
+      {
+        "id": 867,
+        "name": "runerigus",
+        "stage": 2,
+        "evolvesFrom": 562,
+        "trigger": {
+          "kind": "take-damage",
+          "location": "dusty-bowl"
+        },
+        "children": []
+      }
+    ]
+  },
+  "288": {
+    "id": 564,
+    "name": "tirtouga",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 565,
+        "name": "carracosta",
+        "stage": 2,
+        "evolvesFrom": 564,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "289": {
+    "id": 566,
+    "name": "archen",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 567,
+        "name": "archeops",
+        "stage": 2,
+        "evolvesFrom": 566,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "290": {
+    "id": 568,
+    "name": "trubbish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 569,
+        "name": "garbodor",
+        "stage": 2,
+        "evolvesFrom": 568,
+        "trigger": {
+          "kind": "level-up",
+          "level": 36
+        },
+        "children": []
+      }
+    ]
+  },
+  "291": {
+    "id": 570,
+    "name": "zorua",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 571,
+        "name": "zoroark",
+        "stage": 2,
+        "evolvesFrom": 570,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "292": {
+    "id": 572,
+    "name": "minccino",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 573,
+        "name": "cinccino",
+        "stage": 2,
+        "evolvesFrom": 572,
+        "trigger": {
+          "kind": "use-item",
+          "item": "shiny-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "293": {
+    "id": 574,
+    "name": "gothita",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 575,
+        "name": "gothorita",
+        "stage": 2,
+        "evolvesFrom": 574,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 576,
+            "name": "gothitelle",
+            "stage": 3,
+            "evolvesFrom": 575,
+            "trigger": {
+              "kind": "level-up",
+              "level": 41
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "294": {
+    "id": 577,
+    "name": "solosis",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 578,
+        "name": "duosion",
+        "stage": 2,
+        "evolvesFrom": 577,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 579,
+            "name": "reuniclus",
+            "stage": 3,
+            "evolvesFrom": 578,
+            "trigger": {
+              "kind": "level-up",
+              "level": 41
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "295": {
+    "id": 580,
+    "name": "ducklett",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 581,
+        "name": "swanna",
+        "stage": 2,
+        "evolvesFrom": 580,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "296": {
+    "id": 582,
+    "name": "vanillite",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 583,
+        "name": "vanillish",
+        "stage": 2,
+        "evolvesFrom": 582,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": [
+          {
+            "id": 584,
+            "name": "vanilluxe",
+            "stage": 3,
+            "evolvesFrom": 583,
+            "trigger": {
+              "kind": "level-up",
+              "level": 47
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "297": {
+    "id": 585,
+    "name": "deerling",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 586,
+        "name": "sawsbuck",
+        "stage": 2,
+        "evolvesFrom": 585,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "298": {
+    "id": 587,
+    "name": "emolga",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "299": {
+    "id": 588,
+    "name": "karrablast",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 589,
+        "name": "escavalier",
+        "stage": 2,
+        "evolvesFrom": 588,
+        "trigger": {
+          "kind": "trade",
+          "tradeFor": "shelmet"
+        },
+        "children": []
+      }
+    ]
+  },
+  "300": {
+    "id": 590,
+    "name": "foongus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 591,
+        "name": "amoonguss",
+        "stage": 2,
+        "evolvesFrom": 590,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39
+        },
+        "children": []
+      }
+    ]
+  },
+  "301": {
+    "id": 592,
+    "name": "frillish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 593,
+        "name": "jellicent",
+        "stage": 2,
+        "evolvesFrom": 592,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "302": {
+    "id": 594,
+    "name": "alomomola",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "303": {
+    "id": 595,
+    "name": "joltik",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 596,
+        "name": "galvantula",
+        "stage": 2,
+        "evolvesFrom": 595,
+        "trigger": {
+          "kind": "level-up",
+          "level": 36
+        },
+        "children": []
+      }
+    ]
+  },
+  "304": {
+    "id": 597,
+    "name": "ferroseed",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 598,
+        "name": "ferrothorn",
+        "stage": 2,
+        "evolvesFrom": 597,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "305": {
+    "id": 599,
+    "name": "klink",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 600,
+        "name": "klang",
+        "stage": 2,
+        "evolvesFrom": 599,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": [
+          {
+            "id": 601,
+            "name": "klinklang",
+            "stage": 3,
+            "evolvesFrom": 600,
+            "trigger": {
+              "kind": "level-up",
+              "level": 49
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "306": {
+    "id": 602,
+    "name": "tynamo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 603,
+        "name": "eelektrik",
+        "stage": 2,
+        "evolvesFrom": 602,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39
+        },
+        "children": [
+          {
+            "id": 604,
+            "name": "eelektross",
+            "stage": 3,
+            "evolvesFrom": 603,
+            "trigger": {
+              "kind": "use-item",
+              "item": "thunder-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "307": {
+    "id": 605,
+    "name": "elgyem",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 606,
+        "name": "beheeyem",
+        "stage": 2,
+        "evolvesFrom": 605,
+        "trigger": {
+          "kind": "level-up",
+          "level": 42
+        },
+        "children": []
+      }
+    ]
+  },
+  "308": {
+    "id": 607,
+    "name": "litwick",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 608,
+        "name": "lampent",
+        "stage": 2,
+        "evolvesFrom": 607,
+        "trigger": {
+          "kind": "level-up",
+          "level": 41
+        },
+        "children": [
+          {
+            "id": 609,
+            "name": "chandelure",
+            "stage": 3,
+            "evolvesFrom": 608,
+            "trigger": {
+              "kind": "use-item",
+              "item": "dusk-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "309": {
+    "id": 610,
+    "name": "axew",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 611,
+        "name": "fraxure",
+        "stage": 2,
+        "evolvesFrom": 610,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": [
+          {
+            "id": 612,
+            "name": "haxorus",
+            "stage": 3,
+            "evolvesFrom": 611,
+            "trigger": {
+              "kind": "level-up",
+              "level": 48
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "310": {
+    "id": 613,
+    "name": "cubchoo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 614,
+        "name": "beartic",
+        "stage": 2,
+        "evolvesFrom": 613,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "311": {
+    "id": 615,
+    "name": "cryogonal",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "312": {
+    "id": 616,
+    "name": "shelmet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 617,
+        "name": "accelgor",
+        "stage": 2,
+        "evolvesFrom": 616,
+        "trigger": {
+          "kind": "trade",
+          "tradeFor": "karrablast"
+        },
+        "children": []
+      }
+    ]
+  },
+  "313": {
+    "id": 618,
+    "name": "stunfisk",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "314": {
+    "id": 619,
+    "name": "mienfoo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 620,
+        "name": "mienshao",
+        "stage": 2,
+        "evolvesFrom": 619,
+        "trigger": {
+          "kind": "level-up",
+          "level": 50
+        },
+        "children": []
+      }
+    ]
+  },
+  "315": {
+    "id": 621,
+    "name": "druddigon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "316": {
+    "id": 622,
+    "name": "golett",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 623,
+        "name": "golurk",
+        "stage": 2,
+        "evolvesFrom": 622,
+        "trigger": {
+          "kind": "level-up",
+          "level": 43
+        },
+        "children": []
+      }
+    ]
+  },
+  "317": {
+    "id": 624,
+    "name": "pawniard",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 625,
+        "name": "bisharp",
+        "stage": 2,
+        "evolvesFrom": 624,
+        "trigger": {
+          "kind": "level-up",
+          "level": 52
+        },
+        "children": [
+          {
+            "id": 983,
+            "name": "kingambit",
+            "stage": 3,
+            "evolvesFrom": 625,
+            "trigger": {
+              "kind": "three-defeated-bisharp"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "318": {
+    "id": 626,
+    "name": "bouffalant",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "319": {
+    "id": 627,
+    "name": "rufflet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 628,
+        "name": "braviary",
+        "stage": 2,
+        "evolvesFrom": 627,
+        "trigger": {
+          "kind": "level-up",
+          "level": 54
+        },
+        "children": []
+      }
+    ]
+  },
+  "320": {
+    "id": 629,
+    "name": "vullaby",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 630,
+        "name": "mandibuzz",
+        "stage": 2,
+        "evolvesFrom": 629,
+        "trigger": {
+          "kind": "level-up",
+          "level": 54
+        },
+        "children": []
+      }
+    ]
+  },
+  "321": {
+    "id": 631,
+    "name": "heatmor",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "322": {
+    "id": 632,
+    "name": "durant",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "323": {
+    "id": 633,
+    "name": "deino",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 634,
+        "name": "zweilous",
+        "stage": 2,
+        "evolvesFrom": 633,
+        "trigger": {
+          "kind": "level-up",
+          "level": 50
+        },
+        "children": [
+          {
+            "id": 635,
+            "name": "hydreigon",
+            "stage": 3,
+            "evolvesFrom": 634,
+            "trigger": {
+              "kind": "level-up",
+              "level": 64
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "324": {
+    "id": 636,
+    "name": "larvesta",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 637,
+        "name": "volcarona",
+        "stage": 2,
+        "evolvesFrom": 636,
+        "trigger": {
+          "kind": "level-up",
+          "level": 59
+        },
+        "children": []
+      }
+    ]
+  },
+  "325": {
+    "id": 638,
+    "name": "cobalion",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "326": {
+    "id": 639,
+    "name": "terrakion",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "327": {
+    "id": 640,
+    "name": "virizion",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "328": {
+    "id": 641,
+    "name": "tornadus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "329": {
+    "id": 642,
+    "name": "thundurus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "330": {
+    "id": 643,
+    "name": "reshiram",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "331": {
+    "id": 644,
+    "name": "zekrom",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "332": {
+    "id": 645,
+    "name": "landorus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "333": {
+    "id": 646,
+    "name": "kyurem",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "334": {
+    "id": 647,
+    "name": "keldeo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "335": {
+    "id": 648,
+    "name": "meloetta",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "336": {
+    "id": 649,
+    "name": "genesect",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "337": {
+    "id": 650,
+    "name": "chespin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 651,
+        "name": "quilladin",
+        "stage": 2,
+        "evolvesFrom": 650,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 652,
+            "name": "chesnaught",
+            "stage": 3,
+            "evolvesFrom": 651,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "338": {
+    "id": 653,
+    "name": "fennekin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 654,
+        "name": "braixen",
+        "stage": 2,
+        "evolvesFrom": 653,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 655,
+            "name": "delphox",
+            "stage": 3,
+            "evolvesFrom": 654,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "339": {
+    "id": 656,
+    "name": "froakie",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 657,
+        "name": "frogadier",
+        "stage": 2,
+        "evolvesFrom": 656,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 658,
+            "name": "greninja",
+            "stage": 3,
+            "evolvesFrom": 657,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "340": {
+    "id": 659,
+    "name": "bunnelby",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 660,
+        "name": "diggersby",
+        "stage": 2,
+        "evolvesFrom": 659,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "341": {
+    "id": 661,
+    "name": "fletchling",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 662,
+        "name": "fletchinder",
+        "stage": 2,
+        "evolvesFrom": 661,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 663,
+            "name": "talonflame",
+            "stage": 3,
+            "evolvesFrom": 662,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "342": {
+    "id": 664,
+    "name": "scatterbug",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 665,
+        "name": "spewpa",
+        "stage": 2,
+        "evolvesFrom": 664,
+        "trigger": {
+          "kind": "level-up",
+          "level": 9
+        },
+        "children": [
+          {
+            "id": 666,
+            "name": "vivillon",
+            "stage": 3,
+            "evolvesFrom": 665,
+            "trigger": {
+              "kind": "level-up",
+              "level": 12
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "343": {
+    "id": 667,
+    "name": "litleo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 668,
+        "name": "pyroar",
+        "stage": 2,
+        "evolvesFrom": 667,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "344": {
+    "id": 669,
+    "name": "flabebe",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 670,
+        "name": "floette",
+        "stage": 2,
+        "evolvesFrom": 669,
+        "trigger": {
+          "kind": "level-up",
+          "level": 19
+        },
+        "children": [
+          {
+            "id": 671,
+            "name": "florges",
+            "stage": 3,
+            "evolvesFrom": 670,
+            "trigger": {
+              "kind": "use-item",
+              "item": "shiny-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "345": {
+    "id": 672,
+    "name": "skiddo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 673,
+        "name": "gogoat",
+        "stage": 2,
+        "evolvesFrom": 672,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": []
+      }
+    ]
+  },
+  "346": {
+    "id": 674,
+    "name": "pancham",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 675,
+        "name": "pangoro",
+        "stage": 2,
+        "evolvesFrom": 674,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": []
+      }
+    ]
+  },
+  "347": {
+    "id": 676,
+    "name": "furfrou",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "348": {
+    "id": 677,
+    "name": "espurr",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 678,
+        "name": "meowstic",
+        "stage": 2,
+        "evolvesFrom": 677,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "349": {
+    "id": 679,
+    "name": "honedge",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 680,
+        "name": "doublade",
+        "stage": 2,
+        "evolvesFrom": 679,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": [
+          {
+            "id": 681,
+            "name": "aegislash",
+            "stage": 3,
+            "evolvesFrom": 680,
+            "trigger": {
+              "kind": "use-item",
+              "item": "dusk-stone"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "350": {
+    "id": 682,
+    "name": "spritzee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 683,
+        "name": "aromatisse",
+        "stage": 2,
+        "evolvesFrom": 682,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "sachet"
+        },
+        "children": []
+      }
+    ]
+  },
+  "351": {
+    "id": 684,
+    "name": "swirlix",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 685,
+        "name": "slurpuff",
+        "stage": 2,
+        "evolvesFrom": 684,
+        "trigger": {
+          "kind": "trade",
+          "heldItem": "whipped-dream"
+        },
+        "children": []
+      }
+    ]
+  },
+  "352": {
+    "id": 686,
+    "name": "inkay",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 687,
+        "name": "malamar",
+        "stage": 2,
+        "evolvesFrom": 686,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30,
+          "upsideDown": true
+        },
+        "children": []
+      }
+    ]
+  },
+  "353": {
+    "id": 688,
+    "name": "binacle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 689,
+        "name": "barbaracle",
+        "stage": 2,
+        "evolvesFrom": 688,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39
+        },
+        "children": []
+      }
+    ]
+  },
+  "354": {
+    "id": 690,
+    "name": "skrelp",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 691,
+        "name": "dragalge",
+        "stage": 2,
+        "evolvesFrom": 690,
+        "trigger": {
+          "kind": "level-up",
+          "level": 48
+        },
+        "children": []
+      }
+    ]
+  },
+  "355": {
+    "id": 692,
+    "name": "clauncher",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 693,
+        "name": "clawitzer",
+        "stage": 2,
+        "evolvesFrom": 692,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "356": {
+    "id": 694,
+    "name": "helioptile",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 695,
+        "name": "heliolisk",
+        "stage": 2,
+        "evolvesFrom": 694,
+        "trigger": {
+          "kind": "use-item",
+          "item": "sun-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "357": {
+    "id": 696,
+    "name": "tyrunt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 697,
+        "name": "tyrantrum",
+        "stage": 2,
+        "evolvesFrom": 696,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39,
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "358": {
+    "id": 698,
+    "name": "amaura",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 699,
+        "name": "aurorus",
+        "stage": 2,
+        "evolvesFrom": 698,
+        "trigger": {
+          "kind": "level-up",
+          "level": 39,
+          "timeOfDay": "night"
+        },
+        "children": []
+      }
+    ]
+  },
+  "359": {
+    "id": 701,
+    "name": "hawlucha",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "360": {
+    "id": 702,
+    "name": "dedenne",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "361": {
+    "id": 703,
+    "name": "carbink",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "362": {
+    "id": 704,
+    "name": "goomy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 705,
+        "name": "sliggoo",
+        "stage": 2,
+        "evolvesFrom": 704,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": [
+          {
+            "id": 706,
+            "name": "goodra",
+            "stage": 3,
+            "evolvesFrom": 705,
+            "trigger": {
+              "kind": "level-up",
+              "level": 50,
+              "rain": true
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "363": {
+    "id": 707,
+    "name": "klefki",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "364": {
+    "id": 708,
+    "name": "phantump",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 709,
+        "name": "trevenant",
+        "stage": 2,
+        "evolvesFrom": 708,
+        "trigger": {
+          "kind": "trade"
+        },
+        "children": []
+      }
+    ]
+  },
+  "365": {
+    "id": 710,
+    "name": "pumpkaboo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 711,
+        "name": "gourgeist",
+        "stage": 2,
+        "evolvesFrom": 710,
+        "trigger": {
+          "kind": "trade"
+        },
+        "children": []
+      }
+    ]
+  },
+  "366": {
+    "id": 712,
+    "name": "bergmite",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 713,
+        "name": "avalugg",
+        "stage": 2,
+        "evolvesFrom": 712,
+        "trigger": {
+          "kind": "level-up",
+          "level": 37
+        },
+        "children": []
+      }
+    ]
+  },
+  "367": {
+    "id": 714,
+    "name": "noibat",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 715,
+        "name": "noivern",
+        "stage": 2,
+        "evolvesFrom": 714,
+        "trigger": {
+          "kind": "level-up",
+          "level": 48
+        },
+        "children": []
+      }
+    ]
+  },
+  "368": {
+    "id": 716,
+    "name": "xerneas",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "369": {
+    "id": 717,
+    "name": "yveltal",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "370": {
+    "id": 718,
+    "name": "zygarde",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "371": {
+    "id": 719,
+    "name": "diancie",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "372": {
+    "id": 720,
+    "name": "hoopa",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "373": {
+    "id": 721,
+    "name": "volcanion",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "374": {
+    "id": 722,
+    "name": "rowlet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 723,
+        "name": "dartrix",
+        "stage": 2,
+        "evolvesFrom": 722,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 724,
+            "name": "decidueye",
+            "stage": 3,
+            "evolvesFrom": 723,
+            "trigger": {
+              "kind": "level-up",
+              "level": 34
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "375": {
+    "id": 725,
+    "name": "litten",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 726,
+        "name": "torracat",
+        "stage": 2,
+        "evolvesFrom": 725,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 727,
+            "name": "incineroar",
+            "stage": 3,
+            "evolvesFrom": 726,
+            "trigger": {
+              "kind": "level-up",
+              "level": 34
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "376": {
+    "id": 728,
+    "name": "popplio",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 729,
+        "name": "brionne",
+        "stage": 2,
+        "evolvesFrom": 728,
+        "trigger": {
+          "kind": "level-up",
+          "level": 17
+        },
+        "children": [
+          {
+            "id": 730,
+            "name": "primarina",
+            "stage": 3,
+            "evolvesFrom": 729,
+            "trigger": {
+              "kind": "level-up",
+              "level": 34
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "377": {
+    "id": 731,
+    "name": "pikipek",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 732,
+        "name": "trumbeak",
+        "stage": 2,
+        "evolvesFrom": 731,
+        "trigger": {
+          "kind": "level-up",
+          "level": 14
+        },
+        "children": [
+          {
+            "id": 733,
+            "name": "toucannon",
+            "stage": 3,
+            "evolvesFrom": 732,
+            "trigger": {
+              "kind": "level-up",
+              "level": 28
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "378": {
+    "id": 734,
+    "name": "yungoos",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 735,
+        "name": "gumshoos",
+        "stage": 2,
+        "evolvesFrom": 734,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20,
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "379": {
+    "id": 736,
+    "name": "grubbin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 737,
+        "name": "charjabug",
+        "stage": 2,
+        "evolvesFrom": 736,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": [
+          {
+            "id": 738,
+            "name": "vikavolt",
+            "stage": 3,
+            "evolvesFrom": 737,
+            "trigger": {
+              "kind": "level-up",
+              "location": "vast-poni-canyon"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "380": {
+    "id": 739,
+    "name": "crabrawler",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 740,
+        "name": "crabominable",
+        "stage": 2,
+        "evolvesFrom": 739,
+        "trigger": {
+          "kind": "level-up",
+          "location": "mount-lanakila"
+        },
+        "children": []
+      }
+    ]
+  },
+  "381": {
+    "id": 741,
+    "name": "oricorio",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "382": {
+    "id": 742,
+    "name": "cutiefly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 743,
+        "name": "ribombee",
+        "stage": 2,
+        "evolvesFrom": 742,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "383": {
+    "id": 744,
+    "name": "rockruff",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 745,
+        "name": "lycanroc",
+        "stage": 2,
+        "evolvesFrom": 744,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25,
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "384": {
+    "id": 746,
+    "name": "wishiwashi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "385": {
+    "id": 747,
+    "name": "mareanie",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 748,
+        "name": "toxapex",
+        "stage": 2,
+        "evolvesFrom": 747,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "386": {
+    "id": 749,
+    "name": "mudbray",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 750,
+        "name": "mudsdale",
+        "stage": 2,
+        "evolvesFrom": 749,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "387": {
+    "id": 751,
+    "name": "dewpider",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 752,
+        "name": "araquanid",
+        "stage": 2,
+        "evolvesFrom": 751,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "388": {
+    "id": 753,
+    "name": "fomantis",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 754,
+        "name": "lurantis",
+        "stage": 2,
+        "evolvesFrom": 753,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34,
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "389": {
+    "id": 755,
+    "name": "morelull",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 756,
+        "name": "shiinotic",
+        "stage": 2,
+        "evolvesFrom": 755,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "390": {
+    "id": 757,
+    "name": "salandit",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 758,
+        "name": "salazzle",
+        "stage": 2,
+        "evolvesFrom": 757,
+        "trigger": {
+          "kind": "level-up",
+          "level": 33
+        },
+        "children": []
+      }
+    ]
+  },
+  "391": {
+    "id": 759,
+    "name": "stufful",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 760,
+        "name": "bewear",
+        "stage": 2,
+        "evolvesFrom": 759,
+        "trigger": {
+          "kind": "level-up",
+          "level": 27
+        },
+        "children": []
+      }
+    ]
+  },
+  "392": {
+    "id": 761,
+    "name": "bounsweet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 762,
+        "name": "steenee",
+        "stage": 2,
+        "evolvesFrom": 761,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 763,
+            "name": "tsareena",
+            "stage": 3,
+            "evolvesFrom": 762,
+            "trigger": {
+              "kind": "level-up",
+              "knownMove": "stomp"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "393": {
+    "id": 764,
+    "name": "comfey",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "394": {
+    "id": 765,
+    "name": "oranguru",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "395": {
+    "id": 766,
+    "name": "passimian",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "396": {
+    "id": 767,
+    "name": "wimpod",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 768,
+        "name": "golisopod",
+        "stage": 2,
+        "evolvesFrom": 767,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "397": {
+    "id": 769,
+    "name": "sandygast",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 770,
+        "name": "palossand",
+        "stage": 2,
+        "evolvesFrom": 769,
+        "trigger": {
+          "kind": "level-up",
+          "level": 42
+        },
+        "children": []
+      }
+    ]
+  },
+  "398": {
+    "id": 771,
+    "name": "pyukumuku",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "399": {
+    "id": 772,
+    "name": "type-null",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 773,
+        "name": "silvally",
+        "stage": 2,
+        "evolvesFrom": 772,
+        "trigger": {
+          "kind": "level-up",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "400": {
+    "id": 774,
+    "name": "minior",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "401": {
+    "id": 775,
+    "name": "komala",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "402": {
+    "id": 776,
+    "name": "turtonator",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "403": {
+    "id": 777,
+    "name": "togedemaru",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "404": {
+    "id": 778,
+    "name": "mimikyu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "405": {
+    "id": 779,
+    "name": "bruxish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "406": {
+    "id": 780,
+    "name": "drampa",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "407": {
+    "id": 781,
+    "name": "dhelmise",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "408": {
+    "id": 782,
+    "name": "jangmo-o",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 783,
+        "name": "hakamo-o",
+        "stage": 2,
+        "evolvesFrom": 782,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": [
+          {
+            "id": 784,
+            "name": "kommo-o",
+            "stage": 3,
+            "evolvesFrom": 783,
+            "trigger": {
+              "kind": "level-up",
+              "level": 45
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "409": {
+    "id": 785,
+    "name": "tapu-koko",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "410": {
+    "id": 786,
+    "name": "tapu-lele",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "411": {
+    "id": 787,
+    "name": "tapu-bulu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "412": {
+    "id": 788,
+    "name": "tapu-fini",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "413": {
+    "id": 789,
+    "name": "cosmog",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 790,
+        "name": "cosmoem",
+        "stage": 2,
+        "evolvesFrom": 789,
+        "trigger": {
+          "kind": "level-up",
+          "level": 43
+        },
+        "children": [
+          {
+            "id": 791,
+            "name": "solgaleo",
+            "stage": 3,
+            "evolvesFrom": 790,
+            "trigger": {
+              "kind": "level-up",
+              "level": 53
+            },
+            "children": []
+          },
+          {
+            "id": 792,
+            "name": "lunala",
+            "stage": 3,
+            "evolvesFrom": 790,
+            "trigger": {
+              "kind": "level-up",
+              "level": 53
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "414": {
+    "id": 793,
+    "name": "nihilego",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "415": {
+    "id": 794,
+    "name": "buzzwole",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "416": {
+    "id": 795,
+    "name": "pheromosa",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "417": {
+    "id": 796,
+    "name": "xurkitree",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "418": {
+    "id": 797,
+    "name": "celesteela",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "419": {
+    "id": 798,
+    "name": "kartana",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "420": {
+    "id": 799,
+    "name": "guzzlord",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "421": {
+    "id": 800,
+    "name": "necrozma",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "422": {
+    "id": 801,
+    "name": "magearna",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "423": {
+    "id": 802,
+    "name": "marshadow",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "424": {
+    "id": 803,
+    "name": "poipole",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 804,
+        "name": "naganadel",
+        "stage": 2,
+        "evolvesFrom": 803,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "dragon-pulse"
+        },
+        "children": []
+      }
+    ]
+  },
+  "425": {
+    "id": 805,
+    "name": "stakataka",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "426": {
+    "id": 806,
+    "name": "blacephalon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "427": {
+    "id": 807,
+    "name": "zeraora",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "428": {
+    "id": 808,
+    "name": "meltan",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 809,
+        "name": "melmetal",
+        "stage": 2,
+        "evolvesFrom": 808,
+        "trigger": {
+          "kind": "meltan-candies"
+        },
+        "children": []
+      }
+    ]
+  },
+  "430": {
+    "id": 810,
+    "name": "grookey",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 811,
+        "name": "thwackey",
+        "stage": 2,
+        "evolvesFrom": 810,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 812,
+            "name": "rillaboom",
+            "stage": 3,
+            "evolvesFrom": 811,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "431": {
+    "id": 813,
+    "name": "scorbunny",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 814,
+        "name": "raboot",
+        "stage": 2,
+        "evolvesFrom": 813,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 815,
+            "name": "cinderace",
+            "stage": 3,
+            "evolvesFrom": 814,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "432": {
+    "id": 816,
+    "name": "sobble",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 817,
+        "name": "drizzile",
+        "stage": 2,
+        "evolvesFrom": 816,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 818,
+            "name": "inteleon",
+            "stage": 3,
+            "evolvesFrom": 817,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "433": {
+    "id": 819,
+    "name": "skwovet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 820,
+        "name": "greedent",
+        "stage": 2,
+        "evolvesFrom": 819,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "434": {
+    "id": 821,
+    "name": "rookidee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 822,
+        "name": "corvisquire",
+        "stage": 2,
+        "evolvesFrom": 821,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 823,
+            "name": "corviknight",
+            "stage": 3,
+            "evolvesFrom": 822,
+            "trigger": {
+              "kind": "level-up",
+              "level": 38
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "435": {
+    "id": 824,
+    "name": "blipbug",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 825,
+        "name": "dottler",
+        "stage": 2,
+        "evolvesFrom": 824,
+        "trigger": {
+          "kind": "level-up",
+          "level": 10
+        },
+        "children": [
+          {
+            "id": 826,
+            "name": "orbeetle",
+            "stage": 3,
+            "evolvesFrom": 825,
+            "trigger": {
+              "kind": "level-up",
+              "level": 30
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "436": {
+    "id": 827,
+    "name": "nickit",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 828,
+        "name": "thievul",
+        "stage": 2,
+        "evolvesFrom": 827,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": []
+      }
+    ]
+  },
+  "437": {
+    "id": 829,
+    "name": "gossifleur",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 830,
+        "name": "eldegoss",
+        "stage": 2,
+        "evolvesFrom": 829,
+        "trigger": {
+          "kind": "level-up",
+          "level": 20
+        },
+        "children": []
+      }
+    ]
+  },
+  "438": {
+    "id": 831,
+    "name": "wooloo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 832,
+        "name": "dubwool",
+        "stage": 2,
+        "evolvesFrom": 831,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "439": {
+    "id": 833,
+    "name": "chewtle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 834,
+        "name": "drednaw",
+        "stage": 2,
+        "evolvesFrom": 833,
+        "trigger": {
+          "kind": "level-up",
+          "level": 22
+        },
+        "children": []
+      }
+    ]
+  },
+  "440": {
+    "id": 835,
+    "name": "yamper",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 836,
+        "name": "boltund",
+        "stage": 2,
+        "evolvesFrom": 835,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "441": {
+    "id": 837,
+    "name": "rolycoly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 838,
+        "name": "carkol",
+        "stage": 2,
+        "evolvesFrom": 837,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 839,
+            "name": "coalossal",
+            "stage": 3,
+            "evolvesFrom": 838,
+            "trigger": {
+              "kind": "level-up",
+              "level": 34
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "442": {
+    "id": 840,
+    "name": "applin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 841,
+        "name": "flapple",
+        "stage": 2,
+        "evolvesFrom": 840,
+        "trigger": {
+          "kind": "use-item",
+          "item": "tart-apple"
+        },
+        "children": []
+      },
+      {
+        "id": 842,
+        "name": "appletun",
+        "stage": 2,
+        "evolvesFrom": 840,
+        "trigger": {
+          "kind": "use-item",
+          "item": "sweet-apple"
+        },
+        "children": []
+      },
+      {
+        "id": 1011,
+        "name": "dipplin",
+        "stage": 2,
+        "evolvesFrom": 840,
+        "trigger": {
+          "kind": "use-item",
+          "item": "syrupy-apple"
+        },
+        "children": [
+          {
+            "id": 1019,
+            "name": "hydrapple",
+            "stage": 3,
+            "evolvesFrom": 1011,
+            "trigger": {
+              "kind": "level-up",
+              "knownMove": "dragon-cheer"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "443": {
+    "id": 843,
+    "name": "silicobra",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 844,
+        "name": "sandaconda",
+        "stage": 2,
+        "evolvesFrom": 843,
+        "trigger": {
+          "kind": "level-up",
+          "level": 36
+        },
+        "children": []
+      }
+    ]
+  },
+  "444": {
+    "id": 845,
+    "name": "cramorant",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "445": {
+    "id": 846,
+    "name": "arrokuda",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 847,
+        "name": "barraskewda",
+        "stage": 2,
+        "evolvesFrom": 846,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "446": {
+    "id": 848,
+    "name": "toxel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 849,
+        "name": "toxtricity",
+        "stage": 2,
+        "evolvesFrom": 848,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "447": {
+    "id": 850,
+    "name": "sizzlipede",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 851,
+        "name": "centiskorch",
+        "stage": 2,
+        "evolvesFrom": 850,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "448": {
+    "id": 852,
+    "name": "clobbopus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 853,
+        "name": "grapploct",
+        "stage": 2,
+        "evolvesFrom": 852,
+        "trigger": {
+          "kind": "level-up",
+          "knownMove": "taunt"
+        },
+        "children": []
+      }
+    ]
+  },
+  "449": {
+    "id": 854,
+    "name": "sinistea",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 855,
+        "name": "polteageist",
+        "stage": 2,
+        "evolvesFrom": 854,
+        "trigger": {
+          "kind": "use-item",
+          "item": "cracked-pot"
+        },
+        "children": []
+      }
+    ]
+  },
+  "450": {
+    "id": 856,
+    "name": "hatenna",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 857,
+        "name": "hattrem",
+        "stage": 2,
+        "evolvesFrom": 856,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 858,
+            "name": "hatterene",
+            "stage": 3,
+            "evolvesFrom": 857,
+            "trigger": {
+              "kind": "level-up",
+              "level": 42
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "451": {
+    "id": 859,
+    "name": "impidimp",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 860,
+        "name": "morgrem",
+        "stage": 2,
+        "evolvesFrom": 859,
+        "trigger": {
+          "kind": "level-up",
+          "level": 32
+        },
+        "children": [
+          {
+            "id": 861,
+            "name": "grimmsnarl",
+            "stage": 3,
+            "evolvesFrom": 860,
+            "trigger": {
+              "kind": "level-up",
+              "level": 42
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "452": {
+    "id": 868,
+    "name": "milcery",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 869,
+        "name": "alcremie",
+        "stage": 2,
+        "evolvesFrom": 868,
+        "trigger": {
+          "kind": "spin",
+          "heldItem": "strawberry-sweet",
+          "timeOfDay": "day"
+        },
+        "children": []
+      }
+    ]
+  },
+  "453": {
+    "id": 870,
+    "name": "falinks",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "454": {
+    "id": 871,
+    "name": "pincurchin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "455": {
+    "id": 872,
+    "name": "snom",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 873,
+        "name": "frosmoth",
+        "stage": 2,
+        "evolvesFrom": 872,
+        "trigger": {
+          "kind": "level-up",
+          "timeOfDay": "night",
+          "happiness": 160
+        },
+        "children": []
+      }
+    ]
+  },
+  "456": {
+    "id": 874,
+    "name": "stonjourner",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "457": {
+    "id": 875,
+    "name": "eiscue",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "458": {
+    "id": 876,
+    "name": "indeedee",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "459": {
+    "id": 877,
+    "name": "morpeko",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "460": {
+    "id": 878,
+    "name": "cufant",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 879,
+        "name": "copperajah",
+        "stage": 2,
+        "evolvesFrom": 878,
+        "trigger": {
+          "kind": "level-up",
+          "level": 34
+        },
+        "children": []
+      }
+    ]
+  },
+  "461": {
+    "id": 880,
+    "name": "dracozolt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "462": {
+    "id": 881,
+    "name": "arctozolt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "463": {
+    "id": 882,
+    "name": "dracovish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "464": {
+    "id": 883,
+    "name": "arctovish",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "465": {
+    "id": 884,
+    "name": "duraludon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 1018,
+        "name": "archaludon",
+        "stage": 2,
+        "evolvesFrom": 884,
+        "trigger": {
+          "kind": "use-item",
+          "item": "metal-alloy"
+        },
+        "children": []
+      }
+    ]
+  },
+  "466": {
+    "id": 885,
+    "name": "dreepy",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 886,
+        "name": "drakloak",
+        "stage": 2,
+        "evolvesFrom": 885,
+        "trigger": {
+          "kind": "level-up",
+          "level": 50
+        },
+        "children": [
+          {
+            "id": 887,
+            "name": "dragapult",
+            "stage": 3,
+            "evolvesFrom": 886,
+            "trigger": {
+              "kind": "level-up",
+              "level": 60
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "467": {
+    "id": 888,
+    "name": "zacian",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "468": {
+    "id": 889,
+    "name": "zamazenta",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "469": {
+    "id": 890,
+    "name": "eternatus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "470": {
+    "id": 891,
+    "name": "kubfu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 892,
+        "name": "urshifu",
+        "stage": 2,
+        "evolvesFrom": 891,
+        "trigger": {
+          "kind": "tower-of-darkness"
+        },
+        "children": []
+      }
+    ]
+  },
+  "471": {
+    "id": 893,
+    "name": "zarude",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "472": {
+    "id": 894,
+    "name": "regieleki",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "473": {
+    "id": 895,
+    "name": "regidrago",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "474": {
+    "id": 896,
+    "name": "glastrier",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "475": {
+    "id": 897,
+    "name": "spectrier",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "476": {
+    "id": 898,
+    "name": "calyrex",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "477": {
+    "id": 905,
+    "name": "enamorus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "478": {
+    "id": 906,
+    "name": "sprigatito",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 907,
+        "name": "floragato",
+        "stage": 2,
+        "evolvesFrom": 906,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 908,
+            "name": "meowscarada",
+            "stage": 3,
+            "evolvesFrom": 907,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "479": {
+    "id": 909,
+    "name": "fuecoco",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 910,
+        "name": "crocalor",
+        "stage": 2,
+        "evolvesFrom": 909,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 911,
+            "name": "skeledirge",
+            "stage": 3,
+            "evolvesFrom": 910,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "480": {
+    "id": 912,
+    "name": "quaxly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 913,
+        "name": "quaxwell",
+        "stage": 2,
+        "evolvesFrom": 912,
+        "trigger": {
+          "kind": "level-up",
+          "level": 16
+        },
+        "children": [
+          {
+            "id": 914,
+            "name": "quaquaval",
+            "stage": 3,
+            "evolvesFrom": 913,
+            "trigger": {
+              "kind": "level-up",
+              "level": 36
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "481": {
+    "id": 915,
+    "name": "lechonk",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 916,
+        "name": "oinkologne",
+        "stage": 2,
+        "evolvesFrom": 915,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": []
+      }
+    ]
+  },
+  "482": {
+    "id": 917,
+    "name": "tarountula",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 918,
+        "name": "spidops",
+        "stage": 2,
+        "evolvesFrom": 917,
+        "trigger": {
+          "kind": "level-up",
+          "level": 15
+        },
+        "children": []
+      }
+    ]
+  },
+  "483": {
+    "id": 919,
+    "name": "nymble",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 920,
+        "name": "lokix",
+        "stage": 2,
+        "evolvesFrom": 919,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": []
+      }
+    ]
+  },
+  "484": {
+    "id": 921,
+    "name": "pawmi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 922,
+        "name": "pawmo",
+        "stage": 2,
+        "evolvesFrom": 921,
+        "trigger": {
+          "kind": "level-up",
+          "level": 18
+        },
+        "children": [
+          {
+            "id": 923,
+            "name": "pawmot",
+            "stage": 3,
+            "evolvesFrom": 922,
+            "trigger": {
+              "kind": "level-up"
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "485": {
+    "id": 924,
+    "name": "tandemaus",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 925,
+        "name": "maushold",
+        "stage": 2,
+        "evolvesFrom": 924,
+        "trigger": {
+          "kind": "in-battle-level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "486": {
+    "id": 926,
+    "name": "fidough",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 927,
+        "name": "dachsbun",
+        "stage": 2,
+        "evolvesFrom": 926,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "487": {
+    "id": 928,
+    "name": "smoliv",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 929,
+        "name": "dolliv",
+        "stage": 2,
+        "evolvesFrom": 928,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": [
+          {
+            "id": 930,
+            "name": "arboliva",
+            "stage": 3,
+            "evolvesFrom": 929,
+            "trigger": {
+              "kind": "level-up",
+              "level": 35
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "488": {
+    "id": 931,
+    "name": "squawkabilly",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "489": {
+    "id": 932,
+    "name": "nacli",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 933,
+        "name": "naclstack",
+        "stage": 2,
+        "evolvesFrom": 932,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": [
+          {
+            "id": 934,
+            "name": "garganacl",
+            "stage": 3,
+            "evolvesFrom": 933,
+            "trigger": {
+              "kind": "level-up",
+              "level": 38
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "490": {
+    "id": 935,
+    "name": "charcadet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 936,
+        "name": "armarouge",
+        "stage": 2,
+        "evolvesFrom": 935,
+        "trigger": {
+          "kind": "use-item",
+          "item": "auspicious-armor"
+        },
+        "children": []
+      },
+      {
+        "id": 937,
+        "name": "ceruledge",
+        "stage": 2,
+        "evolvesFrom": 935,
+        "trigger": {
+          "kind": "use-item",
+          "item": "malicious-armor"
+        },
+        "children": []
+      }
+    ]
+  },
+  "491": {
+    "id": 938,
+    "name": "tadbulb",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 939,
+        "name": "bellibolt",
+        "stage": 2,
+        "evolvesFrom": 938,
+        "trigger": {
+          "kind": "use-item",
+          "item": "thunder-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "492": {
+    "id": 940,
+    "name": "wattrel",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 941,
+        "name": "kilowattrel",
+        "stage": 2,
+        "evolvesFrom": 940,
+        "trigger": {
+          "kind": "level-up",
+          "level": 25
+        },
+        "children": []
+      }
+    ]
+  },
+  "493": {
+    "id": 942,
+    "name": "maschiff",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 943,
+        "name": "mabosstiff",
+        "stage": 2,
+        "evolvesFrom": 942,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "494": {
+    "id": 944,
+    "name": "shroodle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 945,
+        "name": "grafaiai",
+        "stage": 2,
+        "evolvesFrom": 944,
+        "trigger": {
+          "kind": "level-up",
+          "level": 28
+        },
+        "children": []
+      }
+    ]
+  },
+  "495": {
+    "id": 946,
+    "name": "bramblin",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 947,
+        "name": "brambleghast",
+        "stage": 2,
+        "evolvesFrom": 946,
+        "trigger": {
+          "kind": "level-up"
+        },
+        "children": []
+      }
+    ]
+  },
+  "496": {
+    "id": 948,
+    "name": "toedscool",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 949,
+        "name": "toedscruel",
+        "stage": 2,
+        "evolvesFrom": 948,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30
+        },
+        "children": []
+      }
+    ]
+  },
+  "497": {
+    "id": 950,
+    "name": "klawf",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "498": {
+    "id": 951,
+    "name": "capsakid",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 952,
+        "name": "scovillain",
+        "stage": 2,
+        "evolvesFrom": 951,
+        "trigger": {
+          "kind": "use-item",
+          "item": "fire-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "499": {
+    "id": 953,
+    "name": "rellor",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 954,
+        "name": "rabsca",
+        "stage": 2,
+        "evolvesFrom": 953,
+        "trigger": {
+          "kind": "level-up"
+        },
+        "children": []
+      }
+    ]
+  },
+  "500": {
+    "id": 955,
+    "name": "flittle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 956,
+        "name": "espathra",
+        "stage": 2,
+        "evolvesFrom": 955,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "501": {
+    "id": 957,
+    "name": "tinkatink",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 958,
+        "name": "tinkatuff",
+        "stage": 2,
+        "evolvesFrom": 957,
+        "trigger": {
+          "kind": "level-up",
+          "level": 24
+        },
+        "children": [
+          {
+            "id": 959,
+            "name": "tinkaton",
+            "stage": 3,
+            "evolvesFrom": 958,
+            "trigger": {
+              "kind": "level-up",
+              "level": 38
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "502": {
+    "id": 960,
+    "name": "wiglett",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 961,
+        "name": "wugtrio",
+        "stage": 2,
+        "evolvesFrom": 960,
+        "trigger": {
+          "kind": "level-up",
+          "level": 26
+        },
+        "children": []
+      }
+    ]
+  },
+  "503": {
+    "id": 962,
+    "name": "bombirdier",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "504": {
+    "id": 963,
+    "name": "finizen",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 964,
+        "name": "palafin",
+        "stage": 2,
+        "evolvesFrom": 963,
+        "trigger": {
+          "kind": "level-up",
+          "level": 38
+        },
+        "children": []
+      }
+    ]
+  },
+  "505": {
+    "id": 965,
+    "name": "varoom",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 966,
+        "name": "revavroom",
+        "stage": 2,
+        "evolvesFrom": 965,
+        "trigger": {
+          "kind": "level-up",
+          "level": 40
+        },
+        "children": []
+      }
+    ]
+  },
+  "506": {
+    "id": 967,
+    "name": "cyclizar",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "507": {
+    "id": 968,
+    "name": "orthworm",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "508": {
+    "id": 969,
+    "name": "glimmet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 970,
+        "name": "glimmora",
+        "stage": 2,
+        "evolvesFrom": 969,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": []
+      }
+    ]
+  },
+  "509": {
+    "id": 971,
+    "name": "greavard",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 972,
+        "name": "houndstone",
+        "stage": 2,
+        "evolvesFrom": 971,
+        "trigger": {
+          "kind": "level-up",
+          "level": 30,
+          "timeOfDay": "night"
+        },
+        "children": []
+      }
+    ]
+  },
+  "510": {
+    "id": 973,
+    "name": "flamigo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "511": {
+    "id": 974,
+    "name": "cetoddle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 975,
+        "name": "cetitan",
+        "stage": 2,
+        "evolvesFrom": 974,
+        "trigger": {
+          "kind": "use-item",
+          "item": "ice-stone"
+        },
+        "children": []
+      }
+    ]
+  },
+  "512": {
+    "id": 976,
+    "name": "veluza",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "513": {
+    "id": 977,
+    "name": "dondozo",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "514": {
+    "id": 978,
+    "name": "tatsugiri",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "515": {
+    "id": 984,
+    "name": "great-tusk",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "516": {
+    "id": 985,
+    "name": "scream-tail",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "517": {
+    "id": 986,
+    "name": "brute-bonnet",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "518": {
+    "id": 987,
+    "name": "flutter-mane",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "519": {
+    "id": 988,
+    "name": "slither-wing",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "520": {
+    "id": 989,
+    "name": "sandy-shocks",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "521": {
+    "id": 990,
+    "name": "iron-treads",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "522": {
+    "id": 991,
+    "name": "iron-bundle",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "523": {
+    "id": 992,
+    "name": "iron-hands",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "524": {
+    "id": 993,
+    "name": "iron-jugulis",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "525": {
+    "id": 994,
+    "name": "iron-moth",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "526": {
+    "id": 995,
+    "name": "iron-thorns",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "527": {
+    "id": 996,
+    "name": "frigibax",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 997,
+        "name": "arctibax",
+        "stage": 2,
+        "evolvesFrom": 996,
+        "trigger": {
+          "kind": "level-up",
+          "level": 35
+        },
+        "children": [
+          {
+            "id": 998,
+            "name": "baxcalibur",
+            "stage": 3,
+            "evolvesFrom": 997,
+            "trigger": {
+              "kind": "level-up",
+              "level": 54
+            },
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "528": {
+    "id": 999,
+    "name": "gimmighoul",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 1000,
+        "name": "gholdengo",
+        "stage": 2,
+        "evolvesFrom": 999,
+        "trigger": {
+          "kind": "gimmighoul-coins"
+        },
+        "children": []
+      }
+    ]
+  },
+  "529": {
+    "id": 1001,
+    "name": "wo-chien",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "530": {
+    "id": 1002,
+    "name": "chien-pao",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "531": {
+    "id": 1003,
+    "name": "ting-lu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "532": {
+    "id": 1004,
+    "name": "chi-yu",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "533": {
+    "id": 1005,
+    "name": "roaring-moon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "534": {
+    "id": 1006,
+    "name": "iron-valiant",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "535": {
+    "id": 1007,
+    "name": "koraidon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "536": {
+    "id": 1008,
+    "name": "miraidon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "537": {
+    "id": 1009,
+    "name": "walking-wake",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "538": {
+    "id": 1010,
+    "name": "iron-leaves",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "539": {
+    "id": 1012,
+    "name": "poltchageist",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": [
+      {
+        "id": 1013,
+        "name": "sinistcha",
+        "stage": 2,
+        "evolvesFrom": 1012,
+        "trigger": {
+          "kind": "use-item",
+          "item": "unremarkable-teacup"
+        },
+        "children": []
+      }
+    ]
+  },
+  "540": {
+    "id": 1014,
+    "name": "okidogi",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "541": {
+    "id": 1015,
+    "name": "munkidori",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "542": {
+    "id": 1016,
+    "name": "fezandipiti",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "543": {
+    "id": 1017,
+    "name": "ogerpon",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "544": {
+    "id": 1020,
+    "name": "gouging-fire",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "545": {
+    "id": 1021,
+    "name": "raging-bolt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "546": {
+    "id": 1023,
+    "name": "iron-crown",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "547": {
+    "id": 1022,
+    "name": "iron-boulder",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "548": {
+    "id": 1024,
+    "name": "terapagos",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  },
+  "549": {
+    "id": 1025,
+    "name": "pecharunt",
+    "stage": 1,
+    "evolvesFrom": null,
+    "trigger": null,
+    "children": []
+  }
+}

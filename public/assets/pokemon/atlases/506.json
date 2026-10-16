@@ -1,0 +1,33 @@
+{
+  "key": "506",
+  "frameWidth": 54,
+  "frameHeight": 72,
+  "frameCount": 21,
+  "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "totalDuration": 840,
+  "columns": 21,
+  "source": "pokemon/animated/506.gif",
+  "atlas": "pokemon/atlases/506.webp"
+}

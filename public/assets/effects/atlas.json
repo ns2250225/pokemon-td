@@ -1,0 +1,437 @@
+{
+  "generatedAt": "2026-10-16T05:33:20Z",
+  "note": "白色 + alpha 的基础纹理，运行时由 EffectSystem 按招式配置着色与缩放，实现一套纹理覆盖全部属性",
+  "size": 128,
+  "groups": {
+    "common": {
+      "dot": {
+        "file": "effects/common/dot.png",
+        "key": "common_dot",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 4188
+      },
+      "dot_soft": {
+        "file": "effects/common/dot_soft.png",
+        "key": "common_dot_soft",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 4458
+      },
+      "spark": {
+        "file": "effects/common/spark.png",
+        "key": "common_spark",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 2047
+      },
+      "streak": {
+        "file": "effects/common/streak.png",
+        "key": "common_streak",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 511
+      },
+      "smoke": {
+        "file": "effects/common/smoke.png",
+        "key": "common_smoke",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 8730
+      },
+      "star": {
+        "file": "effects/common/star.png",
+        "key": "common_star",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 2244
+      },
+      "star6": {
+        "file": "effects/common/star6.png",
+        "key": "common_star6",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 4611
+      },
+      "ring": {
+        "file": "effects/common/ring.png",
+        "key": "common_ring",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 6363
+      },
+      "shockwave": {
+        "file": "effects/common/shockwave.png",
+        "key": "common_shockwave",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 6245
+      },
+      "nova": {
+        "file": "effects/common/nova.png",
+        "key": "common_nova",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 12070
+      },
+      "flame": {
+        "file": "effects/common/flame.png",
+        "key": "common_flame",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 5884
+      },
+      "shard": {
+        "file": "effects/common/shard.png",
+        "key": "common_shard",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 2128
+      },
+      "leaf": {
+        "file": "effects/common/leaf.png",
+        "key": "common_leaf",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1683
+      },
+      "beam": {
+        "file": "effects/common/beam.png",
+        "key": "common_beam",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1599
+      },
+      "crack": {
+        "file": "effects/common/crack.png",
+        "key": "common_crack",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 6076
+      },
+      "swirl": {
+        "file": "effects/common/swirl.png",
+        "key": "common_swirl",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 16378
+      },
+      "portal": {
+        "file": "effects/common/portal.png",
+        "key": "common_portal",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 14387
+      },
+      "orb": {
+        "file": "effects/common/orb.png",
+        "key": "common_orb",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 7191
+      },
+      "heart": {
+        "file": "effects/common/heart.png",
+        "key": "common_heart",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 2635
+      },
+      "fist": {
+        "file": "effects/common/fist.png",
+        "key": "common_fist",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1997
+      },
+      "meteor": {
+        "file": "effects/common/meteor.png",
+        "key": "common_meteor",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 5811
+      },
+      "bolt_a": {
+        "file": "effects/common/bolt_a.png",
+        "key": "common_bolt_a",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 2719
+      },
+      "bolt_b": {
+        "file": "effects/common/bolt_b.png",
+        "key": "common_bolt_b",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 3185
+      },
+      "bolt_c": {
+        "file": "effects/common/bolt_c.png",
+        "key": "common_bolt_c",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1870
+      }
+    },
+    "fire": {
+      "flame_large": {
+        "file": "effects/fire/flame_large.png",
+        "key": "fire_flame_large",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 6007
+      },
+      "fireball": {
+        "file": "effects/fire/fireball.png",
+        "key": "fire_fireball",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 7191
+      },
+      "ember": {
+        "file": "effects/fire/ember.png",
+        "key": "fire_ember",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 3318
+      }
+    },
+    "water": {
+      "drop": {
+        "file": "effects/water/drop.png",
+        "key": "water_drop",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 7191
+      },
+      "splash": {
+        "file": "effects/water/splash.png",
+        "key": "water_splash",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 9976
+      },
+      "wave": {
+        "file": "effects/water/wave.png",
+        "key": "water_wave",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1276
+      }
+    },
+    "electric": {
+      "bolt_long": {
+        "file": "effects/electric/bolt_long.png",
+        "key": "electric_bolt_long",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 3013
+      },
+      "spark_ring": {
+        "file": "effects/electric/spark_ring.png",
+        "key": "electric_spark_ring",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 13179
+      }
+    },
+    "ice": {
+      "crystal": {
+        "file": "effects/ice/crystal.png",
+        "key": "ice_crystal",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1805
+      },
+      "frost": {
+        "file": "effects/ice/frost.png",
+        "key": "ice_frost",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 18574
+      }
+    },
+    "grass": {
+      "blade": {
+        "file": "effects/grass/blade.png",
+        "key": "grass_blade",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1683
+      },
+      "seed": {
+        "file": "effects/grass/seed.png",
+        "key": "grass_seed",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1999
+      },
+      "root": {
+        "file": "effects/grass/root.png",
+        "key": "grass_root",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 3260
+      }
+    },
+    "psychic": {
+      "psy_orb": {
+        "file": "effects/psychic/psy_orb.png",
+        "key": "psychic_psy_orb",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 7191
+      },
+      "psy_wave": {
+        "file": "effects/psychic/psy_wave.png",
+        "key": "psychic_psy_wave",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 6268
+      },
+      "psy_field": {
+        "file": "effects/psychic/psy_field.png",
+        "key": "psychic_psy_field",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 14387
+      }
+    },
+    "ultimate": {
+      "charged": {
+        "file": "effects/ultimate/charged.png",
+        "key": "ultimate_charged",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 13777
+      },
+      "beam_core": {
+        "file": "effects/ultimate/beam_core.png",
+        "key": "ultimate_beam_core",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 1903
+      },
+      "explosion": {
+        "file": "effects/ultimate/explosion.png",
+        "key": "ultimate_explosion",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 13758
+      },
+      "vortex": {
+        "file": "effects/ultimate/vortex.png",
+        "key": "ultimate_vortex",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 19633
+      },
+      "rune": {
+        "file": "effects/ultimate/rune.png",
+        "key": "ultimate_rune",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 14387
+      },
+      "prism": {
+        "file": "effects/ultimate/prism.png",
+        "key": "ultimate_prism",
+        "size": [
+          128,
+          128
+        ],
+        "bytes": 5892
+      }
+    }
+  }
+}

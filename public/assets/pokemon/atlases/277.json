@@ -1,0 +1,31 @@
+{
+  "key": "277",
+  "frameWidth": 72,
+  "frameHeight": 19,
+  "frameCount": 19,
+  "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "totalDuration": 760,
+  "columns": 19,
+  "source": "pokemon/animated/277.gif",
+  "atlas": "pokemon/atlases/277.webp"
+}

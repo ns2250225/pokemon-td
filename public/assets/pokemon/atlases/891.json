@@ -1,0 +1,33 @@
+{
+  "key": "891",
+  "frameWidth": 43,
+  "frameHeight": 72,
+  "frameCount": 21,
+  "durations": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "totalDuration": 630,
+  "columns": 21,
+  "source": "pokemon/animated/891.gif",
+  "atlas": "pokemon/atlases/891.webp"
+}

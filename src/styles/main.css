@@ -1,0 +1,240 @@
+/**
+ * 全局样式 —— 圆角按钮、属性色、轻量卡通风格（PRD 2.2）。
+ * 同时处理安全区域、刘海、圆角、手势条（PRD 8.4）。
+ */
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+
+  --bg-0: #0d1117;
+  --bg-1: #151b24;
+  --bg-2: #1d2531;
+  --bg-3: #273040;
+  --line: #33405a;
+
+  --text-0: #f2f6fb;
+  --text-1: #c3cedd;
+  --text-2: #8a97ab;
+
+  --brand: #ffcb05;
+  --brand-dark: #c9a000;
+  --accent: #3b82f6;
+  --good: #4ade80;
+  --warn: #fbbf24;
+  --bad: #f87171;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.28);
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.38);
+  --shadow-lg: 0 14px 40px rgba(0, 0, 0, 0.5);
+
+  --tap-min: 44px;
+
+  --font: system-ui, -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC",
+    "Hiragino Sans GB", "Noto Sans CJK SC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: var(--bg-0);
+  color: var(--text-0);
+  font-family: var(--font);
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  /* 移动端禁止页面级滚动与双击缩放，交给游戏内手势处理 */
+  touch-action: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+#app {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+/* ---------------- 通用组件类 ---------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: var(--tap-min);
+  padding: 0 18px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-3);
+  color: var(--text-0);
+  font-size: 15px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: transform 0.12s ease, background 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:active {
+  transform: scale(0.96);
+}
+
+.btn:hover {
+  background: #2f3a4d;
+}
+
+.btn--primary {
+  background: linear-gradient(180deg, #ffd83d, var(--brand));
+  color: #3a2c00;
+  border-color: #fff0a8;
+}
+
+.btn--primary:hover {
+  background: linear-gradient(180deg, #ffe066, #ffc800);
+}
+
+.btn--danger {
+  background: linear-gradient(180deg, #f98080, #ef4444);
+  color: #fff;
+}
+
+.btn--good {
+  background: linear-gradient(180deg, #6ee7a0, #22c55e);
+  color: #06301a;
+}
+
+.btn--ghost {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--line);
+}
+
+.btn--sm {
+  min-height: 34px;
+  padding: 0 12px;
+  font-size: 13px;
+}
+
+.btn--lg {
+  min-height: 54px;
+  padding: 0 30px;
+  font-size: 18px;
+}
+
+.btn:disabled,
+.btn[aria-disabled='true'] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.panel {
+  background: var(--bg-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 9px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.scroll {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--bg-3) transparent;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: var(--bg-3);
+  border-radius: 4px;
+}
+
+/* 竖屏兜底：CSS 旋转画布 */
+.screen-host.is-css-rotated {
+  /* 旋转样式由 useOrientation 的 rotationTransform 以内联 style 提供
+     （Phaser 需要 CSS 的 matrix 形式才能正确反算指针坐标），
+     这里只负责让容器脱离常规文档流并占满旋转后的可视区。 */
+  overflow: hidden;
+}
+
+.screen-host.is-css-rotated .rotate-guide {
+  display: none;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.pop-enter-active {
+  transition: transform 0.18s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.18s ease;
+}
+
+.pop-leave-active {
+  transition: transform 0.14s ease, opacity 0.14s ease;
+}
+
+.pop-enter-from,
+.pop-leave-to {
+  transform: scale(0.92);
+  opacity: 0;
+}
+
+@keyframes float-up {
+  from { transform: translateY(6px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 203, 5, 0.5); }
+  50% { box-shadow: 0 0 0 12px rgba(255, 203, 5, 0); }
+}

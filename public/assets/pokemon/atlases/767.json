@@ -1,0 +1,31 @@
+{
+  "key": "767",
+  "frameWidth": 72,
+  "frameHeight": 27,
+  "frameCount": 19,
+  "durations": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "totalDuration": 570,
+  "columns": 19,
+  "source": "pokemon/animated/767.gif",
+  "atlas": "pokemon/atlases/767.webp"
+}

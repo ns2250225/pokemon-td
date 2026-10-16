@@ -1,0 +1,27 @@
+{
+  "key": "397",
+  "frameWidth": 72,
+  "frameHeight": 65,
+  "frameCount": 15,
+  "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "totalDuration": 600,
+  "columns": 15,
+  "source": "pokemon/animated/397.gif",
+  "atlas": "pokemon/atlases/397.webp"
+}

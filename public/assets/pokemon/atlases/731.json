@@ -1,0 +1,26 @@
+{
+  "key": "731",
+  "frameWidth": 49,
+  "frameHeight": 72,
+  "frameCount": 14,
+  "durations": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "totalDuration": 420,
+  "columns": 14,
+  "source": "pokemon/animated/731.gif",
+  "atlas": "pokemon/atlases/731.webp"
+}

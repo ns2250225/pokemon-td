@@ -1,0 +1,33 @@
+{
+  "key": "520",
+  "frameWidth": 72,
+  "frameHeight": 62,
+  "frameCount": 21,
+  "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "totalDuration": 840,
+  "columns": 21,
+  "source": "pokemon/animated/520.gif",
+  "atlas": "pokemon/atlases/520.webp"
+}

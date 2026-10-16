@@ -1,0 +1,32 @@
+{
+  "key": "17",
+  "frameWidth": 72,
+  "frameHeight": 54,
+  "frameCount": 20,
+  "durations": [
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40,
+    40
+  ],
+  "totalDuration": 800,
+  "columns": 20,
+  "source": "pokemon/animated/17.gif",
+  "atlas": "pokemon/atlases/17.webp"
+}

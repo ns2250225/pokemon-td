@@ -1,0 +1,13 @@
+{
+  "key": "597",
+  "frameWidth": 57,
+  "frameHeight": 72,
+  "frameCount": 1,
+  "durations": [
+    100
+  ],
+  "totalDuration": 100,
+  "columns": 1,
+  "source": "pokemon/animated/597.gif",
+  "atlas": "pokemon/atlases/597.webp"
+}

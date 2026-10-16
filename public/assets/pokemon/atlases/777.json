@@ -1,0 +1,32 @@
+{
+  "key": "777",
+  "frameWidth": 72,
+  "frameHeight": 71,
+  "frameCount": 20,
+  "durations": [
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30,
+    30
+  ],
+  "totalDuration": 600,
+  "columns": 20,
+  "source": "pokemon/animated/777.gif",
+  "atlas": "pokemon/atlases/777.webp"
+}

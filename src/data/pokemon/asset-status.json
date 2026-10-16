@@ -1,0 +1,18 @@
+{
+  "updatedAt": "2026-10-16T06:22:47.362Z",
+  "static": {
+    "ok": 1025,
+    "missing": 0
+  },
+  "animated": {
+    "ok": 1008,
+    "missing": 17
+  },
+  "portrait": {
+    "ok": 1025
+  },
+  "shiny": {
+    "ok": 1025
+  },
+  "fullyMissing": 0
+}

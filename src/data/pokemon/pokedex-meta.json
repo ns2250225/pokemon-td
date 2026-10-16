@@ -1,0 +1,52 @@
+{
+  "generatedAt": "2026-10-16T05:12:43.869Z",
+  "source": "https://pokeapi.co/api/v2",
+  "speciesCount": 1025,
+  "formCount": 1351,
+  "missingForms": [],
+  "generationBreakdown": {
+    "第一世代": 151,
+    "第二世代": 100,
+    "第三世代": 135,
+    "第四世代": 107,
+    "第五世代": 156,
+    "第六世代": 72,
+    "第七世代": 88,
+    "第八世代": 96,
+    "第九世代": 120
+  },
+  "typeBreakdown": {
+    "grass": 127,
+    "poison": 83,
+    "fire": 81,
+    "flying": 109,
+    "water": 154,
+    "bug": 92,
+    "normal": 131,
+    "electric": 69,
+    "ground": 75,
+    "fairy": 64,
+    "fighting": 73,
+    "psychic": 102,
+    "rock": 74,
+    "steel": 65,
+    "ice": 48,
+    "ghost": 65,
+    "dragon": 70,
+    "dark": 69
+  },
+  "rarityBreakdown": {
+    "normal": 912,
+    "legendary": 71,
+    "mythical": 23,
+    "baby": 19
+  },
+  "speciesWithEvolution": 458,
+  "evolutionChains": 540,
+  "license": {
+    "upstream": "https://pokeapi.co/",
+    "license": "UNVERIFIED",
+    "commercial": false,
+    "note": "元数据（编号/属性/进化链）为事实性数据，此处仍标记为未确认授权以便追溯。"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "pokemon-tower-defense",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "《宝可梦守卫战》- Vue 3 + Phaser 3 网页塔防游戏（非商业原型）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:fast": "vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "assets:sync-pokemon": "node scripts/sync-pokemon.mjs",
+    "assets:download-pokemon": "node scripts/download-sprites.mjs",
+    "assets:download-vfx": "node scripts/download-effects.mjs",
+    "assets:process": "python tools/image_pipeline.py && python tools/vfx_pipeline.py",
+    "assets:audit": "node scripts/audit-assets.mjs",
+    "assets:manifest": "node scripts/generate-manifest.mjs",
+    "assets:all": "npm run assets:sync-pokemon && npm run assets:download-pokemon && npm run assets:download-vfx && npm run assets:process && npm run assets:status && npm run assets:manifest && npm run assets:audit",
+    "test:logic": "esbuild scripts/test-logic.mjs --bundle --platform=node --format=esm --target=node20 --outfile=.assets-cache/test-logic.bundle.mjs --loader:.json=json --log-level=warning && node .assets-cache/test-logic.bundle.mjs",
+    "sim:level": "esbuild scripts/sim-level.mjs --bundle --platform=node --format=esm --target=node20 --outfile=.assets-cache/sim-level.bundle.mjs --loader:.json=json --alias:phaser=./scripts/phaser-stub.js --log-level=warning && node .assets-cache/sim-level.bundle.mjs",
+    "report:balance": "esbuild scripts/balance-report.mjs --bundle --platform=node --format=esm --target=node20 --outfile=.assets-cache/balance-report.bundle.mjs --loader:.json=json --log-level=warning && node .assets-cache/balance-report.bundle.mjs",
+    "assets:status": "node scripts/apply-asset-status.mjs",
+    "test:browser": "node scripts/browser-smoke.mjs http://127.0.0.1:5173/",
+    "test:battle": "node scripts/battle-sim.mjs http://127.0.0.1:5173/ 1-1",
+    "assets:provenance": "node scripts/backfill-provenance.mjs"
+  },
+  "dependencies": {
+    "pinia": "^2.2.6",
+    "phaser": "^3.87.0",
+    "vue": "^3.5.13",
+    "vue-router": "^4.4.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
+    "vue-tsc": "^2.1.10",
+    "esbuild": "^0.24.0"
+  }
+}

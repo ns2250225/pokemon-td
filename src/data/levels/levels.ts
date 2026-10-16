@@ -5,7 +5,7 @@
  * 可用精灵、波次编组、BOSS/特殊事件、通关奖励与星级条件。
  */
 import { POKEDEX } from '../pokemon/pokedex';
-import { STARTER_ENEMY_IDS, STARTER_TOWER_IDS } from '../pokemon/units';
+import { STARTER_ENEMY_IDS, STARTER_TOWER_IDS, getEnemyConfig } from '../pokemon/units';
 
 /* ------------------------------------------------------------------ */
 /* 章节 / 地图主题                                                      */
@@ -83,7 +83,7 @@ export const CHAPTERS: ChapterTheme[] = [
     index: 5, key: 'manor', name: '幽灵古堡', subtitle: '隐身敌人',
     mechanic: '部分敌人周期性隐身，需要幽灵系或具备侦测能力的单位才能锁定。',
     palette: { ground: 0x3a3450, groundAlt: 0x473f61, path: 0x59476b, pathEdge: 0x2a2437, accent: 0x8a5fc4, sky: 0x241f36, fog: 0x1a1526 },
-    rules: { buildSlots: 0.88, enemySpeed: 1.02, enemyHp: 1.15, weather: 'spore', limitedVision: 0.86 },
+    rules: { buildSlots: 0.88, enemySpeed: 1.02, enemyHp: 1.05, weather: 'spore', limitedVision: 0.86 },
     bossId: 94, enemyTypes: ['ghost', 'dark', 'psychic', 'poison'],
   },
   {
@@ -99,7 +99,7 @@ export const CHAPTERS: ChapterTheme[] = [
     // 不再叠加额外的血量/速度乘数 —— 捷径本身已经是难度。
     mechanic: '大量飞行单位沿直线穿越地图，地面技能无法命中，需要专门的对空防御。',
     palette: { ground: 0xbfd6ef, groundAlt: 0xa9c6e6, path: 0xe4eefb, pathEdge: 0x8fa9c9, accent: 0xf2f7ff, sky: 0x6fb3e8, fog: 0xdceaf7 },
-    rules: { buildSlots: 0.84, enemySpeed: 0.92, enemyHp: 0.85, weather: 'none', shortcutForFlyers: true },
+    rules: { buildSlots: 0.84, enemySpeed: 0.92, enemyHp: 0.8, weather: 'none', shortcutForFlyers: true },
     bossId: 384, enemyTypes: ['flying', 'dragon', 'electric', 'fairy'],
   },
   {
@@ -228,7 +228,23 @@ function enemyPoolForChapter(chapter: ChapterTheme): number[] {
   return pool.length ? pool : STARTER_ENEMY_IDS.slice();
 }
 
-/** 用确定性的伪随机保证同一关卡每次生成的波次一致 */
+/**
+ * 波次会话种子 —— 每次启动游戏随机初始化，让每关的敌人构成在图鉴池内
+ * 逐局变化（"每一局都不一样"）；同一次会话内保持一致，素材预加载、
+ * UI 预览与调试仍基于同一份波次数据。
+ *
+ * 测试 / 仿真可在导入本模块前设置 `globalThis.__PTD_WAVE_SEED__` 固定种子，
+ * 或调用 setWaveSeed() 重置（会清空关卡缓存，重新生成全部波次）。
+ */
+let waveSeed: number = ((globalThis as { __PTD_WAVE_SEED__?: number }).__PTD_WAVE_SEED__
+  ?? ((Date.now() ^ Math.floor(Math.random() * 0x7fffffff)))) >>> 0 || 1;
+
+export function setWaveSeed(seed: number) {
+  waveSeed = seed >>> 0 || 1;
+  levelCache = null;
+}
+
+/** 用确定性的伪随机保证同一种子下生成的波次一致 */
 function makeRng(seed: number) {
   let s = seed >>> 0 || 1;
   return () => {
@@ -245,7 +261,10 @@ function buildWaves(
   difficulty: number,
   bossId: number,
 ): Wave[] {
-  const rng = makeRng(chapter.index * 1000 + levelIndex * 37);
+  // 波次种子 = 关卡基础种子 ⊕ 会话随机种子：
+  // 每次启动游戏敌人构成都在本章图鉴池内随机抽取（每局体验不同），
+  // 同一次会话内保持一致（素材预加载与调试基于同一份波次）。
+  const rng = makeRng(((chapter.index * 1000 + levelIndex * 37) ^ waveSeed) >>> 0 || 1);
   const pool = enemyPoolForChapter(chapter);
   const waveCount = 8 + Math.floor(levelIndex / 2) + (levelIndex >= 8 ? 2 : 0);
   const waves: Wave[] = [];
@@ -260,6 +279,14 @@ function buildWaves(
   const flyPool = poolFly.length ? poolFly : pool;
   const groundPool = poolGround.length ? poolGround : pool;
   const minorityCap = 0.4;
+
+  // 单位有效血量 = 自身血量 × (1 + 召唤折算)：召唤者会带来 2 只 0.35 倍血量子体
+  const unitEffHp = (pid: number): number => {
+    const cfg = getEnemyConfig(pid, 1);
+    if (!cfg) return 0;
+    return cfg.hp * (cfg.traits.includes('summoner') ? 1 + 2 * 0.35 : 1);
+  };
+  const poolAvgEffHp = pool.reduce((a, id) => a + unitEffHp(id), 0) / Math.max(1, pool.length);
 
   // 隐身敌人（幽灵 + 高速）只有鬼系/侦测塔能稳定锁定。
   // 幽灵古堡（第五章）是隐身机制的教学章；其他章节直接排除隐身种，
@@ -276,7 +303,6 @@ function buildWaves(
 
   for (let w = 0; w < waveCount; w++) {
     const isBossWave = levelIndex === 9 && w === waveCount - 1;
-    const groups: WaveGroup[] = [];
 
     // 基础编组：数量随波次和难度增长。
     // 前期增长放缓（3 + w*1.15），避免教学关在中段就出现两位数敌潮；
@@ -287,52 +313,76 @@ function buildWaves(
     const entryDiscount = levelIndex < 2
       ? (2 - levelIndex) * Math.min(4, 1 + ((chapter.index - 1) >> 1))
       : 0;
+    // 开场波压力爬坡：数量加成在第 1 波只生效一半，第 2 波起拉满
+    const diffTerm = Math.max(0, Math.min(12, Math.floor(difficulty * 0.22)) - entryDiscount);
     const baseCount = 3 + Math.floor(w * 1.15)
-      + Math.max(0, Math.min(12, Math.floor(difficulty * 0.22)) - entryDiscount);
+      + Math.round(diffTerm * Math.min(1, 0.5 + w / 4));
     const groupCount = 1 + Math.min(2, Math.floor(w / 4));
 
-    // 本章的"少数派"敌群（非天空章 = 飞行；天空章 = 地面）
-    const minorityTotal = Math.min(
-      baseCount - 1,
-      Math.max(1, Math.round((baseCount / groupCount) * (0.5 + rng()) * minorityCap)),
-    );
-    const minorityPool = isSkyChapter ? groundPool : flyPool;
-    const majorityPool = isSkyChapter ? flyPool : groundPool;
-    const minorityDelay = 800 + Math.floor(rng() * 900);
+    // 波次有效血量预算：随机种子可能抽出超纲组合（全坦系 / 召唤海），
+    // 以"本章平均单位血量"为基准上浮 30% 作为上限，超预算则整波重抽、
+    // 取最接近预算的一次 —— 保证任意种子下波次压力都在中等区间内。
+    const waveBudget = baseCount * poolAvgEffHp * 1.2;
 
-    const pushGroup = (pid: number, count: number, delayMs: number, note?: string) => {
-      if (count <= 0) return;
-      groups.push({
-        pokemonId: pid,
-        count,
-        intervalMs: Math.max(340, 950 - w * 45 - difficulty * 10),
-        delayMs,
-        note,
-      });
+    const composeWave = (): { groups: WaveGroup[]; effHp: number } => {
+      const groups: WaveGroup[] = [];
+
+      // 本章的"少数派"敌群（非天空章 = 飞行；天空章 = 地面）
+      const minorityTotal = Math.min(
+        baseCount - 1,
+        Math.max(1, Math.round((baseCount / groupCount) * (0.5 + rng()) * minorityCap)),
+      );
+      const minorityPool = isSkyChapter ? groundPool : flyPool;
+      const majorityPool = isSkyChapter ? flyPool : groundPool;
+      const minorityDelay = 800 + Math.floor(rng() * 900);
+
+      const pushGroup = (pid: number, count: number, delayMs: number, note?: string) => {
+        if (count <= 0) return;
+        groups.push({
+          pokemonId: pid,
+          count,
+          intervalMs: Math.max(340, 950 - w * 45 - difficulty * 10),
+          delayMs,
+          note,
+        });
+      };
+
+      // 少数派拆成 groupCount 个小编组，主群同样
+      let minorityLeft = minorityTotal;
+      let majorityLeft = baseCount - minorityTotal;
+      for (let g = 0; g < groupCount; g++) {
+        const isLast = g === groupCount - 1;
+        const minorityPart = isLast ? minorityLeft : Math.max(0, Math.round(minorityTotal / groupCount) + Math.floor(rng() * 2) - 1);
+        const majorityPart = isLast ? majorityLeft : Math.round(majorityLeft / (groupCount - g)) + Math.floor(rng() * 2) - 1;
+        minorityLeft -= minorityPart;
+        majorityLeft -= Math.max(0, majorityPart);
+        pushGroup(pickTame(minorityPool), minorityPart, g * 1400 + minorityDelay);
+        pushGroup(pickTame(majorityPool), Math.max(1, majorityPart), g * 1400);
+      }
+
+      if (isBossWave && bossId) {
+        groups.push({ pokemonId: bossId, count: 1, intervalMs: 1000, delayMs: 2500, note: 'BOSS' });
+        // BOSS 随行小队：从主群池抽取（天空章 = 飞行护卫）
+        pushGroup(pickTame(majorityPool), 6, 0, '精英护卫');
+      }
+
+      // BOSS 是固定设计的压轴单位，不计入波次预算
+      const effHp = groups.reduce(
+        (a, g) => a + (g.note === 'BOSS' ? 0 : g.count * unitEffHp(g.pokemonId)),
+        0,
+      );
+      return { groups, effHp };
     };
 
-    // 少数派拆成 groupCount 个小编组，主群同样
-    let minorityLeft = minorityTotal;
-    let majorityLeft = baseCount - minorityTotal;
-    for (let g = 0; g < groupCount; g++) {
-      const isLast = g === groupCount - 1;
-      const minorityPart = isLast ? minorityLeft : Math.max(0, Math.round(minorityTotal / groupCount) + Math.floor(rng() * 2) - 1);
-      const majorityPart = isLast ? majorityLeft : Math.round(majorityLeft / (groupCount - g)) + Math.floor(rng() * 2) - 1;
-      minorityLeft -= minorityPart;
-      majorityLeft -= Math.max(0, majorityPart);
-      pushGroup(pickTame(minorityPool), minorityPart, g * 1400 + minorityDelay);
-      pushGroup(pickTame(majorityPool), Math.max(1, majorityPart), g * 1400);
-    }
-
-    if (isBossWave && bossId) {
-      groups.push({ pokemonId: bossId, count: 1, intervalMs: 1000, delayMs: 2500, note: 'BOSS' });
-      // BOSS 随行小队：从主群池抽取（天空章 = 飞行护卫）
-      pushGroup(pickTame(majorityPool), 6, 0, '精英护卫');
+    let wave = composeWave();
+    for (let attempt = 0; attempt < 5 && wave.effHp > waveBudget; attempt++) {
+      const retry = composeWave();
+      if (retry.effHp < wave.effHp) wave = retry;
     }
 
     waves.push({
       index: w,
-      groups,
+      groups: wave.groups,
       bonus: Math.round(25 + w * 8 + difficulty * 4),
       isBoss: isBossWave,
     });

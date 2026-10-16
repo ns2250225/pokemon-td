@@ -344,4 +344,32 @@ function moveDescription(id: string) {
     bottom: calc(128px + var(--safe-bottom));
   }
 }
+
+/* 矮屏（手机横屏）：面板被顶栏与建造栏夹在中间，可用高度只有 ~240px。
+   限制面板高度、超高内部滚动，并整体压缩内容，保证标题/属性/招式/按钮全部可达。 */
+@media (max-height: 520px) {
+  .upgrade {
+    bottom: calc(96px + var(--safe-bottom));
+    max-height: calc(100vh - 96px - 88px); /* 底栏 96 + 顶部 HUD 84 + 余量 */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    width: min(300px, calc(100vw - 16px));
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .upgrade__head { gap: 8px; }
+  .upgrade__head :deep(.pkm-img) { height: 38px !important; width: 38px !important; }
+  .upgrade__name strong { font-size: 13px; }
+  .upgrade__stats { gap: 3px; }
+  .stat-cell { padding: 2px 2px; }
+  .stat-cell__label { font-size: 8px; }
+  .stat-cell strong { font-size: 12px; }
+  .upgrade__moves { gap: 3px; }
+  .move-chip { padding: 3px 7px; font-size: 10.5px; }
+  .upgrade__actions { gap: 4px; }
+  .upgrade__btn { min-height: 32px; font-size: 12px; }
+  .upgrade__close { top: 4px; right: 6px; width: 22px; height: 22px; font-size: 11px; }
+}
+
 </style>

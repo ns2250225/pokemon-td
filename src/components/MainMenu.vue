@@ -357,4 +357,20 @@ function click(fn: () => void) {
 @media (max-width: 640px) {
   .menu__notice { display: none; }
 }
+
+/* 矮屏（手机横屏）：压缩主菜单垂直布局，底部统计条保持可见 */
+@media (max-height: 480px) {
+  .menu { padding: 6px clamp(12px, 3vw, 32px); }
+  .menu__ball { width: 30px; height: 30px; }
+  .menu__header h1 { font-size: 22px; }
+  .menu__header p { font-size: 11px; }
+  .menu__body { gap: 10px; }
+  .menu__showcase { flex-wrap: nowrap; gap: 12px; padding-bottom: 2px; }
+  .menu__showcase :deep(.pkm-img) { height: 46px !important; width: auto !important; }
+  .menu__showcase :deep(img) { height: 100%; width: 100%; }
+  .showcase-card__name { font-size: 10px; }
+  .menu__play { font-size: 15px; }
+  .menu__stats { padding-top: 5px; gap: 14px; }
+}
+
 </style>

@@ -238,3 +238,19 @@ select {
   0%, 100% { box-shadow: 0 0 0 0 rgba(255, 203, 5, 0.5); }
   50% { box-shadow: 0 0 0 12px rgba(255, 203, 5, 0); }
 }
+
+/* ================================================================
+   矮屏（手机横屏，视口高度 ≤ 480px）适配
+   ================================================================ */
+@media (max-height: 480px) {
+  /* 弹窗类 overlay：内容可能超过视口高度。
+     overlay 允许整体滚动，子元素用 auto margin 居中 —— 内容超高时
+     margin 退化为 0，顶部不会被裁掉，完整可滚。 */
+  .overlay {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .overlay > * {
+    margin: auto;
+  }
+}

@@ -406,6 +406,9 @@ onMounted(() => { /* 数据已是同步静态导入，无需额外加载 */ });
   gap: 6px;
   align-content: start;
   padding-right: 4px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .dex-item {

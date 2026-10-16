@@ -226,4 +226,27 @@ const starText = computed(() => ['', '通关', '守住半数生命', '满生命�
   width: 100%;
   margin-top: 4px;
 }
+
+/* 矮屏（手机横屏）：压缩结算面板，保证按钮完整可见 */
+@media (max-height: 480px) {
+  .result {
+    width: min(430px, 94vw);
+    padding: 8px 14px 10px;
+    gap: 5px;
+  }
+  .result__icon { font-size: 26px; }
+  .result h2 { font-size: 19px; margin-top: 2px; letter-spacing: 2px; }
+  .result__level { font-size: 10px; }
+  .result__stars { font-size: 24px; gap: 7px; }
+  .result__star-note { font-size: 10px; }
+  .result__stats { gap: 4px; }
+  .rstat { padding: 3px 2px; }
+  .rstat__label { font-size: 8.5px; }
+  .rstat strong { font-size: 12px; }
+  .rstat--wide { padding: 4px; }
+  .result__actions { gap: 5px; margin-top: 0; }
+  .result__actions .btn--lg { min-height: 40px; font-size: 14px; }
+  .result__unlock { padding: 4px 8px; font-size: 11px; }
+}
+
 </style>

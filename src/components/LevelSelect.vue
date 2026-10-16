@@ -411,4 +411,12 @@ function paletteGradient(): string {
   color: var(--text-2);
   text-align: center;
 }
+
+/* 矮屏（手机横屏）：收紧关卡选择页 */
+@media (max-height: 480px) {
+  .levels { padding: 8px clamp(10px, 2vw, 24px); gap: 8px; }
+  .levels__detail-inner { padding: 8px 10px; gap: 6px; }
+  .levels__grid { gap: 5px; }
+}
+
 </style>

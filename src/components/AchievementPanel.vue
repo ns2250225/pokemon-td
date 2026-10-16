@@ -156,9 +156,22 @@ function fmtDate(ts: number) {
 }
 
 .ach__grid {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  align-content: start;
+  padding-right: 4px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
   gap: 8px;
+}
+
+/* 矮屏（手机横屏）：收紧卡片与间距 */
+@media (max-height: 480px) {
+  .ach__summary { padding: 6px 10px; }
+  .ach-card { padding: 5px 9px; }
 }
 
 .ach-card {

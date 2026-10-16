@@ -8,7 +8,7 @@
  *
  * 两者通过 eventBus 通信，避免 Vue 直接持有场景内部对象。
  */
-import { computed, onBeforeUnmount, onMounted, ref, shallowRef } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, shallowRef, watch } from 'vue';
 import GameHUD from './GameHUD.vue';
 import PokemonCard from './PokemonCard.vue';
 import UpgradePanel from './UpgradePanel.vue';
@@ -63,6 +63,52 @@ const toast = ref<{ text: string; tone: string } | null>(null);
 const availableTowers = computed(() =>
   (level.value?.availableTowers ?? []).filter((id) => progress.isUnlocked(id)),
 );
+
+/* ---------------- 建造栏滚动 ---------------- */
+const cardsRef = ref<HTMLDivElement | null>(null);
+/** 左右两端是否还有被裁掉的卡（控制渐隐提示） */
+const fadeLeft = ref(false);
+const fadeRight = ref(false);
+/** 新解锁高亮中的精灵（几秒后消失） */
+const flashIds = ref<Set<number>>(new Set());
+let flashTimer: ReturnType<typeof setTimeout> | null = null;
+
+function updateFades() {
+  const el = cardsRef.value;
+  if (!el) return;
+  fadeLeft.value = el.scrollLeft > 4;
+  fadeRight.value = el.scrollLeft + el.clientWidth < el.scrollWidth - 4;
+}
+
+/** 桌面端滚轮直接横移建造栏（纵向增量转横向），不再依赖 Shift+滚轮 */
+function onCardsWheel(e: WheelEvent) {
+  const el = cardsRef.value;
+  if (!el) return;
+  if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+    el.scrollLeft += e.deltaY;
+    updateFades();
+  }
+}
+
+/** 新解锁的卡滚到可见区并高亮几秒，提示"刚解锁的在这里" */
+function flashNewCards(ids: number[]) {
+  if (!ids.length) return;
+  void nextTick(() => {
+    const el = cardsRef.value;
+    const target = el?.querySelector(`[data-pokemon-id="${ids[0]}"]`);
+    target?.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+    updateFades();
+  });
+  flashIds.value = new Set(ids);
+  if (flashTimer) clearTimeout(flashTimer);
+  flashTimer = setTimeout(() => { flashIds.value = new Set(); }, 4000);
+}
+
+watch(availableTowers, (now, prev) => {
+  const added = now.filter((id) => !prev.includes(id));
+  if (added.length) flashNewCards(added);
+  void nextTick(updateFades);
+});
 const showResult = computed(() => result.value !== null);
 
 /* ---------------- 生命周期 ---------------- */
@@ -80,6 +126,8 @@ onMounted(async () => {
   audioEngine.startBgm(level.value?.chapter ?? 1);
   registerBusHandlers();
   registerPrecache();
+  window.addEventListener('resize', updateFades);
+  void nextTick(updateFades);
 
   // 「开始游戏时尝试全屏」设置（PRD 8.4）：移动端横屏体验明显更好，
   // 但浏览器要求全屏必须由用户手势触发，因此只在本次点击链内尝试一次，
@@ -119,6 +167,8 @@ function waitForBattleScene(handle: GameHandle, timeoutMs = 6000): Promise<void>
 onBeforeUnmount(() => {
   unregisterBusHandlers();
   audioEngine.stopBgm();
+  window.removeEventListener('resize', updateFades);
+  if (flashTimer) clearTimeout(flashTimer);
   gameHandle.value?.destroy();
   gameHandle.value = null;
   battleScene.value = null;
@@ -336,15 +386,25 @@ const buildType = computed<PokemonType | undefined>(() => {
       <div class="battle__build-hint" v-if="buildMode">
         点击地图上的绿色格子放置 · <button class="link" @click="cancelBuild">取消</button>
       </div>
-      <div class="battle__cards scroll">
-        <PokemonCard
-          v-for="id in availableTowers"
-          :key="id"
-          :pokemon-id="id"
-          :coins="economy.coins"
-          :active="buildMode?.pokemonId === id"
-          @pick="beginBuild(id)"
-        />
+      <div class="battle__cards-wrap">
+        <div
+          ref="cardsRef"
+          class="battle__cards scroll"
+          @scroll="updateFades"
+          @wheel="onCardsWheel"
+        >
+          <PokemonCard
+            v-for="id in availableTowers"
+            :key="id"
+            :pokemon-id="id"
+            :coins="economy.coins"
+            :active="buildMode?.pokemonId === id"
+            :is-new="flashIds.has(id)"
+            @pick="beginBuild(id)"
+          />
+        </div>
+        <div v-if="fadeLeft" class="cards-fade cards-fade--left" aria-hidden="true"></div>
+        <div v-if="fadeRight" class="cards-fade cards-fade--right" aria-hidden="true"></div>
       </div>
     </div>
 
@@ -453,6 +513,31 @@ const buildType = computed<PokemonType | undefined>(() => {
   text-decoration: underline;
   font-size: 12px;
   min-height: auto;
+}
+
+.battle__cards-wrap {
+  position: relative;
+  min-width: 0;
+}
+
+/* 两端渐隐：提示还有卡片在屏幕外 */
+.cards-fade {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.cards-fade--left {
+  left: calc(var(--safe-left, 0px));
+  background: linear-gradient(to right, rgba(13, 17, 23, 0.95), transparent);
+}
+
+.cards-fade--right {
+  right: calc(var(--safe-right, 0px));
+  background: linear-gradient(to left, rgba(13, 17, 23, 0.95), transparent);
 }
 
 .battle__cards {

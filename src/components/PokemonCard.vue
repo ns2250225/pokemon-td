@@ -17,6 +17,8 @@ const props = defineProps<{
   pokemonId: number;
   coins: number;
   active: boolean;
+  /** 刚解锁的高亮态（几秒后自动消失） */
+  isNew?: boolean;
 }>();
 
 const emit = defineEmits<{ (e: 'pick', id: number): void }>();
@@ -51,7 +53,8 @@ function pick() {
 <template>
   <button
     class="pcard"
-    :class="{ 'is-active': active, 'is-poor': !affordable, 'is-locked': !unlocked }"
+    :class="{ 'is-active': active, 'is-poor': !affordable, 'is-locked': !unlocked, 'is-new': isNew }"
+    :data-pokemon-id="pokemonId"
     :style="{ '--accent': accent }"
     :disabled="!unlocked"
     :title="config?.archetype.mechanic"
@@ -60,6 +63,7 @@ function pick() {
     <span class="pcard__cost" :class="{ 'is-poor': !affordable }">
       🪙 {{ config?.cost }}
     </span>
+    <span v-if="isNew" class="pcard__new">NEW</span>
 
     <div class="pcard__art">
       <PokemonImage
@@ -112,6 +116,32 @@ function pick() {
   border-color: var(--brand);
   background: linear-gradient(180deg, rgba(255, 203, 5, 0.2), rgba(21, 27, 36, 0.95));
   box-shadow: 0 0 0 3px rgba(255, 203, 5, 0.28);
+}
+
+/* 新解锁高亮：绿框呼吸 + NEW 角标 */
+.pcard.is-new {
+  border-color: var(--good);
+}
+
+.pcard.is-new .pcard__art { animation: card-new-glow 1.1s ease 3; }
+
+.pcard__new {
+  position: absolute;
+  top: -7px;
+  left: -4px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: var(--good);
+  color: #06130a;
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  z-index: 1;
+}
+
+@keyframes card-new-glow {
+  0%, 100% { filter: drop-shadow(0 0 0 rgba(74, 222, 128, 0)); }
+  50% { filter: drop-shadow(0 0 10px rgba(74, 222, 128, 0.85)); }
 }
 
 .pcard.is-poor { opacity: 0.55; }

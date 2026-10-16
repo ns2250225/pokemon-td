@@ -8,6 +8,7 @@ dist-ssr/
 
 # 本地缓存与工具运行目录（素材下载缓存 / CDP 浏览器配置 / 仿真打包产物）
 .assets-cache/
+.firecrawl/
 .tsrun/
 .vite/
 

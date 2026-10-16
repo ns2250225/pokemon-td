@@ -14,6 +14,7 @@
     "assets:download-pokemon": "node scripts/download-sprites.mjs",
     "assets:download-vfx": "node scripts/download-effects.mjs",
     "assets:process": "python tools/image_pipeline.py && python tools/vfx_pipeline.py",
+    "assets:maps": "python tools/map_pipeline.py",
     "assets:audit": "node scripts/audit-assets.mjs",
     "assets:manifest": "node scripts/generate-manifest.mjs",
     "assets:all": "npm run assets:sync-pokemon && npm run assets:download-pokemon && npm run assets:download-vfx && npm run assets:process && npm run assets:status && npm run assets:manifest && npm run assets:audit",
@@ -22,6 +23,7 @@
     "report:balance": "esbuild scripts/balance-report.mjs --bundle --platform=node --format=esm --target=node20 --outfile=.assets-cache/balance-report.bundle.mjs --loader:.json=json --log-level=warning && node .assets-cache/balance-report.bundle.mjs",
     "assets:status": "node scripts/apply-asset-status.mjs",
     "test:browser": "node scripts/browser-smoke.mjs http://127.0.0.1:5173/",
+    "test:maps": "node scripts/map-smoke.mjs http://127.0.0.1:5173/",
     "test:battle": "node scripts/battle-sim.mjs http://127.0.0.1:5173/ 1-1",
     "assets:provenance": "node scripts/backfill-provenance.mjs"
   },

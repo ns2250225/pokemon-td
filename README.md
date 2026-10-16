@@ -35,6 +35,8 @@ npm run preview    # 预览生产构建
 
 素材已随仓库提供，无需重新下载即可运行。
 
+地图使用 Pixel Frog 的 Tiny Swords **旧版 CC0** 与 Kenney 素材，包含八种主题地形、自然岸线、树木、岩石、宝箱及遗迹。来源与加工方式见 [地图素材清单](public/assets/maps/SOURCES.md)。
+
 ---
 
 ## 玩法

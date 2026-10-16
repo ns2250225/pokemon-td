@@ -14,6 +14,7 @@ import {
   QUALITY_CONFIG, isMobileDevice, type QualityLevel, type GameSpeed,
 } from '../config';
 import { consumePendingLevelId } from './SceneParams';
+import { preloadMapAssets, drawMapTerrain, drawMapObstacle, drawMapEndpoints } from '../MapRenderer';
 import { AssetService, textureKeys } from '../managers/AssetManager';
 import { EffectSystem } from '../systems/EffectSystem';
 import { WaveSystem } from '../systems/WaveSystem';
@@ -103,6 +104,10 @@ export class BattleScene extends Phaser.Scene {
     super({ key: SCENE_KEYS.BATTLE });
   }
 
+  preload() {
+    preloadMapAssets(this);
+  }
+
   create() {
     const levelId = consumePendingLevelId();
     const level = levelId ? getLevel(levelId) : null;
@@ -160,7 +165,10 @@ export class BattleScene extends Phaser.Scene {
   /** 特效纹理体积很小，进入关卡时一次性加载 */
   private ensureEffectTextures() {
     const groups = ['common', 'fire', 'water', 'electric', 'ice', 'grass', 'psychic', 'ultimate'];
-    this.assets.loadEffects(groups).catch(() => { /* 缺失时 EffectSystem 会回退到默认纹理 */ });
+    const assets = this.assets;
+    assets.loadEffects(groups).then(() => {
+      if (this.sys.isActive() && this.assets === assets) this.createWeather();
+    }).catch(() => { /* 缺失时 EffectSystem 会回退到默认纹理 */ });
   }
 
   private setupWaves() {
@@ -188,107 +196,20 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private drawMap() {
-    const theme = this.level.theme.palette;
+    drawMapTerrain(this, this.level);
+    drawMapEndpoints(this, this.level);
 
-    // 背景
-    const bg = this.add.graphics();
-    bg.fillStyle(theme.sky, 1);
-    bg.fillRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
-    bg.setDepth(DEPTH.background);
-
-    // 地面棋盘格
-    const ground = this.add.graphics();
-    ground.setDepth(DEPTH.background + 1);
-    const inBattlefield = (row: number) => row * TILE + TILE / 2 > 0;
-    for (let r = 0; r < GRID_ROWS; r++) {
-      for (let c = 0; c < GRID_COLS; c++) {
-        if (!inBattlefield(r)) continue;
-        const alt = (r + c) % 2 === 0;
-        ground.fillStyle(alt ? theme.ground : theme.groundAlt, 1);
-        ground.fillRect(c * TILE, r * TILE, TILE, TILE);
-      }
-    }
-    // 地形纹理点缀
-    const rng = new Phaser.Math.RandomDataGenerator([`${this.level.id}-deco`]);
-    ground.fillStyle(theme.accent, 0.16);
-    for (let i = 0; i < 90; i++) {
-      const x = rng.between(0, GRID_COLS - 1) * TILE;
-      const y = rng.between(0, GRID_ROWS - 1) * TILE;
-      ground.fillCircle(x + rng.between(8, 56), y + rng.between(8, 56), rng.between(3, 9));
-    }
-
-    // 路径
     this.blocked = blockedCells(this.level.path);
-    // 可玩行带外的行（顶栏 HUD / 底栏建造栏覆盖的区域）禁止建造，
-    // 避免塔和单位被 UI 挡住。路径与障碍已由关卡数据约束在同一行带。
+    // HUD / 建造栏遮挡的行不允许建造。
     for (let x = 0; x < GRID_COLS; x++) {
       for (const y of [0, 1, 11, 12, 13]) this.blocked.add(`${x},${y}`);
     }
-    const path = this.add.graphics();
-    path.setDepth(DEPTH.path);
-    path.lineStyle(TILE * 0.94, theme.pathEdge, 1);
-    path.beginPath();
-    path.moveTo(this.level.path[0].x * TILE + TILE / 2, this.level.path[0].y * TILE + TILE / 2);
-    for (let i = 1; i < this.level.path.length; i++) {
-      path.lineTo(this.level.path[i].x * TILE + TILE / 2, this.level.path[i].y * TILE + TILE / 2);
-    }
-    path.strokePath();
-    path.lineStyle(TILE * 0.78, theme.path, 1);
-    path.beginPath();
-    path.moveTo(this.level.path[0].x * TILE + TILE / 2, this.level.path[0].y * TILE + TILE / 2);
-    for (let i = 1; i < this.level.path.length; i++) {
-      path.lineTo(this.level.path[i].x * TILE + TILE / 2, this.level.path[i].y * TILE + TILE / 2);
-    }
-    path.strokePath();
-
-    // 入口与终点
-    const start = this.level.path[0];
-    const end = this.level.path[this.level.path.length - 1];
-    const startX = Math.max(20, start.x * TILE + TILE / 2);
-    const startY = start.y * TILE + TILE / 2;
-    const endX = end.x * TILE + TILE / 2;
-    const endY = end.y * TILE + TILE / 2;
-
-    const portal = this.add.circle(startX, startY, 26, 0x2b3a52, 0.9).setDepth(DEPTH.path + 1);
-    portal.setStrokeStyle(4, 0x8fd3f4, 0.9);
-    this.add.text(startX, startY - 44, '入口', {
-      fontFamily: 'system-ui, sans-serif', fontSize: '16px', color: '#dff1ff',
-    }).setOrigin(0.5).setDepth(DEPTH.path + 2);
-
-    const base = this.add.circle(endX, endY, 30, 0x2b3a52, 0.92).setDepth(DEPTH.path + 1).setName('base');
-    base.setStrokeStyle(5, 0xffd76e, 0.95);
-    this.add.text(endX, endY - 50, '基地', {
-      fontFamily: 'system-ui, sans-serif', fontSize: '16px', color: '#ffe9a8',
-    }).setOrigin(0.5).setDepth(DEPTH.path + 2);
-    this.tweens.add({ targets: base, scale: { from: 1, to: 1.08 }, duration: 1200, yoyo: true, repeat: -1 });
-
     this.buildableHighlights.clear();
-
-    // 障碍物
-    this.obstacles = [];
-    for (const def of this.level.obstacles) {
-      const x = def.x * TILE + TILE / 2;
-      const y = def.y * TILE + TILE / 2;
-      const container = this.add.container(x, y).setDepth(DEPTH.obstacles);
-      const color = def.kind === 'tree' ? 0x2f7a3a
-        : def.kind === 'rock' ? 0x8b8b8b
-        : def.kind === 'bush' ? 0x4c9c48
-        : def.kind === 'chest' ? 0xd9a441
-        : def.kind === 'crystal' ? 0x7fd4e8
-        : 0x9a8f7d;
-      const body = this.add.circle(0, 4, def.kind === 'tree' || def.kind === 'bush' ? 24 : 20, color, 1);
-      body.setStrokeStyle(3, 0x1b2230, 0.75);
-      const glyph = this.add.text(0, 0, def.kind === 'chest' ? '宝' : def.kind === 'crystal' ? '晶' : def.kind === 'tree' ? '木' : def.kind === 'bush' ? '草' : def.kind === 'ruin' ? '遗' : '石', {
-        fontFamily: 'system-ui, sans-serif', fontSize: '16px', fontStyle: 'bold', color: '#ffffff',
-      }).setOrigin(0.5);
-      container.add([body, glyph]);
-      // 障碍物占位，不可建造
+    this.obstacles = this.level.obstacles.map((def) => {
       this.blocked.add(`${def.x},${def.y}`);
-      this.obstacles.push({ def, maxHp: def.hp, sprite: container });
-    }
+      return { def, maxHp: def.hp, sprite: drawMapObstacle(this, def, this.level.theme.key) };
+    });
 
-    // 天气与光照
-    this.createWeather();
     if (this.level.theme.rules.limitedVision) {
       const v = this.level.theme.rules.limitedVision;
       const overlay = this.add.rectangle(GAME_WIDTH / 2, GAME_HEIGHT / 2, GAME_WIDTH, GAME_HEIGHT, this.level.theme.palette.fog, 1 - v);
@@ -297,6 +218,7 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private createWeather() {
+    if (this.weatherEmitter) return;
     const kind = this.level.theme.rules.weather;
     if (!kind || kind === 'none') return;
     const settings = getGameSettings();
@@ -333,6 +255,7 @@ export class BattleScene extends Phaser.Scene {
     });
     emitter.setDepth(DEPTH.weather);
     this.weatherEmitter = emitter;
+    if (this.state === 'paused' || this.state === 'won' || this.state === 'lost') emitter.stop();
   }
 
   /* ------------------------------------------------------------------ */
@@ -513,13 +436,16 @@ export class BattleScene extends Phaser.Scene {
     bus.emit('battle:buildMode', null);
 
     // 先加载该精灵资源再播放动画
-    await this.assets.loadPokemon(pokemonId, ['static', 'animated']).catch(() => {});
+    const assets = this.assets;
+    await assets.loadPokemon(pokemonId, ['static', 'animated']).catch(() => {});
+    if (!this.sys.isActive() || this.assets !== assets || !this.towers.includes(tower)) return;
     this.discoverSpecies(pokemonId);
 
     const tempKey = textureKeys(pokemonId).animated;
     const tempKeyStatic = textureKeys(pokemonId).static;
     const animKey = this.textures.exists(tempKey) ? tempKey : (this.textures.exists(tempKeyStatic) ? tempKeyStatic : null);
     await this.effects.playSpawnAnimation(x, y, animKey ?? 'fx-common-dot', 1);
+    if (!this.sys.isActive() || this.assets !== assets || !this.towers.includes(tower)) return;
 
     tower.createView(this, this.assets);
     tower.setBaseScaleY(tower.sprite?.scaleY ?? 1);
@@ -657,8 +583,11 @@ export class BattleScene extends Phaser.Scene {
 
     // 进化动画（PRD 3.4：更换精灵形象、提升属性与技能）
     this.effects.playUpgradeFx(tower.x, tower.y, this.typeColor(tower), 'evolution');
-    await this.assets.loadPokemon(targetId, ['static', 'animated']).catch(() => {});
+    const assets = this.assets;
+    await assets.loadPokemon(targetId, ['static', 'animated']).catch(() => {});
+    if (!this.sys.isActive() || this.assets !== assets || !this.towers.includes(tower)) return false;
     await new Promise((r) => this.time.delayedCall(420, r));
+    if (!this.sys.isActive() || this.assets !== assets || !this.towers.includes(tower)) return false;
     this.discoverSpecies(targetId);
 
     tower.evolve(targetConfig);
@@ -738,10 +667,11 @@ export class BattleScene extends Phaser.Scene {
     //
     // 有整体超时兜底：素材加载再慢也不能让关卡永远停在"准备中"——
     // 缺失的素材会走占位回退，游戏仍然可玩。
+    const assets = this.assets;
     const begin = () => {
-      if (this.state !== 'preparing') return;
+      if (!this.sys.isActive() || this.assets !== assets || this.state !== 'preparing') return;
       this.time.delayedCall(600, () => {
-        if (this.state !== 'preparing') return;
+        if (!this.sys.isActive() || this.assets !== assets || this.state !== 'preparing') return;
         this.state = 'running';
         this.waves.start();
       });
@@ -1079,15 +1009,16 @@ export class BattleScene extends Phaser.Scene {
     const id = enemy.id;
     if (this.loadingEnemies.has(id)) return;
     this.loadingEnemies.add(id);
+    const assets = this.assets;
     try {
-      await this.assets.loadPokemon(id, ['static', 'animated']);
+      await assets.loadPokemon(id, ['static', 'animated']);
     } catch {
       /* 素材缺失时保留回退视图 */
     } finally {
-      this.loadingEnemies.delete(id);
+      if (this.assets === assets) this.loadingEnemies.delete(id);
     }
-    // 敌人在加载期间可能已经死亡或抵达终点
-    if (!enemy.alive || enemy.reachedEnd) return;
+    // 加载完成时可能已经切换关卡，旧场景不能再创建视图。
+    if (!this.sys.isActive() || this.assets !== assets || !this.waves.enemies.includes(enemy) || !enemy.alive || enemy.reachedEnd) return;
     enemy.destroyView();
     enemy.createView(this, this.assets);
   }
@@ -1335,6 +1266,7 @@ export class BattleScene extends Phaser.Scene {
   private cleanup() {
     this.scale.off('resize', this.handleResize, this);
     this.waves?.destroy();
+    this.loadingEnemies.clear();
     for (const t of this.towers) t.destroyView();
     this.towers = [];
     this.towerByUid.clear();

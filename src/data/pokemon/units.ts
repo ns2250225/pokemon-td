@@ -120,9 +120,8 @@ function deriveEnemyHp(entry: PokedexEntry, stage: number): number {
   const s = entry.baseStats;
   const bulk = ((s['hp'] ?? 45) * 2 + (s['defense'] ?? 45) + (s['special-defense'] ?? 45)) / 4;
   const rarity = entry.rarity === 'legendary' ? 3.2 : entry.rarity === 'mythical' ? 3.6 : 1;
-  // 基准 22 + bulk * 1.25：第一章基础敌人约 70-110 血，3 座初始塔可以在
-  // 单波内清完；更高章节再按章节系数放大。
-  return Math.round((22 + bulk * 1.25) * (1 + (stage - 1) * 0.22) * rarity);
+  // 基准 24 + bulk * 1.4：中等难度基准。第一章基础敌人约 80-120 血。
+  return Math.round((24 + bulk * 1.4) * (1 + (stage - 1) * 0.22) * rarity);
 }
 
 function deriveEnemySpeed(entry: PokedexEntry): number {
@@ -338,7 +337,7 @@ export function buildEnemyConfig(entry: PokedexEntry, stage = 1): EnemyConfig {
     pokemonId: entry.id,
     nameZh: entry.nameZh,
     types: entry.types as PokemonType[],
-    hp: Math.round(deriveEnemyHp(entry, stage) * (isBoss ? 1.6 : 1)),
+    hp: Math.round(deriveEnemyHp(entry, stage) * (isBoss ? 1.8 : 1)),
     speed: deriveEnemySpeed(entry),
     baseDamage: isBoss ? 5 : entry.rarity === 'mythical' ? 4 : entry.evoStage >= 3 ? 2 : 1,
     armor: Math.min(0.55, Math.max(0, (defense - 45) / 220)),

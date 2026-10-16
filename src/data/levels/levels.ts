@@ -279,9 +279,16 @@ function buildWaves(
     const groups: WaveGroup[] = [];
 
     // 基础编组：数量随波次和难度增长。
-    // 前期增长放缓（3 + w*1.05），避免教学关在中段就出现两位数敌潮；
-    // 难度系数 0.15/级：到最终章每波基础数量 +11，配合章节血量系数递进。
-    const baseCount = 3 + Math.floor(w * 1.05) + Math.floor(difficulty * 0.15);
+    // 前期增长放缓（3 + w*1.15），避免教学关在中段就出现两位数敌潮；
+    // 难度系数 0.22/级并封顶 +12：到最终章每波基础数量最多 +12，
+    // 配合章节血量系数递进。
+    // 章节入门关（第 1~2 关）打折：刚进新章时玩家还没有本章属性的优势塔，
+    // 直接吃满章节数量加成会在开局就被击穿。
+    const entryDiscount = levelIndex < 2
+      ? (2 - levelIndex) * Math.min(4, 1 + ((chapter.index - 1) >> 1))
+      : 0;
+    const baseCount = 3 + Math.floor(w * 1.15)
+      + Math.max(0, Math.min(12, Math.floor(difficulty * 0.22)) - entryDiscount);
     const groupCount = 1 + Math.min(2, Math.floor(w / 4));
 
     // 本章的"少数派"敌群（非天空章 = 飞行；天空章 = 地面）
@@ -298,7 +305,7 @@ function buildWaves(
       groups.push({
         pokemonId: pid,
         count,
-        intervalMs: Math.max(340, 950 - w * 45 - difficulty * 8),
+        intervalMs: Math.max(340, 950 - w * 45 - difficulty * 10),
         delayMs,
         note,
       });

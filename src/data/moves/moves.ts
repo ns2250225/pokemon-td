@@ -124,7 +124,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'hyperbeam', name: '破坏光线', nameEn: 'Hyper Beam', type: 'normal', category: 'special',
-      damageMultiplier: 3.4, cooldownMs: 11000, targeting: 'pierce', effectTier: 'legendary',
+      damageMultiplier: 3.4, cooldownMs: 6100, targeting: 'pierce', effectTier: 'legendary',
       ignoreArmor: true, length: 460, width: 34,
       effects: {
         cast: 'charge_orbs', projectile: 'hyper_beam', impact: 'beam_burst',
@@ -134,7 +134,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'gigaimpact', name: '终极冲击', nameEn: 'Giga Impact', type: 'normal', category: 'physical',
-      damageMultiplier: 3.0, cooldownMs: 9000, targeting: 'single', effectTier: 'epic',
+      damageMultiplier: 3.0, cooldownMs: 5000, targeting: 'single', effectTier: 'epic',
       effects: {
         cast: 'charge_orbs', projectile: 'dash_trail', impact: 'impact_shock',
         screenShake: 0.3, hitStopMs: 80, particles: 40, speed: 1300, castMs: 620, qualityScaling: true,
@@ -143,7 +143,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'swift', name: '高速星星', nameEn: 'Swift', type: 'normal', category: 'special',
-      damageMultiplier: 0.7, cooldownMs: 3200, targeting: 'multi', maxTargets: 3, effectTier: 'common',
+      damageMultiplier: 0.7, cooldownMs: 1800, targeting: 'multi', maxTargets: 3, effectTier: 'common',
       effects: { projectile: 'star_shot', impact: 'hit_spark', particles: 18, speed: 620, qualityScaling: true },
       description: '射出多枚星形飞弹，必定命中的多目标攻击。',
     }),
@@ -158,7 +158,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'flamethrower', name: '喷射火焰', nameEn: 'Flamethrower', type: 'fire', category: 'special',
-      damageMultiplier: 1.35, cooldownMs: 4200, targeting: 'cone', coneAngle: 46, length: 210, effectTier: 'enhanced',
+      damageMultiplier: 1.35, cooldownMs: 2300, targeting: 'cone', coneAngle: 46, length: 210, effectTier: 'enhanced',
       status: { kind: 'burn', durationMs: 4000, value: 7 },
       effects: {
         cast: 'flame_charge', projectile: 'flame_stream', impact: 'fire_field',
@@ -168,7 +168,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'fireblast', name: '大字爆炎', nameEn: 'Fire Blast', type: 'fire', category: 'special',
-      damageMultiplier: 2.1, cooldownMs: 7600, targeting: 'area', radius: 96, effectTier: 'epic',
+      damageMultiplier: 2.1, cooldownMs: 4200, targeting: 'area', radius: 96, effectTier: 'epic',
       status: { kind: 'burn', durationMs: 5000, value: 10 },
       effects: {
         cast: 'flame_charge', projectile: 'fireball_big', impact: 'fire_explosion',
@@ -178,7 +178,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'blastburn', name: '爆炸烈焰', nameEn: 'Blast Burn', type: 'fire', category: 'special',
-      damageMultiplier: 3.1, cooldownMs: 13000, targeting: 'area', radius: 140, effectTier: 'legendary',
+      damageMultiplier: 3.1, cooldownMs: 7200, targeting: 'area', radius: 140, effectTier: 'legendary',
       effects: {
         cast: 'flame_pillar', projectile: 'meteor_fire', impact: 'inferno',
         screenShake: 0.42, flash: 0.55, hitStopMs: 100, particles: 96, speed: 700, castMs: 1100, qualityScaling: true,
@@ -195,13 +195,13 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'waterpulse', name: '水之波动', nameEn: 'Water Pulse', type: 'water', category: 'special',
-      damageMultiplier: 1.2, cooldownMs: 4500, targeting: 'pierce', length: 300, width: 30, effectTier: 'enhanced',
+      damageMultiplier: 1.2, cooldownMs: 2500, targeting: 'pierce', length: 300, width: 30, effectTier: 'enhanced',
       effects: { projectile: 'water_ring', impact: 'splash_burst', particles: 26, speed: 760, qualityScaling: true },
       description: '射出环形水波，穿透直线上的多个敌人。',
     }),
     M({
       id: 'hydropump', name: '水炮', nameEn: 'Hydro Pump', type: 'water', category: 'special',
-      damageMultiplier: 2.3, cooldownMs: 6800, targeting: 'pierce', length: 420, width: 38, effectTier: 'epic',
+      damageMultiplier: 2.3, cooldownMs: 3700, targeting: 'pierce', length: 420, width: 38, effectTier: 'epic',
       status: { kind: 'knockback', durationMs: 0, distance: 34 },
       effects: {
         cast: 'water_charge', projectile: 'hydro_jet', impact: 'water_column',
@@ -211,7 +211,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'surf', name: '冲浪', nameEn: 'Surf', type: 'water', category: 'special',
-      damageMultiplier: 2.0, cooldownMs: 10000, targeting: 'line', length: 520, width: 96, effectTier: 'legendary',
+      damageMultiplier: 2.0, cooldownMs: 5500, targeting: 'line', length: 520, width: 96, effectTier: 'legendary',
       status: { kind: 'knockback', durationMs: 0, distance: 56, ratio: 0.3 },
       effects: {
         cast: 'water_charge', projectile: 'giant_wave', impact: 'wave_crash',
@@ -229,14 +229,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'leechseed', name: '寄生种子', nameEn: 'Leech Seed', type: 'grass', category: 'status',
-      damageMultiplier: 0.5, cooldownMs: 5200, targeting: 'single', effectTier: 'enhanced',
+      damageMultiplier: 0.5, cooldownMs: 2900, targeting: 'single', effectTier: 'enhanced',
       status: { kind: 'poison', durationMs: 6000, value: 9 },
       effects: { projectile: 'seed', impact: 'seed_sprout', particles: 22, speed: 480, qualityScaling: true },
       description: '植入种子持续吸取生命，造成长时间持续伤害。',
     }),
     M({
       id: 'leafstorm', name: '飞叶风暴', nameEn: 'Leaf Storm', type: 'grass', category: 'special',
-      damageMultiplier: 1.7, cooldownMs: 6400, targeting: 'area', radius: 104, hits: 3, hitIntervalMs: 220, effectTier: 'epic',
+      damageMultiplier: 1.7, cooldownMs: 3500, targeting: 'area', radius: 104, hits: 3, hitIntervalMs: 220, effectTier: 'epic',
       effects: {
         cast: 'leaf_charge', projectile: 'leaf_blade', impact: 'leaf_storm',
         screenShake: 0.16, particles: 60, speed: 660, castMs: 340, qualityScaling: true,
@@ -245,7 +245,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'solarbeam', name: '阳光烈焰', nameEn: 'Solar Beam', type: 'grass', category: 'special',
-      damageMultiplier: 3.3, cooldownMs: 12000, targeting: 'pierce', length: 480, width: 42, effectTier: 'legendary',
+      damageMultiplier: 3.3, cooldownMs: 6600, targeting: 'pierce', length: 480, width: 42, effectTier: 'legendary',
       ignoreArmor: true,
       effects: {
         cast: 'solar_charge', projectile: 'solar_beam', impact: 'solar_burst',
@@ -255,7 +255,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'frenzyplant', name: '疯狂植物', nameEn: 'Frenzy Plant', type: 'grass', category: 'special',
-      damageMultiplier: 2.4, cooldownMs: 11000, targeting: 'area', radius: 150, effectTier: 'legendary',
+      damageMultiplier: 2.4, cooldownMs: 6100, targeting: 'area', radius: 150, effectTier: 'legendary',
       status: { kind: 'stun', durationMs: 900 },
       effects: {
         cast: 'leaf_charge', projectile: 'root_spike', impact: 'plant_erupt',
@@ -274,7 +274,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'thunderbolt', name: '十万伏特', nameEn: 'Thunderbolt', type: 'electric', category: 'special',
-      damageMultiplier: 1.6, cooldownMs: 4500, targeting: 'chain', maxTargets: 5, chainRange: 110, effectTier: 'enhanced',
+      damageMultiplier: 1.6, cooldownMs: 2500, targeting: 'chain', maxTargets: 5, chainRange: 110, effectTier: 'enhanced',
       effects: {
         cast: 'electric_charge', projectile: 'lightning_chain', impact: 'electric_burst',
         screenShake: 0.12, flash: 0.24, particles: 36, speed: 0, castMs: 200, qualityScaling: true,
@@ -283,7 +283,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'thunder', name: '打雷', nameEn: 'Thunder', type: 'electric', category: 'special',
-      damageMultiplier: 2.0, cooldownMs: 8000, targeting: 'area', radius: 88, effectTier: 'epic',
+      damageMultiplier: 2.0, cooldownMs: 4400, targeting: 'area', radius: 88, effectTier: 'epic',
       status: { kind: 'stun', durationMs: 600 },
       effects: {
         cast: 'electric_charge', projectile: 'sky_bolt', impact: 'thunder_strike',
@@ -293,7 +293,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'volttackle', name: '伏特攻击', nameEn: 'Volt Tackle', type: 'electric', category: 'physical',
-      damageMultiplier: 2.2, cooldownMs: 7200, targeting: 'pierce', length: 340, width: 40, effectTier: 'epic',
+      damageMultiplier: 2.2, cooldownMs: 4000, targeting: 'pierce', length: 340, width: 40, effectTier: 'epic',
       effects: {
         projectile: 'volt_dash', impact: 'volt_impact', screenShake: 0.22, flash: 0.3,
         particles: 44, speed: 1500, qualityScaling: true,
@@ -304,14 +304,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     /* ============================ 冰 ============================ */
     M({
       id: 'icebeam', name: '冰冻光束', nameEn: 'Ice Beam', type: 'ice', category: 'special',
-      damageMultiplier: 1.3, cooldownMs: 4600, targeting: 'pierce', length: 320, width: 28, effectTier: 'enhanced',
+      damageMultiplier: 1.3, cooldownMs: 2500, targeting: 'pierce', length: 320, width: 28, effectTier: 'enhanced',
       status: { kind: 'slow', durationMs: 3000, ratio: 0.4 },
       effects: { projectile: 'ice_beam', impact: 'ice_shatter', particles: 32, speed: 900, qualityScaling: true },
       description: '细长冰束贯穿敌人并使其减速。',
     }),
     M({
       id: 'blizzard', name: '暴风雪', nameEn: 'Blizzard', type: 'ice', category: 'special',
-      damageMultiplier: 1.9, cooldownMs: 9000, targeting: 'area', radius: 170, effectTier: 'epic',
+      damageMultiplier: 1.9, cooldownMs: 5000, targeting: 'area', radius: 170, effectTier: 'epic',
       status: { kind: 'freeze', durationMs: 1500, ratio: 0.65 },
       effects: {
         cast: 'frost_charge', projectile: 'snowstorm', impact: 'blizzard',
@@ -321,14 +321,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'icefang', name: '冰冻牙', nameEn: 'Ice Fang', type: 'ice', category: 'physical',
-      damageMultiplier: 1.45, cooldownMs: 3400, targeting: 'single', effectTier: 'common',
+      damageMultiplier: 1.45, cooldownMs: 1900, targeting: 'single', effectTier: 'common',
       status: { kind: 'freeze', durationMs: 700, ratio: 0.5 },
       effects: { projectile: 'ice_shard', impact: 'frost_bite', particles: 16, speed: 640, qualityScaling: true },
       description: '寒冰利齿咬击，短时间冻结单个目标。',
     }),
     M({
       id: 'sheercold', name: '绝对零度', nameEn: 'Sheer Cold', type: 'ice', category: 'special',
-      damageMultiplier: 2.8, cooldownMs: 14000, targeting: 'area', radius: 190, effectTier: 'legendary',
+      damageMultiplier: 2.8, cooldownMs: 7700, targeting: 'area', radius: 190, effectTier: 'legendary',
       status: { kind: 'freeze', durationMs: 2600, ratio: 0.8 },
       effects: {
         cast: 'frost_charge', projectile: 'absolute_zero', impact: 'ice_field',
@@ -346,7 +346,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'closecombat', name: '近身战', nameEn: 'Close Combat', type: 'fighting', category: 'physical',
-      damageMultiplier: 2.4, cooldownMs: 6200, targeting: 'area', radius: 76, effectTier: 'epic',
+      damageMultiplier: 2.4, cooldownMs: 3400, targeting: 'area', radius: 76, effectTier: 'epic',
       ignoreArmor: true,
       effects: {
         projectile: 'rush_fist', impact: 'multi_punch', screenShake: 0.26, hitStopMs: 70,
@@ -356,13 +356,13 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'aurasphere', name: '波导弹', nameEn: 'Aura Sphere', type: 'fighting', category: 'special',
-      damageMultiplier: 1.8, cooldownMs: 5400, targeting: 'area', radius: 84, effectTier: 'enhanced',
+      damageMultiplier: 1.8, cooldownMs: 3000, targeting: 'area', radius: 84, effectTier: 'enhanced',
       effects: { projectile: 'aura_orb', impact: 'aura_burst', particles: 34, speed: 560, qualityScaling: true },
       description: '汇聚生命波动的能量球，必定命中且范围爆炸。',
     }),
     M({
       id: 'focusblast', name: '真气弹', nameEn: 'Focus Blast', type: 'fighting', category: 'special',
-      damageMultiplier: 2.6, cooldownMs: 9200, targeting: 'area', radius: 120, effectTier: 'epic',
+      damageMultiplier: 2.6, cooldownMs: 5100, targeting: 'area', radius: 120, effectTier: 'epic',
       ignoreArmor: true,
       effects: {
         cast: 'aura_charge', projectile: 'focus_orb', impact: 'focus_explosion',
@@ -381,7 +381,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'sludgebomb', name: '污泥炸弹', nameEn: 'Sludge Bomb', type: 'poison', category: 'special',
-      damageMultiplier: 1.75, cooldownMs: 5800, targeting: 'area', radius: 92, effectTier: 'enhanced',
+      damageMultiplier: 1.75, cooldownMs: 3200, targeting: 'area', radius: 92, effectTier: 'enhanced',
       status: { kind: 'poison', durationMs: 6000, value: 11, maxStacks: 3 },
       effects: {
         projectile: 'sludge_lob', impact: 'sludge_pool', particles: 40, speed: 480, qualityScaling: true,
@@ -390,7 +390,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'toxicspikes', name: '毒菱', nameEn: 'Toxic Spikes', type: 'poison', category: 'status',
-      damageMultiplier: 1.1, cooldownMs: 7000, targeting: 'line', length: 400, width: 70, effectTier: 'epic',
+      damageMultiplier: 1.1, cooldownMs: 3900, targeting: 'line', length: 400, width: 70, effectTier: 'epic',
       status: { kind: 'poison', durationMs: 8000, value: 13, maxStacks: 4 },
       effects: { projectile: 'spike_rain', impact: 'spike_field', particles: 50, speed: 0, qualityScaling: true },
       description: '在道路上撒布毒菱，经过的敌人持续受到毒素侵蚀。',
@@ -406,7 +406,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'earthquake', name: '地震', nameEn: 'Earthquake', type: 'ground', category: 'physical',
-      damageMultiplier: 2.1, cooldownMs: 8200, targeting: 'area', radius: 165, effectTier: 'epic',
+      damageMultiplier: 2.1, cooldownMs: 4500, targeting: 'area', radius: 165, effectTier: 'epic',
       status: { kind: 'stun', durationMs: 800 },
       effects: {
         cast: 'ground_charge', projectile: 'quake_wave', impact: 'ground_crack',
@@ -416,7 +416,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'earthpower', name: '大地之力', nameEn: 'Earth Power', type: 'ground', category: 'special',
-      damageMultiplier: 1.85, cooldownMs: 6000, targeting: 'area', radius: 110, effectTier: 'enhanced',
+      damageMultiplier: 1.85, cooldownMs: 3300, targeting: 'area', radius: 110, effectTier: 'enhanced',
       effects: {
         projectile: 'earth_burst', impact: 'power_geyser', particles: 42, speed: 0, qualityScaling: true,
       },
@@ -433,14 +433,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'airslash', name: '空气斩', nameEn: 'Air Slash', type: 'flying', category: 'special',
-      damageMultiplier: 1.55, cooldownMs: 4400, targeting: 'line', length: 300, width: 60, effectTier: 'enhanced',
+      damageMultiplier: 1.55, cooldownMs: 2400, targeting: 'line', length: 300, width: 60, effectTier: 'enhanced',
       canHitFlying: true,
       effects: { projectile: 'air_blade', impact: 'air_burst', particles: 30, speed: 900, qualityScaling: true },
       description: '真空刀刃横切直线，对空有效。',
     }),
     M({
       id: 'hurricane', name: '暴风', nameEn: 'Hurricane', type: 'flying', category: 'special',
-      damageMultiplier: 2.2, cooldownMs: 9800, targeting: 'area', radius: 150, effectTier: 'legendary',
+      damageMultiplier: 2.2, cooldownMs: 5400, targeting: 'area', radius: 150, effectTier: 'legendary',
       canHitFlying: true,
       status: { kind: 'stun', durationMs: 500 },
       effects: {
@@ -459,7 +459,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'psychicmove', name: '精神强念', nameEn: 'Psychic', type: 'psychic', category: 'special',
-      damageMultiplier: 1.9, cooldownMs: 6600, targeting: 'area', radius: 130, effectTier: 'epic',
+      damageMultiplier: 1.9, cooldownMs: 3600, targeting: 'area', radius: 130, effectTier: 'epic',
       status: { kind: 'weaken', durationMs: 4000, ratio: 0.25 },
       effects: {
         cast: 'psy_charge', projectile: 'psy_field', impact: 'psy_warp',
@@ -469,7 +469,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'psystrike', name: '精神击破', nameEn: 'Psystrike', type: 'psychic', category: 'special',
-      damageMultiplier: 2.5, cooldownMs: 10000, targeting: 'pierce', length: 400, width: 46, effectTier: 'epic',
+      damageMultiplier: 2.5, cooldownMs: 5500, targeting: 'pierce', length: 400, width: 46, effectTier: 'epic',
       ignoreArmor: true,
       effects: {
         projectile: 'psy_lance', impact: 'psy_shatter', screenShake: 0.28, flash: 0.36,
@@ -479,7 +479,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'psyshocklegend', name: '精神震荡', nameEn: 'Psywave', type: 'psychic', category: 'special',
-      damageMultiplier: 2.7, cooldownMs: 13000, targeting: 'global', effectTier: 'legendary',
+      damageMultiplier: 2.7, cooldownMs: 7200, targeting: 'global', effectTier: 'legendary',
       status: { kind: 'stun', durationMs: 1200 },
       effects: {
         cast: 'psy_charge', projectile: 'psy_nova', impact: 'mind_crush',
@@ -497,13 +497,13 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'xscissor', name: '十字剪', nameEn: 'X-Scissor', type: 'bug', category: 'physical',
-      damageMultiplier: 1.7, cooldownMs: 4800, targeting: 'line', length: 280, width: 52, effectTier: 'enhanced',
+      damageMultiplier: 1.7, cooldownMs: 2600, targeting: 'line', length: 280, width: 52, effectTier: 'enhanced',
       effects: { projectile: 'x_slash', impact: 'cross_cut', particles: 32, speed: 1000, qualityScaling: true },
       description: '交叉斩击切开直线上的敌人。',
     }),
     M({
       id: 'bugbuzz', name: '虫鸣', nameEn: 'Bug Buzz', type: 'bug', category: 'special',
-      damageMultiplier: 2.0, cooldownMs: 8600, targeting: 'area', radius: 140, effectTier: 'epic',
+      damageMultiplier: 2.0, cooldownMs: 4700, targeting: 'area', radius: 140, effectTier: 'epic',
       status: { kind: 'weaken', durationMs: 5000, ratio: 0.2 },
       effects: {
         cast: 'buzz_charge', projectile: 'sound_wave', impact: 'resonance',
@@ -521,14 +521,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'rockblast', name: '岩石爆击', nameEn: 'Rock Blast', type: 'rock', category: 'physical',
-      damageMultiplier: 1.4, cooldownMs: 5000, targeting: 'multi', maxTargets: 4, hits: 2, hitIntervalMs: 180, effectTier: 'enhanced',
+      damageMultiplier: 1.4, cooldownMs: 2800, targeting: 'multi', maxTargets: 4, hits: 2, hitIntervalMs: 180, effectTier: 'enhanced',
       status: { kind: 'knockback', durationMs: 0, distance: 22 },
       effects: { projectile: 'rock_volley', impact: 'rock_burst', particles: 34, speed: 640, qualityScaling: true },
       description: '连续投射岩石，命中时击退敌人。',
     }),
     M({
       id: 'stoneedge', name: '尖石攻击', nameEn: 'Stone Edge', type: 'rock', category: 'physical',
-      damageMultiplier: 2.3, cooldownMs: 7800, targeting: 'line', length: 320, width: 56, effectTier: 'epic',
+      damageMultiplier: 2.3, cooldownMs: 4300, targeting: 'line', length: 320, width: 56, effectTier: 'epic',
       status: { kind: 'knockback', durationMs: 0, distance: 44 },
       effects: {
         projectile: 'stone_spike', impact: 'spike_wall', screenShake: 0.3,
@@ -547,7 +547,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'shadowball', name: '暗影球', nameEn: 'Shadow Ball', type: 'ghost', category: 'special',
-      damageMultiplier: 1.8, cooldownMs: 5200, targeting: 'area', radius: 98, effectTier: 'enhanced',
+      damageMultiplier: 1.8, cooldownMs: 2900, targeting: 'area', radius: 98, effectTier: 'enhanced',
       revealsStealth: true,
       status: { kind: 'armorBreak', durationMs: 5000, ratio: 0.25 },
       effects: {
@@ -557,7 +557,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'shadowballlegend', name: '暗影潜袭', nameEn: 'Shadow Sneak', type: 'ghost', category: 'special',
-      damageMultiplier: 2.6, cooldownMs: 11000, targeting: 'area', radius: 175, effectTier: 'legendary',
+      damageMultiplier: 2.6, cooldownMs: 6100, targeting: 'area', radius: 175, effectTier: 'legendary',
       revealsStealth: true,
       status: { kind: 'curse', durationMs: 7000, value: 14, maxStacks: 2 },
       effects: {
@@ -568,7 +568,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'willowisp', name: '鬼火', nameEn: 'Will-O-Wisp', type: 'ghost', category: 'status',
-      damageMultiplier: 1.2, cooldownMs: 6400, targeting: 'multi', maxTargets: 3, effectTier: 'enhanced',
+      damageMultiplier: 1.2, cooldownMs: 3500, targeting: 'multi', maxTargets: 3, effectTier: 'enhanced',
       revealsStealth: true,
       status: { kind: 'burn', durationMs: 6000, value: 9 },
       effects: { projectile: 'will_o_wisp', impact: 'spirit_flame', particles: 36, speed: 400, qualityScaling: true },
@@ -585,7 +585,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'dragonpulse', name: '龙之波动', nameEn: 'Dragon Pulse', type: 'dragon', category: 'special',
-      damageMultiplier: 1.95, cooldownMs: 6000, targeting: 'line', length: 360, width: 54, effectTier: 'epic',
+      damageMultiplier: 1.95, cooldownMs: 3300, targeting: 'line', length: 360, width: 54, effectTier: 'epic',
       effects: {
         cast: 'dragon_charge', projectile: 'dragon_wave', impact: 'dragon_burst',
         screenShake: 0.22, particles: 48, speed: 860, castMs: 320, qualityScaling: true,
@@ -594,7 +594,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'dracometeor', name: '流星群', nameEn: 'Draco Meteor', type: 'dragon', category: 'special',
-      damageMultiplier: 3.2, cooldownMs: 15000, targeting: 'global', effectTier: 'legendary',
+      damageMultiplier: 3.2, cooldownMs: 8200, targeting: 'global', effectTier: 'legendary',
       hits: 6, hitIntervalMs: 260, ignoreArmor: true,
       effects: {
         cast: 'meteor_summon', projectile: 'meteor_fall', impact: 'meteor_impact',
@@ -604,7 +604,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'outrage', name: '逆鳞', nameEn: 'Outrage', type: 'dragon', category: 'physical',
-      damageMultiplier: 2.4, cooldownMs: 8600, targeting: 'multi', maxTargets: 5, effectTier: 'epic',
+      damageMultiplier: 2.4, cooldownMs: 4700, targeting: 'multi', maxTargets: 5, effectTier: 'epic',
       effects: {
         cast: 'rage_charge', projectile: 'dragon_rush', impact: 'rage_impact',
         screenShake: 0.32, particles: 64, speed: 1100, castMs: 420, qualityScaling: true,
@@ -621,7 +621,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'crunch', name: '咬碎', nameEn: 'Crunch', type: 'dark', category: 'physical',
-      damageMultiplier: 1.8, cooldownMs: 5600, targeting: 'single', effectTier: 'enhanced',
+      damageMultiplier: 1.8, cooldownMs: 3100, targeting: 'single', effectTier: 'enhanced',
       status: { kind: 'armorBreak', durationMs: 6000, ratio: 0.3 },
       effects: {
         projectile: 'dark_fang', impact: 'crunch_hit', screenShake: 0.16, particles: 32, speed: 820, qualityScaling: true,
@@ -630,7 +630,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'darkpulse', name: '恶之波动', nameEn: 'Dark Pulse', type: 'dark', category: 'special',
-      damageMultiplier: 2.2, cooldownMs: 8400, targeting: 'area', radius: 145, effectTier: 'epic',
+      damageMultiplier: 2.2, cooldownMs: 4600, targeting: 'area', radius: 145, effectTier: 'epic',
       effects: {
         cast: 'dark_charge', projectile: 'dark_pulse_wave', impact: 'dark_explosion',
         screenShake: 0.3, flash: 0.24, particles: 60, speed: 0, castMs: 520, qualityScaling: true,
@@ -641,14 +641,14 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     /* ============================ 钢 ============================ */
     M({
       id: 'metalsound', name: '金属音', nameEn: 'Metal Sound', type: 'steel', category: 'status',
-      damageMultiplier: 1.15, cooldownMs: 4600, targeting: 'area', radius: 100, effectTier: 'enhanced',
+      damageMultiplier: 1.15, cooldownMs: 2500, targeting: 'area', radius: 100, effectTier: 'enhanced',
       status: { kind: 'armorBreak', durationMs: 6000, ratio: 0.35 },
       effects: { projectile: 'metal_ring', impact: 'metal_screech', particles: 30, speed: 0, qualityScaling: true },
       description: '刺耳金属共鸣削弱范围内敌人的护甲。',
     }),
     M({
       id: 'flashcannon', name: '加农光炮', nameEn: 'Flash Cannon', type: 'steel', category: 'special',
-      damageMultiplier: 2.1, cooldownMs: 7000, targeting: 'pierce', length: 380, width: 36, effectTier: 'epic',
+      damageMultiplier: 2.1, cooldownMs: 3900, targeting: 'pierce', length: 380, width: 36, effectTier: 'epic',
       ignoreArmor: true,
       effects: {
         cast: 'metal_charge', projectile: 'cannon_beam', impact: 'metal_burst',
@@ -658,7 +658,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'ironhead', name: '铁头', nameEn: 'Iron Head', type: 'steel', category: 'physical',
-      damageMultiplier: 1.6, cooldownMs: 4000, targeting: 'single', effectTier: 'common',
+      damageMultiplier: 1.6, cooldownMs: 2200, targeting: 'single', effectTier: 'common',
       status: { kind: 'stun', durationMs: 400 },
       effects: { projectile: 'iron_dash', impact: 'clang', particles: 22, speed: 900, qualityScaling: true },
       description: '钢铁头锤冲撞，有几率眩晕。',
@@ -673,7 +673,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'dazzlinggleam', name: '魔法闪耀', nameEn: 'Dazzling Gleam', type: 'fairy', category: 'special',
-      damageMultiplier: 1.8, cooldownMs: 5800, targeting: 'area', radius: 118, effectTier: 'enhanced',
+      damageMultiplier: 1.8, cooldownMs: 3200, targeting: 'area', radius: 118, effectTier: 'enhanced',
       effects: {
         cast: 'fairy_charge', projectile: 'fairy_beam', impact: 'prism_burst',
         screenShake: 0.18, flash: 0.34, particles: 52, speed: 0, castMs: 320, qualityScaling: true,
@@ -682,7 +682,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'moonblast', name: '月亮之力', nameEn: 'Moonblast', type: 'fairy', category: 'special',
-      damageMultiplier: 2.4, cooldownMs: 9400, targeting: 'global', effectTier: 'legendary',
+      damageMultiplier: 2.4, cooldownMs: 5200, targeting: 'global', effectTier: 'legendary',
       selfBuff: { kind: 'damage', ratio: 0.15, durationMs: 8000 },
       effects: {
         cast: 'moon_charge', projectile: 'moon_beam', impact: 'lunar_burst',
@@ -692,7 +692,7 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     }),
     M({
       id: 'playrough', name: '嬉闹', nameEn: 'Play Rough', type: 'fairy', category: 'physical',
-      damageMultiplier: 1.7, cooldownMs: 5200, targeting: 'cone', coneAngle: 70, length: 170, effectTier: 'enhanced',
+      damageMultiplier: 1.7, cooldownMs: 2900, targeting: 'cone', coneAngle: 70, length: 170, effectTier: 'enhanced',
       status: { kind: 'weaken', durationMs: 3500, ratio: 0.2 },
       effects: { projectile: 'play_swipe', impact: 'hearts_burst', particles: 38, speed: 0, qualityScaling: true },
       description: '嬉闹式连击，扇形范围内削弱敌人攻击力。',
@@ -701,28 +701,28 @@ export const MOVES: Record<string, MoveDef> = Object.fromEntries(
     /* ============================ 特性 / 通用强化 ============================ */
     M({
       id: 'doubleseam', name: '影子分身', nameEn: 'Double Team', type: 'normal', category: 'status',
-      damageMultiplier: 0.6, cooldownMs: 12000, targeting: 'multi', maxTargets: 4, effectTier: 'epic',
+      damageMultiplier: 0.6, cooldownMs: 6600, targeting: 'multi', maxTargets: 4, effectTier: 'epic',
       selfBuff: { kind: 'multiShot', ratio: 2, durationMs: 6000 },
       effects: { cast: 'clone_spawn', impact: 'afterimage_hit', particles: 40, speed: 1000, qualityScaling: true },
       description: '制造残影，短时间内发动多重攻击。',
     }),
     M({
       id: 'agility', name: '高速移动', nameEn: 'Agility', type: 'psychic', category: 'status',
-      damageMultiplier: 0, cooldownMs: 15000, targeting: 'aura', effectTier: 'enhanced',
+      damageMultiplier: 0, cooldownMs: 8200, targeting: 'aura', effectTier: 'enhanced',
       selfBuff: { kind: 'attackSpeed', ratio: 0.5, durationMs: 8000 },
       effects: { cast: 'speed_aura', particles: 26, qualityScaling: true },
       description: '提升自身攻击速度 50%，持续 8 秒。',
     }),
     M({
       id: 'swordsdance', name: '剑舞', nameEn: 'Swords Dance', type: 'normal', category: 'status',
-      damageMultiplier: 0, cooldownMs: 16000, targeting: 'aura', effectTier: 'enhanced',
+      damageMultiplier: 0, cooldownMs: 8800, targeting: 'aura', effectTier: 'enhanced',
       selfBuff: { kind: 'damage', ratio: 0.45, durationMs: 9000 },
       effects: { cast: 'blade_aura', particles: 30, qualityScaling: true },
       description: '提升自身攻击力 45%，持续 9 秒。',
     }),
     M({
       id: 'calmmind', name: '冥想', nameEn: 'Calm Mind', type: 'psychic', category: 'status',
-      damageMultiplier: 0, cooldownMs: 16000, targeting: 'aura', effectTier: 'enhanced',
+      damageMultiplier: 0, cooldownMs: 8800, targeting: 'aura', effectTier: 'enhanced',
       selfBuff: { kind: 'range', ratio: 0.35, durationMs: 9000 },
       effects: { cast: 'psy_aura', particles: 28, qualityScaling: true },
       description: '扩大自身攻击范围 35%，持续 9 秒。',

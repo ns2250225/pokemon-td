@@ -130,6 +130,9 @@ export class MovingEnemy {
       this.shieldMax = Math.round(this.maxHp * 0.28);
       this.shield = this.shieldMax;
     }
+    // 召唤首发延迟：召唤型出场后先走一小段再放子体，避免同波所有召唤者
+    // 在出生点同时爆出一轮子体（开场 10 秒 20+ 只的怪潮）
+    this.abilityCooldown = this.traits.has('summoner') ? 2.5 : 0;
   }
 
   /** 应用一次伤害，返回实际扣除的血量 */
@@ -236,7 +239,7 @@ export class MovingEnemy {
     if (this.traits.has('summoner') && this.summoned < 2) {
       // 召唤上限与冷却控制波次的有效血量：无上限时一只召唤者在约 30 秒的
       // 行程里能召出 6 只，一个 10 只召唤者的波次会让场上敌人数翻 3 倍。
-      this.abilityCooldown = 12;
+      this.abilityCooldown = 10.5;
       this.summoned++;
       ctx.summon(this);
       return;

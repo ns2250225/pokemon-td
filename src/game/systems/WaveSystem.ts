@@ -194,7 +194,7 @@ export class WaveSystem {
     const base = getEnemyConfig(group.pokemonId, 1);
     if (!base) return null;
 
-    const difficulty = this.level.rules.enemyHp * (1 + (this.level.chapter - 1) * 0.055);
+    const difficulty = this.level.rules.enemyHp * (1 + (this.level.chapter - 1) * 0.06);
     const hpScale = difficulty * overrideHpScale;
     const speedScale = this.level.rules.enemySpeed * overrideSpeedScale * (isBoss ? 0.86 : 1);
 
@@ -289,16 +289,21 @@ export class WaveSystem {
         summon: (parent) => {
           const childCfg = this.pickSummonChild(parent.cfg);
           if (!childCfg) return;
-          // 子体：0.3 倍血量、与母体同速（不再加速），母体位置稍后方出生，
-          // 并继承母体的行进路径（飞行/地面），给防御塔留出拦截窗口
+          // 子体：0.35 倍血量、与母体同速（不再加速），母体位置稍后方出生，
+          // 并继承母体的行进路径（飞行/地面），给防御塔留出拦截窗口。
+          // 召唤物不再带召唤特性：草/虫系子体本身多半也是召唤者，
+          // 级联召唤会让波次指数滚雪球（一波 9 只滚成 20+），前期塔群无法应对。
           const parentUsesFlyingPath = parent.isFlying && this.level.rules.shortcutForFlyers;
           const child = this.spawnFrom(
             { pokemonId: childCfg.pokemonId, count: 1, intervalMs: 0, delayMs: 0 },
-            false, 0.3, 1.0,
+            false, 0.35, 1.0,
             Math.max(0, parent.traveled - 60),
             parentUsesFlyingPath,
           );
-          if (child) this.callbacks.onSummon?.(parent, child);
+          if (child) {
+            child.traits.delete('summoner');
+            this.callbacks.onSummon?.(parent, child);
+          }
         },
       });
 

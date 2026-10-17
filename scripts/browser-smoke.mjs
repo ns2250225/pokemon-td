@@ -21,6 +21,9 @@ const EDGE_PATHS = [
   'C:\\Program Files\\Microsoft\\Edge\\Application\\msedge.exe',
   'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
   'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+  // macOS
+  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
 ];
 
 function findBrowser() {
@@ -339,7 +342,8 @@ async function main() {
   console.log('  建造后塔数:', s1 ? s1.towers.length : 'n/a', s1?.towers[0] ? JSON.stringify(s1.towers[0]) : '');
   await shoot('04-buildmode');
 
-  // 等待敌人出场
+  // 等待敌人出场（波次现在由"开始出怪"确认，这里通过场景 API 启动第一波）
+  await evaluate(`window.__PTD__?.startNextWave?.()`);
   await delay(9000);
   const s2 = await state();
   if (s2) {
@@ -355,10 +359,11 @@ async function main() {
   }
   await shoot('05-battle-running');
 
-  // 切 2 倍速让战斗推进
+  // 切 2 倍速让战斗推进（若第一波已清完，顺带确认开始下一波）
   await evaluate(`(() => {
     const b = document.querySelectorAll('.speed-btn')[1];
     if (b) b.click();
+    window.__PTD__?.startNextWave?.();
   })()`);
   await delay(12000);
   await shoot('07-battle-later');

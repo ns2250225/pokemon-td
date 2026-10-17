@@ -15,6 +15,7 @@ import UpgradePanel from './UpgradePanel.vue';
 import ResultPanel from './ResultPanel.vue';
 import PauseMenu from './PauseMenu.vue';
 import BossHealthBar from './BossHealthBar.vue';
+import WavePreview from './WavePreview.vue';
 import { createGame, type GameHandle } from '../game';
 import { SCENE_KEYS } from '../game/config';
 import type { BattleScene, BattleResult } from '../game/scenes/BattleScene';
@@ -47,7 +48,10 @@ const level = computed(() => getLevel(props.levelId));
 
 /* ---------------- HUD 状态 ---------------- */
 const economy = ref({ coins: 0, hp: 10, maxHp: 10 });
-const wave = ref({ index: 0, total: 1, isBoss: false });
+// index 初始为 -1：第一波尚未开始（等待玩家点"开始出怪"），HUD 显示 0/N
+const wave = ref({ index: -1, total: level.value?.waves.length ?? 1, isBoss: false });
+/** 待命中的波次（battle:waveReady）：展示预览与"开始出怪"按钮 */
+const waveReady = ref<{ index: number; total: number; isBoss: boolean } | null>(null);
 const speed = ref<1 | 2 | 3>(1);
 const buildMode = ref<{ pokemonId: number; cost: number } | null>(null);
 const selected = ref<Record<string, unknown> | null>(null);
@@ -185,8 +189,14 @@ function registerBusHandlers() {
     bus.on<{ coins: number; hp: number; maxHp: number }>('battle:economy', (e) => { economy.value = e; }),
     bus.on<{ index: number; total: number; isBoss: boolean }>('battle:wave', (w) => {
       wave.value = w;
+      waveReady.value = null;
       audioEngine.play(w.isBoss ? 'boss_warning' : 'wave_start');
       if (w.isBoss) bus.emit('battle:toast', { text: 'BOSS 来袭！', tone: 'warn' });
+    }),
+    bus.on<{ index: number; total: number; isBoss: boolean }>('battle:waveReady', (w) => {
+      // 波次待命：弹出战前预览，等玩家点"开始出怪"
+      waveReady.value = w;
+      audioEngine.play('ui_confirm');
     }),
     bus.on<{ speed: 1 | 2 | 3 }>('battle:speed', (s) => { speed.value = s.speed; }),
     bus.on<{ pokemonId: number; cost: number } | null>('battle:buildMode', (b) => { buildMode.value = b; }),
@@ -205,6 +215,7 @@ function registerBusHandlers() {
     }),
     bus.on<BattleResult>('battle:finished', (r) => {
       result.value = r;
+      waveReady.value = null;
       newUnlocks.value = [];
       if (r.victory) {
         audioEngine.play('victory');
@@ -315,6 +326,12 @@ function setSpeed(s: 1 | 2 | 3) {
   audioEngine.play('ui_click');
 }
 
+/** 确认开始当前待命的波次（波次预览面板上的"开始出怪"按钮） */
+function startNextWave() {
+  audioEngine.play('ui_click');
+  battleScene.value?.startNextWave();
+}
+
 function togglePause() {
   battleScene.value?.togglePause();
   pausedByUser.value = !pausedByUser.value;
@@ -334,6 +351,8 @@ function restart() {
   newUnlocks.value = [];
   paused.value = false;
   pausedByUser.value = false;
+  waveReady.value = null;
+  wave.value = { index: -1, total: level.value?.waves.length ?? 1, isBoss: false };
   // 重新设置关卡 id，保证场景 restart 后能再次读取到
   setPendingLevelId(props.levelId);
   battleScene.value?.restart();
@@ -385,6 +404,15 @@ const buildType = computed<PokemonType | undefined>(() => {
 
     <!-- BOSS 血条 -->
     <BossHealthBar v-if="boss" v-bind="boss" />
+
+    <!-- 波次预览：出怪前展示本波构成，点击"开始出怪"才出怪 -->
+    <WavePreview
+      v-if="waveReady && level && !showResult"
+      :level="level"
+      :wave-index="waveReady.index"
+      :wave-total="waveReady.total"
+      @start="startNextWave"
+    />
 
     <!-- 建造栏 -->
     <div class="battle__build-bar" :class="{ 'is-dimmed': showResult || pausedByUser }">

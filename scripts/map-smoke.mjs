@@ -21,6 +21,9 @@ const browser = [
   'C:/Program Files/Microsoft/Edge/Application/msedge.exe',
   'C:/Program Files/Google/Chrome/Application/chrome.exe',
   'C:/Program Files (x86)/Google/Chrome/Application/chrome.exe',
+  // macOS
+  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
 ].find((file) => fs.existsSync(file));
 const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const report = { url: gameUrl, renderer: forceCanvas ? 'Canvas' : 'WebGL', lifecycleOnly, checks: [], maps: [], errors: [], assetErrors: [], screenshots: [] };

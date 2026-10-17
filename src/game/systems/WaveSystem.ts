@@ -25,6 +25,11 @@ export interface WaveCallbacks {
   onEnemyDied?: (enemy: MovingEnemy) => void;
   onEnemyReachedEnd?: (enemy: MovingEnemy, damage: number) => void;
   onWaveStart?: (wave: Wave, index: number) => void;
+  /**
+   * 波次待命：这一波已经就绪、等待玩家点击"开始出怪"确认。
+   * UI 用它展示本波敌人构成预览与确认按钮。
+   */
+  onWaveReady?: (wave: Wave, index: number) => void;
   onWaveComplete?: (index: number) => void;
   onAllWavesComplete?: () => void;
   onEnemyHealed?: (enemy: MovingEnemy, amount: number) => void;
@@ -48,9 +53,10 @@ export class WaveSystem {
   simTime = 0;
 
   currentWaveIndex = -1;
+  /** 待命中的波次序号（等待 confirmStartWave）；-1 表示没有待命波次 */
+  private readyWaveIndex = -1;
   private tasks: SpawnTask[] = [];
   private finishedSpawning = false;
-  private waveStartTime = 0;
   private completedWaves = 0;
 
   /** 路径的世界坐标 */
@@ -157,7 +163,6 @@ export class WaveSystem {
     const wave = this.level.waves[waveIndex];
     if (!wave) return;
     this.currentWaveIndex = waveIndex;
-    this.waveStartTime = this.simTime;
     this.finishedSpawning = false;
     this.tasks = [];
 
@@ -176,8 +181,29 @@ export class WaveSystem {
     this.callbacks.onWaveStart?.(wave, waveIndex);
   }
 
+  /**
+   * 进入战斗：第一波进入待命，等待玩家点击"开始出怪"确认后才开始出怪。
+   */
   start() {
-    this.scheduleWave(0);
+    this.readyWaveIndex = 0;
+    this.callbacks.onWaveReady?.(this.level.waves[0], 0);
+  }
+
+  /** 当前待命中的波次序号；-1 表示没有待命波次 */
+  get awaitingStartWave(): number {
+    return this.readyWaveIndex;
+  }
+
+  /**
+   * 确认开始当前待命的波次（"开始出怪"按钮）。
+   * @returns 是否确实有待命波次被启动
+   */
+  confirmStartWave(): boolean {
+    if (this.readyWaveIndex < 0) return false;
+    const index = this.readyWaveIndex;
+    this.readyWaveIndex = -1;
+    this.scheduleWave(index);
+    return true;
   }
 
   private spawnFrom(
@@ -377,9 +403,12 @@ export class WaveSystem {
         this.callbacks.onWaveComplete?.(this.currentWaveIndex);
         const next = this.currentWaveIndex + 1;
         if (next < this.level.waves.length) {
-          // 波间休整：给玩家 4 秒造塔时间（固定步长计时，倍速下等效缩短）
-          this.simTime += 4000;
-          this.scheduleWave(next);
+          // 波间待命：下一波进入"等待确认"状态，备战时长由玩家通过
+          // "开始出怪"按钮掌握（UI 会先展示下一波的构成预览）。
+          // currentWaveIndex 置回 -1，避免后续固定步反复触发完成判定。
+          this.currentWaveIndex = -1;
+          this.readyWaveIndex = next;
+          this.callbacks.onWaveReady?.(this.level.waves[next], next);
         } else if (!this.finishedSpawning) {
           this.finishedSpawning = true;
           this.currentWaveIndex = -1;
@@ -429,5 +458,6 @@ export class WaveSystem {
     for (const e of this.enemies) e.destroyView();
     this.enemies = [];
     this.tasks = [];
+    this.readyWaveIndex = -1;
   }
 }

@@ -179,6 +179,10 @@ export class BattleScene extends Phaser.Scene {
       onWaveStart: (wave, index) => {
         bus.emit('battle:wave', { index, total: this.level.waves.length, isBoss: wave.isBoss });
       },
+      onWaveReady: (wave, index) => {
+        // 波次待命：UI 据此展示本波构成预览与"开始出怪"按钮
+        bus.emit('battle:waveReady', { index, total: this.level.waves.length, isBoss: wave.isBoss });
+      },
       onWaveComplete: (index) => {
         // 波次通关奖励：levels.ts 为每波配置了 bonus，这里统一结算。
         // 结算点必须与 onWaveComplete 回调对齐，否则越到后期经济越跟不上波次压力。
@@ -1119,6 +1123,11 @@ export class BattleScene extends Phaser.Scene {
     this.emitSpeed();
   }
 
+  /** 由 UI 触发：确认开始当前待命的波次（"开始出怪"按钮） */
+  startNextWave() {
+    this.waves.confirmStartWave();
+  }
+
   private emitSpeed() {
     bus.emit('battle:speed', { speed: this.speed });
   }
@@ -1231,6 +1240,7 @@ export class BattleScene extends Phaser.Scene {
       })(),
       bossRuntime: this.bossRuntime ? { ability: this.bossRuntime.abilityId, phase: this.bossRuntime.phase } : null,
       waveIndex: this.waves?.currentWaveIndex ?? -1,
+      awaitingWave: this.waves?.awaitingStartWave ?? -1,
       wavesCleared: this.waves?.completedWaveCount ?? 0,
       pendingSpawns: this.waves?.pendingCount ?? 0,
       blockedCount: this.blocked.size,
@@ -1257,6 +1267,8 @@ export class BattleScene extends Phaser.Scene {
     const cap = Math.max(0, Math.min(steps, 20000));
     for (let i = 0; i < cap; i++) {
       if (this.state !== 'running') break;
+      // 自动化没有 UI 可点：待命波次直接确认开始，保证快进能推进到出怪
+      if (this.waves.awaitingStartWave >= 0) this.waves.confirmStartWave();
       this.simulateStep();
       this.elapsedMs += SIM_STEP_MS;
     }

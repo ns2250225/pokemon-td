@@ -412,6 +412,8 @@ class HeadlessBattle {
     let lastAct = 0;
     let lastLog = 0;
     while (!this.finished && this.waves.simTime < maxMs) {
+      // 波次待命时自动确认开始出怪（无头仿真没有 UI 按钮，直接等价于点击）
+      if (this.waves.awaitingStartWave >= 0) this.waves.confirmStartWave();
       this.simulateStep();
       steps++;
       if (this.waves.simTime - lastAct >= 1000) {

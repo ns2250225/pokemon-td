@@ -181,6 +181,10 @@ function click(fn: () => void) {
   flex-shrink: 0;
 }
 
+/* 按钮文字不随容器挤压折行（窄屏下"全屏"/"宝可梦图鉴"曾折成两行） */
+.menu__top-actions .btn,
+.menu__sub .btn { white-space: nowrap; }
+
 .menu__logo {
   display: flex;
   align-items: center;
@@ -237,7 +241,9 @@ function click(fn: () => void) {
   align-items: center;
 }
 
-@media (max-width: 860px) {
+/* 窄屏且屏幕较高（竖屏手机/窄窗口）才堆成单列；
+   手机横屏宽度足够，保持"展示卡 | 按钮"两列，避免纵向挤成一团 */
+@media (max-width: 700px) and (min-height: 520px) {
   .menu__body { grid-template-columns: 1fr; gap: 12px; }
   .menu__showcase { order: 2; }
   .menu__actions { order: 1; }
@@ -358,19 +364,33 @@ function click(fn: () => void) {
   .menu__notice { display: none; }
 }
 
-/* 矮屏（手机横屏）：压缩主菜单垂直布局，底部统计条保持可见 */
+/* 矮屏（手机横屏）：两列布局下整体压缩，底部统计条保持可见 */
 @media (max-height: 480px) {
   .menu { padding: 6px clamp(12px, 3vw, 32px); }
   .menu__ball { width: 30px; height: 30px; }
   .menu__header h1 { font-size: 22px; }
   .menu__header p { font-size: 11px; }
-  .menu__body { gap: 10px; }
-  .menu__showcase { flex-wrap: nowrap; gap: 12px; padding-bottom: 2px; }
-  .menu__showcase :deep(.pkm-img) { height: 46px !important; width: auto !important; }
-  .menu__showcase :deep(img) { height: 100%; width: 100%; }
+  .menu__body { gap: clamp(14px, 2.5vw, 28px); }
+
+  /* 展示卡保持正方形比例，只缩小尺寸，不再压扁成长条 */
+  .menu__showcase { flex-wrap: nowrap; gap: 10px; padding-bottom: 2px; }
+  .menu__showcase :deep(.pkm-img) { height: 62px !important; width: 62px !important; }
+  .showcase-card { padding: 2px; gap: 2px; }
   .showcase-card__name { font-size: 10px; }
-  .menu__play { font-size: 15px; }
+
+  .menu__actions { gap: 8px; }
+  .menu__play { font-size: 15px; min-height: 42px; }
+  .menu__sub { gap: 8px; }
+  .menu__sub .btn { min-height: 36px; padding: 0 8px; font-size: 13px; white-space: nowrap; }
+
+  /* 继续进度压成一行，说明文字收起 */
+  .menu__continue { flex-direction: row; align-items: baseline; gap: 8px; padding: 8px 12px; }
+  .menu__continue-sub { display: none; }
+
   .menu__stats { padding-top: 5px; gap: 14px; }
+  .stat__value { font-size: 14px; }
+  .stat__label { font-size: 10px; }
+  .menu__notice { display: none; }
 }
 
 </style>

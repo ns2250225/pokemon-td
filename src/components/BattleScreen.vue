@@ -58,6 +58,8 @@ const result = ref<BattleResult | null>(null);
 const newUnlocks = ref<number[]>([]);
 const boss = ref<{ pokemonId: number; name: string; hpRatio: number } | null>(null);
 const toast = ref<{ text: string; tone: string } | null>(null);
+/** 递增序号：只有最新一条提示的计时器可以清屏（旧提示被覆盖后不再抢清） */
+let toastSeq = 0;
 
 /** 建造栏只显示已解锁的精灵：未解锁的进图鉴看，不占建造栏 */
 const availableTowers = computed(() =>
@@ -196,7 +198,10 @@ function registerBusHandlers() {
     bus.on<{ text: string; tone: string }>('battle:toast', (t) => {
       toast.value = t;
       audioEngine.play(t.tone === 'warn' ? 'ui_error' : 'ui_click');
-      setTimeout(() => { if (toast.value === t) toast.value = null; }, 2200);
+      // 不能用 toast.value === t 判断：ref 会把对象包装成 reactive 代理，
+      // 与原始载荷永不相等，计时器永远清不掉提示（提示会一直挂在屏幕上）。
+      const id = ++toastSeq;
+      setTimeout(() => { if (toastSeq === id) toast.value = null; }, 2200);
     }),
     bus.on<BattleResult>('battle:finished', (r) => {
       result.value = r;

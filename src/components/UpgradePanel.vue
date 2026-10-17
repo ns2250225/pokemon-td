@@ -346,30 +346,42 @@ function moveDescription(id: string) {
 }
 
 /* 矮屏（手机横屏）：面板被顶栏与建造栏夹在中间，可用高度只有 ~240px。
-   限制面板高度、超高内部滚动，并整体压缩内容，保证标题/属性/招式/按钮全部可达。 */
+   面板收窄、内容横向压缩（招式横排换行、升级/出售同行），
+   超高时内部滚动兜底，尽量少遮挡战场。 */
 @media (max-height: 520px) {
   .upgrade {
-    bottom: calc(96px + var(--safe-bottom));
-    max-height: calc(100vh - 96px - 88px); /* 底栏 96 + 顶部 HUD 84 + 余量 */
+    bottom: calc(86px + var(--safe-bottom));
+    /* 底部建造栏（~86px）+ 顶部 HUD（~72px）+ 余量；dvh 优先，老内核回退 vh */
+    max-height: calc(100vh - 86px - 78px);
+    max-height: calc(100dvh - 86px - 78px);
     overflow-y: auto;
     overscroll-behavior: contain;
     -webkit-overflow-scrolling: touch;
-    width: min(300px, calc(100vw - 16px));
-    padding: 8px 10px;
-    gap: 5px;
+    width: min(238px, calc(100vw - 16px));
+    padding: 7px 9px;
+    gap: 4px;
   }
-  .upgrade__head { gap: 8px; }
-  .upgrade__head :deep(.pkm-img) { height: 38px !important; width: 38px !important; }
-  .upgrade__name strong { font-size: 13px; }
-  .upgrade__stats { gap: 3px; }
-  .stat-cell { padding: 2px 2px; }
+  .upgrade__head { gap: 7px; }
+  .upgrade__head :deep(.pkm-img) { height: 34px !important; width: 34px !important; }
+  .upgrade__name { margin-bottom: 1px; }
+  .upgrade__name strong { font-size: 12.5px; }
+  .upgrade__stats { gap: 2px; }
+  .stat-cell { padding: 2px; }
   .stat-cell__label { font-size: 8px; }
-  .stat-cell strong { font-size: 12px; }
-  .upgrade__moves { gap: 3px; }
-  .move-chip { padding: 3px 7px; font-size: 10.5px; }
-  .upgrade__actions { gap: 4px; }
-  .upgrade__btn { min-height: 32px; font-size: 12px; }
-  .upgrade__close { top: 4px; right: 6px; width: 22px; height: 22px; font-size: 11px; }
+  .stat-cell strong { font-size: 11.5px; }
+  /* 招式从竖排列表改为横排换行（说明文字内联在同排），面板高度明显减小 */
+  .upgrade__moves { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 3px; }
+  .upgrade__section { flex: 0 0 auto; font-size: 9.5px; }
+  .move-chip { padding: 2px 6px; font-size: 10px; }
+  /* 升级 + 出售同行，进化整行置底；按钮内文字不换行（窄按钮下"出售"会折成两行） */
+  .upgrade__actions { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+  .upgrade__btn { flex: 1 1 40%; min-height: 28px; font-size: 11.5px; white-space: nowrap; padding: 0 10px; }
+  .upgrade__btn--evolve { flex-basis: 100%; order: 2; }
+  .upgrade__btn--sell { font-size: 11px; }
+  .upgrade__maxed,
+  .upgrade__hint { flex: 1 1 auto; padding: 4px; font-size: 10px; }
+  .upgrade__preview { font-size: 9.5px; }
+  .upgrade__close { top: 3px; right: 5px; width: 20px; height: 20px; font-size: 10px; }
 }
 
 </style>

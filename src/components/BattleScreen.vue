@@ -492,13 +492,32 @@ const buildType = computed<PokemonType | undefined>(() => {
 }
 
 /* 矮屏（手机横屏）：收紧内边距，让建造栏少占战场高度 */
+/* 矮屏（手机横屏）：栏体压到 ~42px 恒定高（安全区除外）。
+   路径与可建造区最底到第 10 行，栏体每高一点都会裁掉底行精灵的下半截，
+   因此除收紧内边距外，建造提示悬浮在栏上方，避免进入建造模式时撑高栏体。 */
 @media (max-height: 520px) {
   .battle__build-bar {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 1px;
+    padding-bottom: calc(1px + var(--safe-bottom));
   }
-  .battle__build-hint { padding-bottom: 1px; font-size: 11px; }
-  .battle__cards { gap: 5px; }
+  .battle__build-hint {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 2px);
+    transform: translateX(-50%);
+    padding: 2px 12px;
+    background: rgba(13, 17, 23, 0.92);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    font-size: 11px;
+    white-space: nowrap;
+  }
+  .battle__cards {
+    gap: 4px;
+    padding-bottom: 0;
+    scrollbar-width: none;
+  }
+  .battle__cards::-webkit-scrollbar { display: none; }
 }
 
 .battle__build-bar.is-dimmed {

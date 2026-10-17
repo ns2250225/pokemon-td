@@ -213,17 +213,20 @@ function pick() {
   white-space: nowrap;
 }
 
-/* 矮屏（手机横屏）：压缩建造栏高度，少遮挡战场 */
+/* 矮屏（手机横屏）：压缩建造栏高度，少遮挡战场。
+   卡片控制在 ~40px：图标 26px、隐藏属性行，保证底行战场完整可见。 */
 @media (max-height: 520px) {
   .pcard {
     width: 72px;
-    padding: 3px 2px 2px;
+    padding: 2px 2px 1px;
     gap: 0;
   }
-  .pcard__art { height: 32px; }
-  .pcard__art :deep(img) { max-height: 32px; }
-  .pcard__name { font-size: 10px; }
+  .pcard__art { height: 26px; }
+  .pcard__art :deep(.pkm-img) { height: 26px !important; width: 26px !important; }
+  .pcard__art :deep(img) { max-height: 26px; }
+  .pcard__name { font-size: 9.5px; line-height: 1.15; }
+  .pcard__types,
   .pcard__archetype { display: none; }
-  .pcard__cost { font-size: 9px; top: -6px; }
+  .pcard__cost { font-size: 9px; top: -5px; }
 }
 </style>
